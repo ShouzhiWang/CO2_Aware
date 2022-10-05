@@ -10,7 +10,8 @@ import SwiftUI
 
 struct UserSelfView: View {
     @AppStorage("username") var username: String = ""
-    @AppStorage("points") var points: Int = 0
+    //@AppStorage("points") var points: Int = 0
+    @ObservedObject var levelsm : UserProgress
     @State private var tempname: String = ""
     @State private var temppoints: String = ""
     
@@ -37,7 +38,7 @@ struct UserSelfView: View {
             VStack {
                 
                 Text(username)
-                Text(String(UserDefaults.standard.integer(forKey: "points")))
+                Text(String(levelsm.points))
                 Button("Clear") {
                     UserDefaults.standard.set(nil, forKey: "username")
 
@@ -50,13 +51,15 @@ struct UserSelfView: View {
     
     func saveName() {
         username = tempname
-        UserProgress().set(a: Int(temppoints) ?? 0)
+        levelsm.points = Int(temppoints) ?? 0
+        
+        //UserProgress().set(a: Int(temppoints) ?? 0)
         //UserDefaults.standard.set(Int(temppoints), forKey: "points")
     }
     
     struct UserSelfView_Previews: PreviewProvider {
         static var previews: some View {
-            UserSelfView()
+            UserSelfView(levelsm: UserProgress())
         }
     }
 }

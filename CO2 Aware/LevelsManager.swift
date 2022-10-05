@@ -7,16 +7,41 @@
 
 import Foundation
 
-class UserProgress: ObservableObject{
-    @Published var points: Int = 0
+final class UserProgress: ObservableObject{
+    
     
     init(){
-        self.points = UserDefaults.standard.integer(forKey: "points")
+        UserDefaults.standard.register(defaults: ["points" : 0])
+        UserDefaults.standard.register(defaults: ["level" : 1])
+        UserDefaults.standard.register(defaults: ["calculatedPoints" : 0])
     }
     
-    func get() -> Int {
-        return UserDefaults.standard.integer(forKey: "points")
+    
+    @Published var points: Int = UserDefaults.standard.integer(forKey: "points"){
+        didSet{
+            UserDefaults.standard.set(points, forKey: "points")
+            level = getCurrentLevel()
+            calculatedPoints = getCurrentPoints()
+        }
     }
+    
+    @Published var level: Int = UserDefaults.standard.integer(forKey: "level"){
+        didSet{
+            UserDefaults.standard.set(level, forKey: "level")
+        }
+    }
+    
+    @Published var calculatedPoints: Int = UserDefaults.standard.integer(forKey: "calculatedPoints"){
+        didSet{
+            UserDefaults.standard.set(calculatedPoints, forKey: "calculatedPoints")
+        }
+    }
+        
+    
+    
+//    func get() -> Int {
+//        return UserDefaults.standard.integer(forKey: "points")
+//    }
     
     func set(a: Int) {
         points = a
@@ -25,14 +50,14 @@ class UserProgress: ObservableObject{
         UserDefaults.standard.set(getCurrentLevel(), forKey: "calculatedPoints")
     }
     
-    func getCurrentLevel() -> String{
+    func getCurrentLevel() -> Int{
         //let points = p.points
         var level = 1
         level += points/100
         if (level  <= 6){
-            return String(level)
+            return level
         } else{
-            return "6"
+            return 6
         }
     }
     

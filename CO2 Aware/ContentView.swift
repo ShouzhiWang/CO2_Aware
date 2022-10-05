@@ -16,11 +16,11 @@ struct ContentView: View {
 //        animation: .default)
 //    private var items: FetchedResults<Item>
     @State private var selection = 0
-    
+    @StateObject var p =  UserProgress()
     var body: some View {
         NavigationView {
             TabView(selection: $selection){
-                HomeView()
+                HomeView(p: p)
                     .tabItem {
                         Label("Home", systemImage: "leaf")
                     }
@@ -38,7 +38,7 @@ struct ContentView: View {
                     }
                     .tag(2)
                 
-                UserSelfView()
+                UserSelfView(levelsm: p)
                     .tabItem {
                         Label("About Me", systemImage: "person")
                     }

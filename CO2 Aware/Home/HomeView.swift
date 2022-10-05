@@ -17,7 +17,8 @@ import SwiftUI
 struct HomeView: View {
    
 
-    @EnvironmentObject var p :  UserProgress
+    @ObservedObject var p :  UserProgress
+    //@State var pLevel: Int = 0
 
     
     var body: some View {
@@ -48,7 +49,7 @@ struct HomeView: View {
                     }
                     
                     
-                    Image("treeLvl" + p.getCurrentLevel())
+                    Image("treeLvl" + String(p.level))
                         .resizable()
                         .aspectRatio(contentMode: .fit)
           
@@ -68,10 +69,10 @@ struct HomeView: View {
                                 //Text("Level " + getCurrentLevel())
                                     //.font(.title2.weight(.semibold))
                                 //Spacer()
-                                ProgressView("Level " + p.getCurrentLevel(), value: Double(p.getCurrentPoints()), total: 100)
+                                ProgressView("Level " + String(p.level), value: Double(self.p.calculatedPoints), total: 100)
                                     .font(.title3.weight(.semibold))
                                 Spacer()
-                                Text(String(p.getCurrentPoints()) + "/100")
+                                Text(String(self.p.calculatedPoints) + "/100")
                                     //.frame(alignment: .top)
                                 
                                 
@@ -110,20 +111,22 @@ struct HomeView: View {
             .navigationTitle("Home")
             .toolbar(.hidden)
             .background(
-                Image("HomeLvl" + p.getCurrentLevel())
+                Image("HomeLvl" + String(p.level))
                 .resizable()
                 .ignoresSafeArea()
             )
-        }
+//        }.onChange(of: isPresented) { isPresented in
+//            if isPresented {
+//                // Do something when first presented.
+//                pPoints = p.points
+//            }
+//            
+        }.environmentObject(p)
+            
         
         
     }
-//        .onChange(of: isPresented) { isPresented in
-//        if isPresented {
-//            // Do something when first presented.
-//
-//        }
-//    }
+        
         
     
     func getCurrentLevel() -> String{
@@ -151,7 +154,7 @@ struct HomeView: View {
 
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
-        HomeView()
-            .environmentObject(UserProgress())
+        HomeView(p: UserProgress())
+            //.environmentObject(UserProgress())
     }
 }
