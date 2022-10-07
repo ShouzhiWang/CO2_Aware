@@ -14,6 +14,9 @@ final class UserProgress: ObservableObject{
         UserDefaults.standard.register(defaults: ["points" : 0])
         UserDefaults.standard.register(defaults: ["level" : 1])
         UserDefaults.standard.register(defaults: ["calculatedPoints" : 0])
+        UserDefaults.standard.register(defaults: ["username" : ""])
+        UserDefaults.standard.register(defaults: ["co2Region" : "... Please Choose"])
+        UserDefaults.standard.register(defaults: ["co2e" : 0])
     }
     
     
@@ -34,6 +37,24 @@ final class UserProgress: ObservableObject{
     @Published var calculatedPoints: Int = UserDefaults.standard.integer(forKey: "calculatedPoints"){
         didSet{
             UserDefaults.standard.set(calculatedPoints, forKey: "calculatedPoints")
+        }
+    }
+    
+    @Published var username: String = (UserDefaults.standard.string(forKey: "username") ?? ""){
+        didSet{
+            UserDefaults.standard.set(username, forKey: "username")
+        }
+    }
+    
+    @Published var co2Region: String = (UserDefaults.standard.string(forKey: "co2Region") ?? "...Please Choose"){
+        didSet{
+            UserDefaults.standard.set(username, forKey: "co2Region")
+        }
+    }
+    
+    @Published var co2e: Double = (UserDefaults.standard.double(forKey: "co2e")){
+        didSet{
+            UserDefaults.standard.set(username, forKey: "co2e")
         }
     }
         

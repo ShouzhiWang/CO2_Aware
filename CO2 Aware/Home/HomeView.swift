@@ -7,48 +7,35 @@
 
 import SwiftUI
 
-
-    
-//    init(points: Int) {
-//        self.points = points
-//    }
-
-
 struct HomeView: View {
-   
-
     @ObservedObject var p :  UserProgress
-    //@State var pLevel: Int = 0
 
-    
     var body: some View {
-        //let _ = Self._printChanges()
+        //Home view
         NavigationStack{
             ScrollView(.vertical) {
-                //Tree,clouds,and sun(moon) combination
+                
                 ZStack(alignment: .top){
                     
-                    
+                    //Cloud Image
                     Image("Cloud")
                         .resizable()
                         .aspectRatio(contentMode: .fit)
+                    //Sun Image
                     HStack{
                         Image("Sun")
                             .resizable()
                             .frame(width: 90.0, height: 90.0)
-                            
+                            //"HI" text
                             .overlay(
                                 Text("Hi!")
                                     .font(.largeTitle.weight(.bold))
-                                    //.padding(.leading)
                                     .frame(maxWidth: .infinity, alignment: .center)
-                                    //.offset(x: 5, y: 5)
                             )
                         Spacer()
-                        
                     }
                     
-                    
+                    //Changing tree image according to the level
                     Image("treeLvl" + String(p.level))
                         .resizable()
                         .aspectRatio(contentMode: .fit)
@@ -58,48 +45,50 @@ struct HomeView: View {
                 
                 .padding(.horizontal)
                 Spacer(minLength: 15)
+                
+                //Rectangular region that shows the user's status
                 RoundedRectangle(cornerRadius: 36)
-                    .foregroundColor(Color("WB").opacity(0.5))
+                    .foregroundColor(Color("WB").opacity(0.2))
+                    .background(.ultraThinMaterial, in: RoundedRectangle(cornerRadius: 36))
                     .padding(.horizontal)
                     .blur(radius: 0.3)
                     .frame(height: 160.0)
                     .overlay(
                         VStack{
                             ZStack(alignment: .topTrailing){
-                                //Text("Level " + getCurrentLevel())
-                                    //.font(.title2.weight(.semibold))
-                                //Spacer()
+                                //Level progress bar + text indicating the level
                                 ProgressView("Level " + String(p.level), value: Double(self.p.calculatedPoints), total: 100)
                                     .font(.title3.weight(.semibold))
                                 Spacer()
+                                //Text: calculated points
                                 Text(String(self.p.calculatedPoints) + "/100")
-                                    //.frame(alignment: .top)
+                                    
                                 
                                 
                                 
                             }.padding(.horizontal)
                             HStack{
+                                //Text: Steps
                                 Text("Steps")
                                     .font(.title2.weight(.semibold))
                                 Spacer()
                                 
                             }.padding(.horizontal)
                             HStack{
+                                //Text: Actions
                                 Text("Actions")
                                     .font(.title2.weight(.semibold))
                                 Spacer()
                                 
                             }.padding(.horizontal)
                             HStack{
+                                //Text: Emission Saved
                                 Text("Saved")
                                     .font(.title2.weight(.semibold))
                                 Spacer()
                                 
                             }.padding(.horizontal)
-                            
-                            
-                            
-                            
+
                         }.padding(.horizontal).frame(height: 150.0)
                     
                     )
@@ -110,44 +99,18 @@ struct HomeView: View {
             }
             .navigationTitle("Home")
             .toolbar(.hidden)
+            //Background Image that changes according to the level
             .background(
                 Image("HomeLvl" + String(p.level))
                 .resizable()
                 .ignoresSafeArea()
+                .padding(-20) //Trick: To escape from white patch @top & @bottom
             )
-//        }.onChange(of: isPresented) { isPresented in
-//            if isPresented {
-//                // Do something when first presented.
-//                pPoints = p.points
-//            }
-//            
+      
         }.environmentObject(p)
-            
-        
-        
+     
     }
-        
-        
-    
-    func getCurrentLevel() -> String{
-        let points = p.points
-        var level = 1
-        level += points/100
-        if (level  <= 6){
-            return String(level)
-        } else{
-            return "6"
-        }
-    }
-    
-    func getCurrentPoints() -> Int{
-        let points = p.points
-        return points % 100
-    }
-    
-    
-    
-    
+       
 }
     
 
@@ -155,6 +118,6 @@ struct HomeView: View {
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
         HomeView(p: UserProgress())
-            //.environmentObject(UserProgress())
+           
     }
 }

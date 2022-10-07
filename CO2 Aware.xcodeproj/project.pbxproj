@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A1379DDF28EE759200E3154B /* GHGPerCapita.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1379DDE28EE759200E3154B /* GHGPerCapita.swift */; };
+		A1379DE128EE769000E3154B /* GHGPerCap.csv in Resources */ = {isa = PBXBuildFile; fileRef = A1379DE028EE768F00E3154B /* GHGPerCap.csv */; };
 		A147750B28D5495800C204EA /* CO2_AwareApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A147750A28D5495800C204EA /* CO2_AwareApp.swift */; };
 		A147750D28D5495800C204EA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A147750C28D5495800C204EA /* ContentView.swift */; };
 		A147750F28D5495A00C204EA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A147750E28D5495A00C204EA /* Assets.xcassets */; };
@@ -22,6 +24,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A1379DDE28EE759200E3154B /* GHGPerCapita.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GHGPerCapita.swift; sourceTree = "<group>"; };
+		A1379DE028EE768F00E3154B /* GHGPerCap.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = GHGPerCap.csv; sourceTree = "<group>"; };
 		A147750728D5495800C204EA /* CO2 Aware.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CO2 Aware.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A147750A28D5495800C204EA /* CO2_AwareApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CO2_AwareApp.swift; sourceTree = "<group>"; };
 		A147750C28D5495800C204EA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -119,6 +123,8 @@
 			isa = PBXGroup;
 			children = (
 				A147754328D602A600C204EA /* UserSelfView.swift */,
+				A1379DDE28EE759200E3154B /* GHGPerCapita.swift */,
+				A1379DE028EE768F00E3154B /* GHGPerCap.csv */,
 			);
 			path = UserSelf;
 			sourceTree = "<group>";
@@ -181,6 +187,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A1379DE128EE769000E3154B /* GHGPerCap.csv in Resources */,
 				A147751228D5495A00C204EA /* Preview Assets.xcassets in Resources */,
 				A147750F28D5495A00C204EA /* Assets.xcassets in Resources */,
 			);
@@ -203,6 +210,7 @@
 				A147754128D6025800C204EA /* DiscoverView.swift in Sources */,
 				A147753E28D6022700C204EA /* ActionsView.swift in Sources */,
 				A147750B28D5495800C204EA /* CO2_AwareApp.swift in Sources */,
+				A1379DDF28EE759200E3154B /* GHGPerCapita.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -331,7 +339,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"CO2 Aware/Preview Content\"";
-				DEVELOPMENT_TEAM = 586L2Q38YL;
+				DEVELOPMENT_TEAM = CZW6UDHZ9D;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -361,7 +369,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"CO2 Aware/Preview Content\"";
-				DEVELOPMENT_TEAM = 586L2Q38YL;
+				DEVELOPMENT_TEAM = CZW6UDHZ9D;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
