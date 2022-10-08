@@ -16,9 +16,10 @@ struct UserSelfView: View {
     @State private var temppoints: String = ""
     @State private var showPopover: Bool = false
     @State private var showPopover2: Bool = false
+    
+    
     var worldData = loadCSV()
-    @State private var tempCo2e: Double = 0.00
-    @State private var tempCo2Region = ""
+    @State private var tempCo2: GHG?
     
     var settings: [String] = ["a", "b", "c", "d"]
     
@@ -94,7 +95,7 @@ struct UserSelfView: View {
                                         .font(.title)
                                         .fontWeight(.bold)
                                         .foregroundColor(Color.white)
-                                    Text("CO2e")
+                                    Text("t CO2e")
                                         .font(.subheadline)
                                         .foregroundColor(Color.white)
                                         .padding(.bottom, -5.0)
@@ -149,24 +150,32 @@ struct UserSelfView: View {
                         }
                         Spacer()
                         Button{
-                            if tempname.count <= 15 {
-                                saveName()
-                                showPopover = false
-                            }
+                        
+                            saveName()
+                            showPopover = false
+                            
                         } label: {
                             Text("Save")
                                 .font(.body)
                                 .fontWeight(.bold)
                             
-                        }
+                        }.disabled(tempname.count > 15 || tempname.count == 0)
                     }.padding(.all)
+                    
+                    Image(systemName: "paintbrush")
+                        .foregroundColor(Color("AccentColor"))
+                        .font(.largeTitle)
+                        .padding(.all)
+                    
+                    
                     Text("Edit your nickname")
-                        .font(.title)
+                        .font(.largeTitle)
                         .fontWeight(.bold)
+                        .padding(.bottom)
                     
                     HStack{
                         TextField("Nickname", text: $tempname)
-                            .padding(.horizontal)
+                            .padding(.all)
                             .textFieldStyle(.roundedBorder)
                             .disableAutocorrection(true)
                         if tempname.count <= 15 {
@@ -199,14 +208,125 @@ struct UserSelfView: View {
             
             .popover(isPresented: $showPopover2) {
                 VStack {
-                    Picker("Select a region", selection: $tempCo2Region) {
-                        ForEach(worldData, id: \.self) { v in
-                            Text(v.country).tag(v.country)
-                            
+                    HStack{
+                        Button("Cancel") {
+                            showPopover2 = false
                         }
+                        Spacer()
+                    }.padding(.all)
+                    
+                    Image(systemName: "globe")
+                        .foregroundColor(Color("AccentColor"))
+                    
+                        .font(.system(size: 50))
+                        .padding(.all)
+                    
+                    if levelsm.co2Region == "... Please Choose" {
+                        Text("Select Your Region")
+                            .font(.largeTitle)
+                            .fontWeight(.bold)
+                    } else{
+                        Text("Edit Your Region")
+                            .font(.largeTitle)
+                            .fontWeight(.bold)
                     }
-                    .pickerStyle(.menu)
-                    Text(tempCo2Region)
+                    
+                    
+
+//                    HStack{
+//                        Text("Your Region:")
+//                            .fontWeight(.bold)
+//                        Spacer()
+//                    }.padding([.top, .leading])
+                    
+                    HStack {
+                        Picker("Select a region", selection: $tempCo2) {
+                            ForEach(worldData, id: \.self) { v in
+                                Text(v.country).tag(v as GHG?)
+                            }
+                        }.pickerStyle(.menu)
+                        Spacer()
+                    }.padding(.leading)
+                    
+                    
+                    if tempCo2 != nil && tempCo2?.country != "...Please Select"{
+                        HStack{
+                            Text("CO₂e emission per capita (tons)")
+                                .fontWeight(.bold)
+                                .padding(.leading)
+                                .font(.title3)
+                            Spacer()
+                        }.padding(.leading)
+                        
+                        HStack{
+                            Text("\(tempCo2?.emission ?? "")")
+                                .padding(.leading)
+                                .font(.title)
+                            
+                            Spacer()
+                                
+                        }.padding(.leading)
+                        
+                       
+                                
+                        
+                        
+                    }
+                    HStack{
+                        Text("[Learn More](https://en.wikipedia.org/wiki/Greenhouse_gas_emissions)")
+                            .padding(.leading)
+                        Spacer()
+                    }.padding(.leading)
+                        //Spacer()
+                    //.padding(.horizontal)
+                    
+                    
+                    
+                    Spacer()
+                    Divider()
+                    VStack{
+                        HStack{
+                            Image(systemName: "note.text")
+                                .padding([.top, .leading, .trailing])
+                                .foregroundColor(Color("Label"))
+                            Spacer()
+                        }
+                        
+                        
+                        
+                        Text("The data is from 2019.\nEmissions are measured in carbon dioxide equivalents (CO2eq). This means non-CO2 gases are weighted by the amount of warming they cause over a 100-year timescale. Emissions from land use change – which can be positive or negative – are taken into account.\n\nSource: Our World In Data, Per capita greenhouse gas emissions")
+                            .font(.footnote)
+                            .multilineTextAlignment(.leading)
+                            .padding(.all)
+                            .foregroundColor(Color("Label"))
+                        
+                    }
+                    HStack {
+                        Button(action: {
+                            levelsm.co2Region = tempCo2?.country ?? "Undefined"
+                            
+                            levelsm.co2e = Double(tempCo2?.emission ?? "0.02") ?? 0.03
+                            showPopover2 = false
+                        }) {
+                            Text("Save")
+                                .font(.body)
+                                .frame(minWidth: 0, maxWidth: .infinity)
+                                .fontWeight(.bold)
+                            
+                                .padding()
+                                .foregroundColor(Color("WB"))
+                                .overlay(
+                                    RoundedRectangle(cornerRadius: 15)
+                                        .stroke(Color("WB"), lineWidth: 2)
+                            )
+                        }
+                        .background(Color.accentColor)
+                        .cornerRadius(15)
+                        .disabled(tempCo2 == nil || tempCo2?.country == "...Please Select")
+
+                    }
+                    .padding(.horizontal)
+                  
                 }
             }
             

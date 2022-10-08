@@ -16,7 +16,7 @@ struct GHG: Identifiable, Hashable {
     
     init(raw: [String]) {
         country = raw[0]
-        emission = raw[1]
+        emission = raw[1].filter { !$0.isWhitespace }
     }
 }
 

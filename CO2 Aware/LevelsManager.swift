@@ -48,13 +48,13 @@ final class UserProgress: ObservableObject{
     
     @Published var co2Region: String = (UserDefaults.standard.string(forKey: "co2Region") ?? "...Please Choose"){
         didSet{
-            UserDefaults.standard.set(username, forKey: "co2Region")
+            UserDefaults.standard.set(co2Region, forKey: "co2Region")
         }
     }
     
     @Published var co2e: Double = (UserDefaults.standard.double(forKey: "co2e")){
         didSet{
-            UserDefaults.standard.set(username, forKey: "co2e")
+            UserDefaults.standard.set(co2e, forKey: "co2e")
         }
     }
         
