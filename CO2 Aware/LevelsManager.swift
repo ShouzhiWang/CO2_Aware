@@ -17,7 +17,15 @@ final class UserProgress: ObservableObject{
         UserDefaults.standard.register(defaults: ["username" : ""])
         UserDefaults.standard.register(defaults: ["co2Region" : "... Please Choose"])
         UserDefaults.standard.register(defaults: ["co2e" : 0])
+        UserDefaults.standard.register(defaults: ["redeemProgress" : false])
+        UserDefaults.standard.register(defaults: ["stepsAuth" : false])
+        healthStore = HealthStore()
+        //UserDefaults.standard.register(defaults: ["appDay" : String(Date().formatted(date: .numeric, time: .omitted))])
+        
     }
+    
+    private var healthStore: HealthStore?
+    
     
     
     @Published var points: Int = UserDefaults.standard.integer(forKey: "points"){
@@ -57,12 +65,44 @@ final class UserProgress: ObservableObject{
             UserDefaults.standard.set(co2e, forKey: "co2e")
         }
     }
+    
+    @Published var userSteps: Double = 0.0
+    
+    @Published var redeemProgress: Bool = (UserDefaults.standard.bool(forKey: "redeemProgress")){
+        didSet{
+            UserDefaults.standard.set(redeemProgress, forKey: "redeemProgress")
+        }
+    }
+    
+    @Published var stepsAuth: Bool = (UserDefaults.standard.bool(forKey: "stepsAuth")){
+        didSet{
+            UserDefaults.standard.set(stepsAuth, forKey: "stepsAuth")
+        }
+    }
+    
+    
+    
+    @Published var appDay: String = UserDefaults.standard.string(forKey: "appDay") ?? "" {
+        didSet{
+            UserDefaults.standard.set(appDay, forKey: "appDay")
+        }
+    }
+    
         
     
     
-//    func get() -> Int {
-//        return UserDefaults.standard.integer(forKey: "points")
-//    }
+
+    
+    func isDayChanged() {
+        let todaysDate = String(Date().formatted(date: .numeric, time: .omitted))
+      
+        if todaysDate != UserDefaults.standard.string(forKey: "appDay") {
+            
+            redeemProgress = false
+            appDay = todaysDate
+        }
+        
+    }
     
     func set(a: Int) {
         points = a
@@ -86,4 +126,26 @@ final class UserProgress: ObservableObject{
         //let points = p.points
         return points % 100
     }
+    
+    func manageSteps() {
+        if let healthStore = healthStore {
+            healthStore.requestAuthorization {
+                success in
+                if success {
+                    //self.stepsAuth = true
+                    
+                    healthStore.getTodaysSteps { statisticCollection in
+                        DispatchQueue.main.async{
+                            
+                            self.userSteps = statisticCollection
+                        }
+                        
+                    }
+                }
+            }
+        }
+    }
 }
+
+
+

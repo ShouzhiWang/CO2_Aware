@@ -17,6 +17,17 @@ struct ContentView: View {
 //    private var items: FetchedResults<Item>
     @State private var selection = 0
     @StateObject var p =  UserProgress()
+    //@State var steps : Double
+    
+//    private var healthStore: HealthStore?
+//
+//    init() {
+//        healthStore = HealthStore()
+//
+//    }
+    
+    
+    
     var body: some View {
         NavigationView {
             TabView(selection: $selection){
@@ -45,7 +56,28 @@ struct ContentView: View {
                     .tag(3)
                 
             }
-            
+//            .onAppear {
+//
+//                if let healthStore = healthStore {
+//                    healthStore.requestAuthorization {
+//                        success in
+//                        if success {
+//                            p.stepsAuth = true
+//
+//                            healthStore.getTodaysSteps { statisticCollection in
+//                                DispatchQueue.main.async{
+//
+//                                    p.userSteps = statisticCollection
+//                                }
+//
+//                            }
+//                        }
+//                    }
+//                }
+//
+//
+//
+//            }
             
             
             //            List {

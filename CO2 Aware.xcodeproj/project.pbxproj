@@ -20,6 +20,7 @@
 		A147754128D6025800C204EA /* DiscoverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A147754028D6025800C204EA /* DiscoverView.swift */; };
 		A147754428D602A600C204EA /* UserSelfView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A147754328D602A600C204EA /* UserSelfView.swift */; };
 		A1A6A13228EA883D000A53D1 /* LevelsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A6A13128EA883D000A53D1 /* LevelsManager.swift */; };
+		A1B3DF9E28F3A06D001D2EDE /* HealthStepsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B3DF9D28F3A06D001D2EDE /* HealthStepsManager.swift */; };
 		A1F8FEBC28E8ACD90015567F /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F8FEBB28E8ACD90015567F /* DataManager.swift */; };
 /* End PBXBuildFile section */
 
@@ -38,6 +39,9 @@
 		A147754028D6025800C204EA /* DiscoverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverView.swift; sourceTree = "<group>"; };
 		A147754328D602A600C204EA /* UserSelfView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSelfView.swift; sourceTree = "<group>"; };
 		A1A6A13128EA883D000A53D1 /* LevelsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelsManager.swift; sourceTree = "<group>"; };
+		A1B3DF9D28F3A06D001D2EDE /* HealthStepsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthStepsManager.swift; sourceTree = "<group>"; };
+		A1B3DF9F28F3BE43001D2EDE /* CO2-Aware-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "CO2-Aware-Info.plist"; sourceTree = SOURCE_ROOT; };
+		A1B3DFA028F3C4AF001D2EDE /* CO2 Aware.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "CO2 Aware.entitlements"; sourceTree = "<group>"; };
 		A1F8FEBB28E8ACD90015567F /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -71,6 +75,8 @@
 		A147750928D5495800C204EA /* CO2 Aware */ = {
 			isa = PBXGroup;
 			children = (
+				A1B3DFA028F3C4AF001D2EDE /* CO2 Aware.entitlements */,
+				A1B3DF9F28F3BE43001D2EDE /* CO2-Aware-Info.plist */,
 				A147750C28D5495800C204EA /* ContentView.swift */,
 				A147750A28D5495800C204EA /* CO2_AwareApp.swift */,
 				A147751328D5495A00C204EA /* Persistence.swift */,
@@ -99,6 +105,7 @@
 			isa = PBXGroup;
 			children = (
 				A147753A28D6020000C204EA /* HomeView.swift */,
+				A1B3DF9D28F3A06D001D2EDE /* HealthStepsManager.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -211,6 +218,7 @@
 				A147753E28D6022700C204EA /* ActionsView.swift in Sources */,
 				A147750B28D5495800C204EA /* CO2_AwareApp.swift in Sources */,
 				A1379DDF28EE759200E3154B /* GHGPerCapita.swift in Sources */,
+				A1B3DF9E28F3A06D001D2EDE /* HealthStepsManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -336,12 +344,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "CO2 Aware/CO2 Aware.entitlements";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"CO2 Aware/Preview Content\"";
 				DEVELOPMENT_TEAM = 586L2Q38YL;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "CO2-Aware-Info.plist";
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "This app uses your steps data from health to evaluate your daily points earned from walking, as well as to calculate the amount of CO2 you saved.";
+				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "This app uses your steps data from health to evaluate your daily points earned from walking, as well as to calculate the amount of CO2 you saved.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -355,6 +368,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "ShawnWang.CO2-Aware";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -366,12 +380,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "CO2 Aware/CO2 Aware.entitlements";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"CO2 Aware/Preview Content\"";
 				DEVELOPMENT_TEAM = 586L2Q38YL;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "CO2-Aware-Info.plist";
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "This app uses your steps data from health to evaluate your daily points earned from walking, as well as to calculate the amount of CO2 you saved.";
+				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "This app uses your steps data from health to evaluate your daily points earned from walking, as well as to calculate the amount of CO2 you saved.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -385,6 +404,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "ShawnWang.CO2-Aware";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

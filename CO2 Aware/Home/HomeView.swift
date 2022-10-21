@@ -9,6 +9,9 @@ import SwiftUI
 
 struct HomeView: View {
     @ObservedObject var p :  UserProgress
+    @State private var presentAlrt: Bool = false
+    @Environment(\.scenePhase) var scenePhase
+    
 
     var body: some View {
         //Home view
@@ -47,51 +50,84 @@ struct HomeView: View {
                 Spacer(minLength: 15)
                 
                 //Rectangular region that shows the user's status
-                RoundedRectangle(cornerRadius: 36)
-                    .foregroundColor(Color("WB").opacity(0.2))
-                    .background(.ultraThinMaterial, in: RoundedRectangle(cornerRadius: 36))
-                    .padding(.horizontal)
-                    .blur(radius: 0.3)
-                    .frame(height: 160.0)
-                    .overlay(
-                        VStack{
-                            ZStack(alignment: .topTrailing){
-                                //Level progress bar + text indicating the level
-                                ProgressView("Level " + String(p.level), value: Double(self.p.calculatedPoints), total: 100)
-                                    .font(.title3.weight(.semibold))
-                                Spacer()
-                                //Text: calculated points
-                                Text(String(self.p.calculatedPoints) + "/100")
+                
+                ZStack{
+                    RoundedRectangle(cornerRadius: 36)
+                        .foregroundColor(Color("WB").opacity(0.2))
+                        .background(.ultraThinMaterial, in: RoundedRectangle(cornerRadius: 36))
+                        .padding(.horizontal)
+                        .blur(radius: 0.3)
+                        //.frame(height: 160.0)
+                    VStack{
+                        ZStack(alignment: .topTrailing){
+                            //Level progress bar + text indicating the level
+                            ProgressView("Level " + String(p.level), value: Double(self.p.calculatedPoints), total: 100)
+                                .font(.title3.weight(.semibold))
+                            Spacer()
+                            //Text: calculated points
+                            Text(String(self.p.calculatedPoints) + "/100")
+                                
+                            
+                            
+                            
+                        }.padding(.horizontal)
+                        
+                        ZStack(alignment: .topTrailing){
+                            //Steps progress bar + text indicating the steps
+                            
+                            ProgressView("Steps", value: p.userSteps, total: 6000)
+                                .font(.title3.weight(.semibold))
+                            
+                            Spacer()
+                            HStack{
+                                if p.userSteps != 0.0 {
+                                    Button("Redeem"){
+                                        p.redeemProgress = true
+                                    }.disabled(p.userSteps < 1000 || p.redeemProgress)
+                                    Text(String(p.redeemProgress))
+                                } else{
+                                    Button(){
+                                        presentAlrt = true
+                                    } label: {
+                                        Image(systemName: "questionmark.circle")
+                                    }
                                     
+                                }
                                 
+                                //Text: calculated steps
+                                Text(String(Int(p.userSteps)) + "/6000")
+                            }
+                            
                                 
-                                
-                            }.padding(.horizontal)
-                            HStack{
-                                //Text: Steps
-                                Text("Steps")
-                                    .font(.title2.weight(.semibold))
-                                Spacer()
-                                
-                            }.padding(.horizontal)
-                            HStack{
-                                //Text: Actions
-                                Text("Actions")
-                                    .font(.title2.weight(.semibold))
-                                Spacer()
-                                
-                            }.padding(.horizontal)
-                            HStack{
-                                //Text: Emission Saved
-                                Text("Saved")
-                                    .font(.title2.weight(.semibold))
-                                Spacer()
-                                
-                            }.padding(.horizontal)
+                            
+                            
+                            
+                        }.padding(.horizontal)
+                        
 
-                        }.padding(.horizontal).frame(height: 150.0)
-                    
-                    )
+                        HStack{
+                            //Text: Actions
+                            Text("Actions")
+                                .font(.title2.weight(.semibold))
+                            Spacer()
+                            
+                        }.padding(.horizontal)
+                        HStack{
+                            //Text: Emission Saved
+                            Text("Saved")
+                                .font(.title2.weight(.semibold))
+                            Spacer()
+                            
+                        }.padding(.horizontal)
+
+                    }.padding(.all)
+                }
+                
+//                    .overlay(
+//
+//
+//
+//                    )
                 
                 
                 
@@ -106,8 +142,31 @@ struct HomeView: View {
                 .ignoresSafeArea()
                 .padding(-20) //Trick: To escape from white patch @top & @bottom
             )
+            .alert("No Steps?", isPresented: $presentAlrt, actions: {
+                
+            }, message:{
+                Text("If you want to see your steps presented in CO2 Aware and earn steps points, please allow us to load your step data from Apple Health.\n\nYou can grant permission in Settings->Privacy->Health->CO2 Aware.\n\nIf you did not walk today or just woke up, please disregard this message! Your steps will present after you have your step data.\n\nThank you!")
+                    
+            }
+                    
+            )
       
         }.environmentObject(p)
+            .onAppear{
+                p.manageSteps()
+                p.isDayChanged()
+                
+                
+                
+            }
+            .onChange(of: scenePhase) {newValue in
+                if newValue == .active{
+                    p.manageSteps()
+                    p.isDayChanged()
+                }
+                
+                           
+            }
      
     }
        

@@ -9,7 +9,7 @@ import SwiftUI
 
 
 struct UserSelfView: View {
-    //@AppStorage("username") var username: String = ""
+    
     
     @ObservedObject var levelsm : UserProgress
     @State private var tempname: String = ""
@@ -37,9 +37,8 @@ struct UserSelfView: View {
                             Image("HomeLvl" + String(levelsm.level))
                                 .resizable()
                                 .padding(.all, -10.0)
-                                .cornerRadius(35)
-                                .blur(radius: 3)
-                                .clipShape(RoundedRectangle(cornerRadius: 35))
+                                .cornerRadius(25)
+                              
                         }
                         HStack{
                             
@@ -64,6 +63,7 @@ struct UserSelfView: View {
                         }
                     }
                     .frame(height: 130.0)
+                    .padding([.leading, .bottom, .trailing])
                     Spacer()
                 }
                 
@@ -80,9 +80,8 @@ struct UserSelfView: View {
                             Image("Earth")
                                 .resizable()
                                 .padding(.all, -10.0)
-                                .cornerRadius(35)
-                                .blur(radius: 3)
-                                .clipShape(RoundedRectangle(cornerRadius: 35))
+                                .cornerRadius(25)
+                                
                         }
                         HStack{
                             Spacer()
@@ -111,7 +110,9 @@ struct UserSelfView: View {
                         }
                     }
                     .frame(height: 130.0)
+                    .padding(.horizontal)
                     Spacer()
+                        
                 }
 
                 Spacer()
@@ -206,6 +207,11 @@ struct UserSelfView: View {
                 
             }
             
+            
+            
+            
+            
+            
             .popover(isPresented: $showPopover2) {
                 VStack {
                     HStack{
@@ -233,11 +239,6 @@ struct UserSelfView: View {
                     
                     
 
-//                    HStack{
-//                        Text("Your Region:")
-//                            .fontWeight(.bold)
-//                        Spacer()
-//                    }.padding([.top, .leading])
                     
                     HStack {
                         Picker("Select a region", selection: $tempCo2) {
@@ -277,8 +278,7 @@ struct UserSelfView: View {
                             .padding(.leading)
                         Spacer()
                     }.padding(.leading)
-                        //Spacer()
-                    //.padding(.horizontal)
+                        
                     
                     
                     
@@ -350,26 +350,3 @@ struct UserSelfView: View {
         }
     }
 }
-
-//            if (username == "") {
-//                VStack{
-//                    TextField("Nickname", text: $tempname)
-//                    TextField("Points", text: $temppoints)
-//                        .keyboardType(.decimalPad)
-//
-//                    Button("save") {
-//                        saveName()
-//                    }
-//                }
-//            } else{
-//                VStack {
-//
-//                    Text(username)
-//                    Text(String(levelsm.points))
-//                    Button("Clear") {
-//                        UserDefaults.standard.set(nil, forKey: "username")
-//
-//                    }
-//
-//                }
-//            }
