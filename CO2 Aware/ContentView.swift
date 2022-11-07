@@ -10,21 +10,10 @@ import CoreData
 
 struct ContentView: View {
     @Environment(\.managedObjectContext) private var viewContext
-//
-//    @FetchRequest(
-//        sortDescriptors: [NSSortDescriptor(keyPath: \Item.timestamp, ascending: true)],
-//        animation: .default)
-//    private var items: FetchedResults<Item>
     @State private var selection = 0
     @StateObject var p =  UserProgress()
-    //@State var steps : Double
-    
-//    private var healthStore: HealthStore?
-//
-//    init() {
-//        healthStore = HealthStore()
-//
-//    }
+    @State private var presentAlrt: Bool = false
+
     
     
     
@@ -56,94 +45,24 @@ struct ContentView: View {
                     .tag(3)
                 
             }
-//            .onAppear {
-//
-//                if let healthStore = healthStore {
-//                    healthStore.requestAuthorization {
-//                        success in
-//                        if success {
-//                            p.stepsAuth = true
-//
-//                            healthStore.getTodaysSteps { statisticCollection in
-//                                DispatchQueue.main.async{
-//
-//                                    p.userSteps = statisticCollection
-//                                }
-//
-//                            }
-//                        }
-//                    }
-//                }
-//
-//
-//
-//            }
-            
-            
-            //            List {
-            //                ForEach(items) { item in
-            //                    NavigationLink {
-            //                        Text("Item at \(item.timestamp!, formatter: itemFormatter)")
-            //                    } label: {
-            //                        Text(item.timestamp!, formatter: itemFormatter)
-            //                    }
-            //                }
-            //                .onDelete(perform: deleteItems)
-            //            }
-            //            .toolbar {
-            //                ToolbarItem(placement: .navigationBarTrailing) {
-            //                    EditButton()
-            //                }
-            //                ToolbarItem {
-            //                    Button(action: addItem) {
-            //                        Label("Add Item", systemImage: "plus")
-            //                    }
-            //                }
-            //            }
-            //            Text("Select an item")
-            //        }
-            //    }
-            //
-            //    private func addItem() {
-            //        withAnimation {
-            //            let newItem = Item(context: viewContext)
-            //            newItem.timestamp = Date()
-            //
-            //            do {
-            //                try viewContext.save()
-            //            } catch {
-            //                // Replace this implementation with code to handle the error appropriately.
-            //                // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-            //                let nsError = error as NSError
-            //                fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
-            //            }
-            //        }
-            //    }
-            //
-            //    private func deleteItems(offsets: IndexSet) {
-            //        withAnimation {
-            //            offsets.map { items[$0] }.forEach(viewContext.delete)
-            //
-            //            do {
-            //                try viewContext.save()
-            //            } catch {
-            //                // Replace this implementation with code to handle the error appropriately.
-            //                // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-            //                let nsError = error as NSError
-            //                fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
-            //            }
-            //        }
-            //    }
-            //}
-            //
-            //private let itemFormatter: DateFormatter = {
-            //    let formatter = DateFormatter()
-            //    formatter.dateStyle = .short
-            //    formatter.timeStyle = .medium
-            //    return formatter
-            //}()
         }
+        .onAppear{
+            if p.daysBetween() {
+                presentAlrt = true
+            }
         
+        }
+        .alert("Yah! It's been a month.", isPresented: $presentAlrt, actions: {
+            
+        }, message:{
+            VStack {
+                Image(systemName: "sun.max.fill")
+                    .font(.largeTitle)
+                Text("A month or more just passed, so your points have been cleared. Let's start your earning for the next exciting 30 days!")
+            }
+        }
+                
+        )
     }
     
     
@@ -152,7 +71,7 @@ struct ContentView: View {
         static var previews: some View {
             ContentView()
                 .environmentObject(UserProgress())
-                //.environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
+              
         }
     }
 }

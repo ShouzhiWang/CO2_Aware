@@ -57,7 +57,7 @@ struct HomeView: View {
                         .background(.ultraThinMaterial, in: RoundedRectangle(cornerRadius: 36))
                         .padding(.horizontal)
                         .blur(radius: 0.3)
-                        //.frame(height: 160.0)
+                  
                     VStack{
                         ZStack(alignment: .topTrailing){
                             //Level progress bar + text indicating the level
@@ -81,10 +81,20 @@ struct HomeView: View {
                             Spacer()
                             HStack{
                                 if p.userSteps != 0.0 {
-                                    Button("Redeem"){
+                                    Button(){
                                         p.redeemProgress = true
-                                    }.disabled(p.userSteps < 1000 || p.redeemProgress)
-                                    Text(String(p.redeemProgress))
+                                        p.pointUp(point: 10)
+                                    } label:{
+                                        if p.redeemProgress {
+                                            Text("Redeemed")
+                                        } else {
+                                            Text("Redeem")
+                                        }
+                                        
+                                    }
+                                        .disabled(p.userSteps < 1000 || p.redeemProgress)
+
+                     
                                 } else{
                                     Button(){
                                         presentAlrt = true
@@ -94,14 +104,11 @@ struct HomeView: View {
                                     
                                 }
                                 
+                                
                                 //Text: calculated steps
                                 Text(String(Int(p.userSteps)) + "/6000")
                             }
-                            
-                                
-                            
-                            
-                            
+                
                         }.padding(.horizontal)
                         
 
@@ -122,25 +129,23 @@ struct HomeView: View {
 
                     }.padding(.all)
                 }
-                
-//                    .overlay(
-//
-//
-//
-//                    )
-                
-                
-                
-                
             }
+            
             .navigationTitle("Home")
             .toolbar(.hidden)
+            
+            
             //Background Image that changes according to the level
             .background(
                 Image("HomeLvl" + String(p.level))
+               
                 .resizable()
                 .ignoresSafeArea()
-                .padding(-20) //Trick: To escape from white patch @top & @bottom
+                
+                .padding(.horizontal, -20)
+                .padding(.top, -50)
+                .padding(.bottom, -100)
+                //Trick: To escape from white patch @top & @bottom
             )
             .alert("No Steps?", isPresented: $presentAlrt, actions: {
                 

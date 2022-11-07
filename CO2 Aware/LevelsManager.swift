@@ -18,9 +18,10 @@ final class UserProgress: ObservableObject{
         UserDefaults.standard.register(defaults: ["co2Region" : "... Please Choose"])
         UserDefaults.standard.register(defaults: ["co2e" : 0])
         UserDefaults.standard.register(defaults: ["redeemProgress" : false])
-        UserDefaults.standard.register(defaults: ["stepsAuth" : false])
+        UserDefaults.standard.register(defaults: ["startDate" : Date()])
+
         healthStore = HealthStore()
-        //UserDefaults.standard.register(defaults: ["appDay" : String(Date().formatted(date: .numeric, time: .omitted))])
+
         
     }
     
@@ -74,17 +75,15 @@ final class UserProgress: ObservableObject{
         }
     }
     
-    @Published var stepsAuth: Bool = (UserDefaults.standard.bool(forKey: "stepsAuth")){
-        didSet{
-            UserDefaults.standard.set(stepsAuth, forKey: "stepsAuth")
-        }
-    }
-    
-    
-    
     @Published var appDay: String = UserDefaults.standard.string(forKey: "appDay") ?? "" {
         didSet{
             UserDefaults.standard.set(appDay, forKey: "appDay")
+        }
+    }
+    
+    @Published var startDate: Date = (UserDefaults.standard.object(forKey: "startDate") as? Date ?? Date()){
+        didSet{
+            UserDefaults.standard.set(startDate, forKey: "startDate")
         }
     }
     
@@ -112,7 +111,6 @@ final class UserProgress: ObservableObject{
     }
     
     func getCurrentLevel() -> Int{
-        //let points = p.points
         var level = 1
         level += points/100
         if (level  <= 6){
@@ -123,8 +121,11 @@ final class UserProgress: ObservableObject{
     }
     
     func getCurrentPoints() -> Int{
-        //let points = p.points
         return points % 100
+    }
+    
+    func pointUp(point: Int) {
+        points += point
     }
     
     func manageSteps() {
@@ -132,7 +133,7 @@ final class UserProgress: ObservableObject{
             healthStore.requestAuthorization {
                 success in
                 if success {
-                    //self.stepsAuth = true
+                    
                     
                     healthStore.getTodaysSteps { statisticCollection in
                         DispatchQueue.main.async{
@@ -142,8 +143,20 @@ final class UserProgress: ObservableObject{
                         
                     }
                 }
+                
             }
         }
+    }
+    
+    func daysBetween() -> Bool {
+        if Calendar.current.dateComponents([.day], from: startDate, to: Date()).day! > 30 {
+            startDate = Date()
+            points = 0
+            return true
+        } else {
+            return false
+        }
+            
     }
 }
 
