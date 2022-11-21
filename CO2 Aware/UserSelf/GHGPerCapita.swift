@@ -36,7 +36,7 @@ func loadCSV() -> [GHG] {
         return []
     }
     
-    var rows = data.components(separatedBy: "\n")
+    let rows = data.components(separatedBy: "\n")
     
     let columnCount = rows.first?.components(separatedBy: ",").count
     //rows.removeFirst()

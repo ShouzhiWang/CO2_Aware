@@ -13,6 +13,7 @@ struct ContentView: View {
     @State private var selection = 0
     @StateObject var p =  UserProgress()
     @State private var presentAlrt: Bool = false
+    @StateObject var md = ModelData()
 
     
     
@@ -32,7 +33,7 @@ struct ContentView: View {
                     }
                     .tag(1)
                 
-                DiscoverView()
+                DiscoverView().environmentObject(md)
                     .tabItem {
                         Label("Discover", systemImage: "newspaper")
                     }
@@ -71,6 +72,7 @@ struct ContentView: View {
         static var previews: some View {
             ContentView()
                 .environmentObject(UserProgress())
+                .environmentObject(ModelData())
               
         }
     }

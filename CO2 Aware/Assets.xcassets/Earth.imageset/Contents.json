@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "Earth.png",
+      "filename" : "earthHeader.jpg",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "Earth@2x.png",
+      "filename" : "earthHeader 1.jpg",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "Earth@3x.png",
+      "filename" : "earthHeader 2.jpg",
       "idiom" : "universal",
       "scale" : "3x"
     }

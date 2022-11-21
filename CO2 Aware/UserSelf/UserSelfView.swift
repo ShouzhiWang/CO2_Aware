@@ -11,6 +11,7 @@ import SwiftUI
 struct UserSelfView: View {
     
     
+    
     @ObservedObject var levelsm : UserProgress
     @State private var tempname: String = ""
     @State private var temppoints: String = ""
@@ -23,68 +24,50 @@ struct UserSelfView: View {
     
     var settings: [String] = ["a", "b", "c", "d"]
     
+    
     var body: some View {
         NavigationStack{
             ScrollView{
-                
-                //User information
-                HStack{
-                    Spacer()
-                    ZStack{
-                        Button() {
-                            showPopover = true
-                        } label:{
-                            Image("HomeLvl" + String(levelsm.level))
-                                .resizable()
-                                .padding(.all, -10.0)
-                                .cornerRadius(25)
-                              
-                        }
+                ZStack{
+                    Image("Earth")
+                        .resizable()
+                        //.aspectRatio(contentMode: .fit)
+                        //.cornerRadius(25)
+                        .frame(height: 300)
+                    VStack {
+                        Spacer()
                         HStack{
                             
                             VStack{
                                 Text("Welcome,")
                                     .font(.title2)
+                                    .foregroundColor(Color.white)
+                                
                                     
                                 if (levelsm.username == ""){
                                     Text("Tap to edit")
+                                        .foregroundColor(Color.white)
                                 } else {
                                     Text(levelsm.username)
                                         .font(.title)
                                         .fontWeight(.bold)
+                                        .foregroundColor(Color.white)
                                 }
                             }.padding(.leading)
                             Spacer()
                             Text("Your Level: \n" + String(levelsm.level) + "/6")
+                                .foregroundColor(Color.white)
                                 .padding(.trailing)
                             Image(systemName: "arrow.up.forward")
                                 .foregroundColor(Color("AccentColor"))
                                 .padding(.trailing)
+                                .onTapGesture {
+                                    showPopover = true
+                                }
                         }
-                    }
-                    .frame(height: 130.0)
-                    .padding([.leading, .bottom, .trailing])
-                    Spacer()
-                }
-                
-                
-                
-                
-                //Local CO2 eq emission avg
-                HStack{
-                    Spacer()
-                    ZStack{
-                        Button() {
-                            showPopover2 = true
-                        } label:{
-                            Image("Earth")
-                                .resizable()
-                                .padding(.all, -10.0)
-                                .cornerRadius(25)
-                                
-                        }
-                        HStack{
-                            Spacer()
+                        Spacer()
+                        ZStack{
+                            
                             VStack{
                                 Text("Per capita GHG emission")
                                     .foregroundColor(Color.white)
@@ -105,15 +88,27 @@ struct UserSelfView: View {
                                     .fontWeight(.bold)
                                     .foregroundColor(Color.white)
                             }
-                            Spacer()
-                           
-                        }
+                            
+                            HStack{
+                                Spacer()
+                                Image(systemName: "arrow.up.forward")
+                                    .foregroundColor(Color("AccentColor"))
+                                    .padding(.trailing)
+                                    
+                                    .onTapGesture {
+                                        showPopover2 = true
+                                    }
+                            }
+                            
+                            
+                            
+                            
+                        }.padding(.bottom)
                     }
-                    .frame(height: 130.0)
-                    .padding(.horizontal)
-                    Spacer()
-                        
                 }
+                
+                    
+                
 
                 Spacer()
                 
@@ -206,6 +201,7 @@ struct UserSelfView: View {
                 
                 
             }
+            
             
             
             
@@ -329,8 +325,9 @@ struct UserSelfView: View {
                   
                 }
             }
+            .ignoresSafeArea()
+            //.navigationTitle("About Me")
             
-            .navigationTitle("About Me")
             
             
 
