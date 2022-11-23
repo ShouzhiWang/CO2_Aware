@@ -73,6 +73,7 @@ struct ContentView: View {
             ContentView()
                 .environmentObject(UserProgress())
                 .environmentObject(ModelData())
+                
               
         }
     }

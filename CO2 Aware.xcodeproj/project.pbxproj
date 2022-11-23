@@ -14,6 +14,7 @@
 		6B0CF45A292B17E80013488E /* ArticleDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B0CF459292B17E80013488E /* ArticleDetails.swift */; };
 		6B0CF45E292BFD130013488E /* OtherArticles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B0CF45D292BFD130013488E /* OtherArticles.swift */; };
 		6B0CF460292C21000013488E /* SFSafariViewWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B0CF45F292C21000013488E /* SFSafariViewWrapper.swift */; };
+		6BE6FA3F292EC334008814F3 /* Actions.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6BE6FA3D292EC334008814F3 /* Actions.xcdatamodeld */; };
 		6BF130EE2926E75F00D23961 /* articles2.json in Resources */ = {isa = PBXBuildFile; fileRef = 6BF130ED2926E75F00D23961 /* articles2.json */; };
 		A1379DDF28EE759200E3154B /* GHGPerCapita.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1379DDE28EE759200E3154B /* GHGPerCapita.swift */; };
 		A1379DE128EE769000E3154B /* GHGPerCap.csv in Resources */ = {isa = PBXBuildFile; fileRef = A1379DE028EE768F00E3154B /* GHGPerCap.csv */; };
@@ -22,7 +23,6 @@
 		A147750F28D5495A00C204EA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A147750E28D5495A00C204EA /* Assets.xcassets */; };
 		A147751228D5495A00C204EA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A147751128D5495A00C204EA /* Preview Assets.xcassets */; };
 		A147751428D5495A00C204EA /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = A147751328D5495A00C204EA /* Persistence.swift */; };
-		A147751728D5495A00C204EA /* CO2_Aware.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A147751528D5495A00C204EA /* CO2_Aware.xcdatamodeld */; };
 		A147753B28D6020000C204EA /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A147753A28D6020000C204EA /* HomeView.swift */; };
 		A147753E28D6022700C204EA /* ActionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A147753D28D6022700C204EA /* ActionsView.swift */; };
 		A147754128D6025800C204EA /* DiscoverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A147754028D6025800C204EA /* DiscoverView.swift */; };
@@ -32,7 +32,6 @@
 		A1E890E229180B1900C8E28E /* articles.json in Resources */ = {isa = PBXBuildFile; fileRef = A1E890E129180B1900C8E28E /* articles.json */; };
 		A1E890E529180DC900C8E28E /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E890E329180DC900C8E28E /* Article.swift */; };
 		A1E890E629180DC900C8E28E /* ModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E890E429180DC900C8E28E /* ModelData.swift */; };
-		A1F8FEBC28E8ACD90015567F /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F8FEBB28E8ACD90015567F /* DataManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +42,7 @@
 		6B0CF459292B17E80013488E /* ArticleDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleDetails.swift; sourceTree = "<group>"; };
 		6B0CF45D292BFD130013488E /* OtherArticles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherArticles.swift; sourceTree = "<group>"; };
 		6B0CF45F292C21000013488E /* SFSafariViewWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SFSafariViewWrapper.swift; sourceTree = "<group>"; };
+		6BE6FA3E292EC334008814F3 /* Actions.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Actions.xcdatamodel; sourceTree = "<group>"; };
 		6BF130ED2926E75F00D23961 /* articles2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = articles2.json; sourceTree = "<group>"; };
 		A1379DDE28EE759200E3154B /* GHGPerCapita.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GHGPerCapita.swift; sourceTree = "<group>"; };
 		A1379DE028EE768F00E3154B /* GHGPerCap.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = GHGPerCap.csv; sourceTree = "<group>"; };
@@ -52,7 +52,6 @@
 		A147750E28D5495A00C204EA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A147751128D5495A00C204EA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		A147751328D5495A00C204EA /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
-		A147751628D5495A00C204EA /* CO2_Aware.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CO2_Aware.xcdatamodel; sourceTree = "<group>"; };
 		A147753A28D6020000C204EA /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		A147753D28D6022700C204EA /* ActionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionsView.swift; sourceTree = "<group>"; };
 		A147754028D6025800C204EA /* DiscoverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverView.swift; sourceTree = "<group>"; };
@@ -64,7 +63,6 @@
 		A1E890E129180B1900C8E28E /* articles.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = articles.json; sourceTree = "<group>"; };
 		A1E890E329180DC900C8E28E /* Article.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
 		A1E890E429180DC900C8E28E /* ModelData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelData.swift; sourceTree = "<group>"; };
-		A1F8FEBB28E8ACD90015567F /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,14 +124,13 @@
 				A147750C28D5495800C204EA /* ContentView.swift */,
 				A147750A28D5495800C204EA /* CO2_AwareApp.swift */,
 				A147751328D5495A00C204EA /* Persistence.swift */,
-				A1F8FEBB28E8ACD90015567F /* DataManager.swift */,
 				A1A6A13128EA883D000A53D1 /* LevelsManager.swift */,
 				6B0CF45F292C21000013488E /* SFSafariViewWrapper.swift */,
 				A147753C28D6020F00C204EA /* Home */,
 				A147753F28D6022A00C204EA /* Actions */,
 				A147754228D6026100C204EA /* Discover */,
 				A147754528D602B400C204EA /* UserSelf */,
-				A147751528D5495A00C204EA /* CO2_Aware.xcdatamodeld */,
+				6BE6FA3D292EC334008814F3 /* Actions.xcdatamodeld */,
 				A147750E28D5495A00C204EA /* Assets.xcassets */,
 				A147751028D5495A00C204EA /* Preview Content */,
 			);
@@ -263,10 +260,9 @@
 				6B0CF458292B0E930013488E /* PageControl.swift in Sources */,
 				6B0CF454292AEFFC0013488E /* FeatureCard.swift in Sources */,
 				A1E890E629180DC900C8E28E /* ModelData.swift in Sources */,
-				A1F8FEBC28E8ACD90015567F /* DataManager.swift in Sources */,
 				6B0CF45A292B17E80013488E /* ArticleDetails.swift in Sources */,
 				A147754428D602A600C204EA /* UserSelfView.swift in Sources */,
-				A147751728D5495A00C204EA /* CO2_Aware.xcdatamodeld in Sources */,
+				6BE6FA3F292EC334008814F3 /* Actions.xcdatamodeld in Sources */,
 				6B0CF452292AE2F70013488E /* PageViewController.swift in Sources */,
 				A147750D28D5495800C204EA /* ContentView.swift in Sources */,
 				6B0CF45E292BFD130013488E /* OtherArticles.swift in Sources */,
@@ -495,13 +491,13 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		A147751528D5495A00C204EA /* CO2_Aware.xcdatamodeld */ = {
+		6BE6FA3D292EC334008814F3 /* Actions.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				A147751628D5495A00C204EA /* CO2_Aware.xcdatamodel */,
+				6BE6FA3E292EC334008814F3 /* Actions.xcdatamodel */,
 			);
-			currentVersion = A147751628D5495A00C204EA /* CO2_Aware.xcdatamodel */;
-			path = CO2_Aware.xcdatamodeld;
+			currentVersion = 6BE6FA3E292EC334008814F3 /* Actions.xcdatamodel */;
+			path = Actions.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
