@@ -1,0 +1,442 @@
+[
+ {
+   "type": "Daily",
+   "title": "Switch off lights",
+   "description": "**Turn off** the lights when natural light is sufficient or when you leave the room. This is a really simple action. ",
+   "points": 5,
+   "id": 0,
+   "picture": "lightbulb",
+   "source": "https://sustainability.georgetown.edu/community-engagement/things-you-can-do/",
+   "special": false
+ },
+ {
+   "type": "Daily",
+   "title": "Walk",
+   "description": "Walking, instead of driving, can help reduce physical inactivity and air pollution, save lives and mitigate climate change, as the negative effects from burning fuel are eliminated. ",
+   "points": 20,
+   "id": 1,
+   "picture": "walk",
+   "source": "https://sustainability.georgetown.edu/community-engagement/things-you-can-do/",
+   "special": true
+ },
+ {
+   "type": "Daily",
+   "title": "Control the temperature",
+   "description": "Keep your temperature system on a moderate setting while you’re in the room. During the warm weather, it is generally recommended that you set your home's cooling system to **78 degrees Fahrenheit (26 degrees Celsius)** when you are home. For winter, it is **68 degrees Fahrenheit (20 degrees Celsius)**",
+   "points": 5,
+   "id": 2,
+   "picture": "temperature",
+   "source": "https://sustainability.georgetown.edu/community-engagement/things-you-can-do/",
+   "special": false
+ },
+ {
+   "type": "Daily",
+   "title": "Be wise with windows",
+   "description": "If your climate control system is **on**, shut the windows; if you need a little fresh air, turn **off** the heat or AC.",
+   "points": 5,
+   "id": 3,
+   "picture": "windows",
+   "source": "https://sustainability.georgetown.edu/community-engagement/things-you-can-do/",
+   "special": false
+ },
+ {
+   "type": "Lifestyle",
+   "title": "Loaded Laundry",
+   "description": "Only do full loads of laundry and use the bright colors cycle whenever possible.",
+   "points": 10,
+   "id": 4,
+   "picture": "",
+   "source": "https://sustainability.georgetown.edu/community-engagement/things-you-can-do/",
+   "special": false
+ },
+ {
+   "type": "Lifestyle",
+   "title": "Insulate your home",
+   "description": "Heating your living space can be an expensive and energy-intensive process. By insulating places like your loft and walls, you can make sure your home retains heat during the winter and stays cool in summer",
+   "points": 30,
+   "id": 5,
+   "picture": "",
+   "source": "https://www.futurelearn.com/info/blog/how-to-reduce-your-carbon-footprint-tips",
+   "special": false
+ },
+ {
+   "type": "Lifestyle",
+   "title": "Switch to renewable energy",
+   "description": "By switching to a company that provides electricity from solar, wind, or hydroelectric energy, you can reduce your household emissions and save money on your energy bills. ",
+   "points": 30,
+   "id": 6,
+   "picture": "",
+   "source": "https://www.futurelearn.com/info/blog/how-to-reduce-your-carbon-footprint-tips",
+   "special": false
+ },
+ {
+   "type": "Lifestyle",
+   "title": "Buy energy efficient bulbs",
+   "description": "Like buying energy-saving light bulbs or appliances with energy star",
+   "points": 15,
+   "id": 7,
+   "picture": "",
+   "source": "https://www.futurelearn.com/info/blog/how-to-reduce-your-carbon-footprint-tips",
+   "special": false
+ },
+ {
+   "type": "Lifestyle",
+   "title": "Use less water",
+   "description": "It takes energy and resources to process and deliver water to our homes. What’s more, it’s also quite energy-intensive to heat it once it’s there. So, by using less, you can help the environment and lower your carbon footprint. ",
+   "points": 10,
+   "id": 8,
+   "picture": "",
+   "source": "https://www.futurelearn.com/info/blog/how-to-reduce-your-carbon-footprint-tips",
+   "special": false
+ },
+ {
+   "type": "Lifestyle",
+   "title": "Change your diet",
+   "description": "By eating fewer animal products, especially red meat, (or choosing a plant-based diet) and shopping for locally sourced food, you can make a big difference. Why not support your local farmers’ market?",
+   "points": 10,
+   "id": 9,
+   "picture": "",
+   "source": "https://www.futurelearn.com/info/blog/how-to-reduce-your-carbon-footprint-tips",
+   "special": false
+ },
+ {
+   "type": "Lifestyle",
+   "title": "Go digital ",
+   "description": "It’s never been easier to collaborate with others online. Whether through sharing documents using cloud storage or video conferencing instead of traveling, you can reduce your waste and emissions.",
+   "points": 5,
+   "id": 10,
+   "picture": "",
+   "source": "https://www.futurelearn.com/info/blog/how-to-reduce-your-carbon-footprint-tips",
+   "special": false
+ },
+ {
+   "type": "Lifestyle",
+   "title": "Cycle to work ",
+   "description": "Cycling and walking are two of the most environmentally friendly ways to travel. And, not only are they good for the planet, but they’re also good for your health. If you can, choose to cycle or walk to work where possible. Your employer might even have a scheme that can help you purchase a bike. ",
+   "points": 10,
+   "id": 11,
+   "picture": "",
+   "source": "https://www.futurelearn.com/info/blog/how-to-reduce-your-carbon-footprint-tips",
+   "special": false
+ },
+ {
+   "type": "Lifestyle",
+   "title": "Reduce, reuse, recycle ",
+   "description": "Companies of all sizes use a host of different products in their day-to-day running. Whether it’s things like paper, electronic devices, packaging, or water, it all has a carbon footprint. By reducing the amount of waste you generate, reusing IT equipment, and recycling waste, you can make a real difference. ",
+   "points": 10,
+   "id": 12,
+   "picture": "",
+   "source": "https://www.futurelearn.com/info/blog/how-to-reduce-your-carbon-footprint-tips",
+   "special": false
+ },
+ {
+   "type": "Lifestyle",
+   "title": "Eliminate single-use plastic",
+   "description": "Single-use plastics may be convenient, yet they’re fairly dreadful for the environment. Not only do they pollute our waterways and oceans, but they also require energy to produce and recycle. You can stop using things like disposable coffee cups and cutlery to reduce your company’s carbon footprint.",
+   "points": 5,
+   "id": 13,
+   "picture": "",
+   "source": "https://www.futurelearn.com/info/blog/how-to-reduce-your-carbon-footprint-tips",
+   "special": false
+ },
+ {
+   "type": "Food",
+   "title": "Stop wasting food",
+   "description": "Food waste is a major contributor to greenhouse gas emissions. That’s because food that’s thrown away decomposes in landfills and emits methane, a particularly potent greenhouse gas",
+   "points": 5,
+   "id": 14,
+   "picture": "",
+   "source": "https://www.healthline.com/nutrition/how-to-reduce-carbon-footprint#1.-Stop-wasting-food",
+   "special": false
+ },
+ {
+   "type": "Food",
+   "title": "Eat less meat",
+   "description": "Research shows that reducing your meat intake is one of the best ways to lower your carbon footprint.\n\nIn a study in 16,800 Americans, diets that released the most greenhouse gasses were highest in meat from beef, veal, pork, and other ruminants. Meanwhile, the diets lowest in greenhouse gas emissions were also lowest in meat.",
+   "points": 15,
+   "id": 15,
+   "picture": "",
+   "source": "https://www.healthline.com/nutrition/how-to-reduce-carbon-footprint#1.-Stop-wasting-food",
+   "special": false
+ },
+ {
+   "type": "Food",
+   "title": "Try plant-based protein",
+   "description": "Eating more plant-based protein can dramatically cut your greenhouse gas emissions.\nIn one study, people with the lowest greenhouse gas emissions had the highest intake of plant-based proteins, including legumes, nuts, and seeds — and the lowest intake of animal proteins",
+   "points": 10,
+   "id": 16,
+   "picture": "",
+   "source": "https://www.healthline.com/nutrition/how-to-reduce-carbon-footprint#1.-Stop-wasting-food",
+   "special": false
+ },
+ {
+   "type": "Food",
+   "title": "Cut back on dairy",
+   "description": "Cutting back on dairy products, including milk and cheese, is another way to reduce your carbon footprint.\nOne study in 2,101 Dutch adults revealed that dairy products were the second largest contributor to individual greenhouse gas emissions — behind only meat.\n\nTo get started, try eating less cheese and replacing dairy milk with plant-based alternatives like almond or soy milk.",
+   "points": 10,
+   "id": 17,
+   "picture": "",
+   "source": "https://www.healthline.com/nutrition/how-to-reduce-carbon-footprint#1.-Stop-wasting-food",
+   "special": false
+ },
+ {
+   "type": "Food",
+   "title": "Eat more fiber-rich foods",
+   "description": "Eating more fiber-rich foods not only improves your health but may also reduce your carbon footprint.\nA study in 16,800 Americans found that the diets lowest in greenhouse gas emissions were high in fiber-rich plant foods and low in saturated fats and sodium. These foods may help keep you full, naturally limiting your intake of items with a heavy carbon load.",
+   "points": 10,
+   "id": 18,
+   "picture": "",
+   "source": "https://www.healthline.com/nutrition/how-to-reduce-carbon-footprint#1.-Stop-wasting-food",
+   "special": false
+ },
+ {
+   "type": "Food",
+   "title": "Grow your own produce",
+   "description": "Growing your own produce in a community garden or your backyard is associated with numerous benefits, including reduced stress, better diet quality, and improved emotional wellbeing.\nCultivating a plot of land, no matter the size, can reduce your carbon footprint as well.\nThat’s because growing fruits and vegetables reduces your use of plastic packaging and your dependency on produce transported long distances.",
+   "points": 20,
+   "id": 19,
+   "picture": "",
+   "source": "https://www.healthline.com/nutrition/how-to-reduce-carbon-footprint#1.-Stop-wasting-food",
+   "special": false
+ },
+ {
+   "type": "Food",
+   "title": "Don’t eat excess calories",
+   "description": "Eating more calories than your body needs may promote weight gain and related illnesses. What’s more, it’s linked to higher greenhouse gas emissions.\nA study in 3,818 Dutch people demonstrated that those with higher greenhouse gas emissions consumed more calories from food and beverages than those who had low greenhouse-gas-emitting diets.",
+   "points": 10,
+   "id": 20,
+   "picture": "",
+   "source": "https://www.healthline.com/nutrition/how-to-reduce-carbon-footprint#1.-Stop-wasting-food",
+   "special": false
+ },
+ {
+   "type": "Food",
+   "title": "Purchase local food",
+   "description": "Supporting local farmers is a great way to reduce your carbon footprint. Buying locally lowers your dependence on food transported vast distances and may increase your intake of fresh fruits and vegetables, helping offset your carbon emissions.",
+   "points": 10,
+   "id": 21,
+   "picture": "",
+   "source": "https://www.healthline.com/nutrition/how-to-reduce-carbon-footprint#1.-Stop-wasting-food",
+   "special": false
+ },
+ {
+   "type": "School/Work",
+   "title": "Stop printing",
+   "description": "If possible, use e-mail or iPad to view documents instead of printing them out. ",
+   "points": 10,
+   "id": 22,
+   "picture": "",
+   "source": "",
+   "special": false
+ },
+ {
+   "type": "School/Work",
+   "title": "Print Double sided",
+   "description": "Double-sided printing uses half the amount of paper, requires less energy, and takes up less room than one-sided printing",
+   "points": 5,
+   "id": 23,
+   "picture": "",
+   "source": "",
+   "special": false
+ },
+ {
+   "type": "School/Work",
+   "title": "Turn off light/AC",
+   "description": "Turn off light or AC when you leave the meeting room or the office",
+   "points": 5,
+   "id": 24,
+   "picture": "",
+   "source": "",
+   "special": false
+ },
+ {
+   "type": "School/Work",
+   "title": "Use water bottle",
+   "description": "Use a bottle/cup/mug instead of disposable water bottle. ",
+   "points": 10,
+   "id": 25,
+   "picture": "",
+   "source": "",
+   "special": false
+ },
+ {
+   "type": "School/Work",
+   "title": "Use energy saving appliances",
+   "description": "Use more energy-star certificated products like computers, coffee machines, or printers. ",
+   "points": 15,
+   "id": 26,
+   "picture": "",
+   "source": "",
+   "special": false
+ },
+ {
+   "type": "School/Work",
+   "title": "Online Meeting",
+   "description": "If possible, have more online meetings instead of traveling around personally for offline meetings. ",
+   "points": 10,
+   "id": 27,
+   "picture": "",
+   "source": "",
+   "special": false
+ },
+ {
+   "type": "School/Work",
+   "title": "Renewable Electricity source",
+   "description": "Use renewable power such as solar panel or wind power electricity instead of traditional fuel powered energy sources.",
+   "points": 20,
+   "id": 28,
+   "picture": "",
+   "source": "",
+   "special": false
+ },
+ {
+   "type": "School/Work",
+   "title": "Better building structure",
+   "description": "Use more efficient structure and material of the building that utilizes more natural light. While saving energy, natural light in the workplace affects a number of health aspects like mood, sleep, vitamin D levels, and eye health--and it heightens productivity levels.",
+   "points": 30,
+   "id": 29,
+   "picture": "",
+   "source": "https://ohsonline.com/articles/2019/11/27/five-ways-that-natural-light-improves-productivity-in-the-workplace.aspx",
+   "special": false
+ },
+ {
+   "type": "Travel",
+   "title": "Better Transportation",
+   "description": "Instead of hiring a driver or renting a car, be adventurous and opt for public transportation. Ride the subway. Hop on a bus. Take a streetcar. Just note that the efficiency of public transport modes can vary from one destination to the next. While many cities’ bus and rail systems are powered by cleaner fuels or alternative technologies, others still run on diesel or natural gas. In some places, visitors can even hop in electric tuk tuks to weave through traffic jams. Research the different options in the destination you are visiting to make an informed decision. ",
+   "points": 10,
+   "id": 30,
+   "picture": "",
+   "source": "https://sustainabletravel.org/how-to-reduce-travel-carbon-footprint/",
+   "special": false
+ },
+ {
+   "type": "Travel",
+   "title": "Use the “Do Not Disturb” sign ",
+   "description": "Hotels want to deliver the best customer service to their guests and make you feel like royalty. But do you really need your room vacuumed every day? Or your towels washed after every use? \nReduce the amount of energy and resources that are used for housekeeping activities by hanging up the “Do Not Disturb Sign” outside your door. ",
+   "points": 10,
+   "id": 31,
+   "picture": "",
+   "source": "https://sustainabletravel.org/how-to-reduce-travel-carbon-footprint/",
+   "special": false
+ },
+ {
+   "type": "Travel",
+   "title": "Eat the local cuisine",
+   "description": "By eating local foods instead of imported ones, you’ll reduce the carbon footprint of your meal while also supporting the local economy. Plus, you’ll get to experience the local food culture and enjoy some of the freshest cuisine out there!",
+   "points": 5,
+   "id": 32,
+   "picture": "",
+   "source": "https://sustainabletravel.org/how-to-reduce-travel-carbon-footprint/",
+   "special": false
+ },
+ {
+   "type": "Travel",
+   "title": "Reduce food waste",
+   "description": "With all the delicious and exotic food dishes to try, it’s hard not to over indulge while on vacation. But did you know that food production is responsible for roughly one-quarter of the world’s emissions? As forests are cleared to graze cows and grow crops, the carbon they store is released into the air. Food also produces carbon when it’s processed, packaged, transported, and refrigerated; and when we throw our uneaten food away, it creates harmful methane emissions as it rots in a landfill.",
+   "points": 10,
+   "id": 33,
+   "picture": "",
+   "source": "https://sustainabletravel.org/how-to-reduce-travel-carbon-footprint/",
+   "special": false
+ },
+ {
+   "type": "Travel",
+   "title": "Buy meaningful souvenirs that you will actually use",
+   "description": "Before purchasing an item, consider whether it’s something that you will actually use at home. Are you really going to wear that sombrero? Is that snow globe going to collect dust in the back of a drawer? Choose practical items that you’ll actually use. Buy meaningful souvenirs crafted by local artisans rather than mass-produced items imported from abroad.  Invest in high quality products instead of poorly made items that you’ll have to trash after one use. ",
+   "points": 5,
+   "id": 34,
+   "picture": "",
+   "source": "https://sustainabletravel.org/how-to-reduce-travel-carbon-footprint/",
+   "special": false
+ },
+ {
+   "type": "Travel",
+   "title": "Avoid flying to nearby destinations",
+   "description": "When vacationing closer-to-home, there are many opportunities to replace air travel with more sustainable modes of transportation. As a general rule, charter buses and trains tend to be the most climate-friendly options. What about driving? One of the big factors to consider here is the number of passengers that will be in your vehicle. If you’re traveling solo, then driving a car may actually have a higher carbon footprint than flying on a plane. But if you’re traveling with the whole family then a good old fashioned road trip is likely the better choice.",
+   "points": 10,
+   "id": 35,
+   "picture": "",
+   "source": "https://sustainabletravel.org/how-to-reduce-travel-carbon-footprint/",
+   "special": false
+ },
+ {
+   "type": "Travel",
+   "title": "Book non-stop flights",
+   "description": "The shorter distance isn’t the only reason to book a non-stop flight. One lesser known fact is that planes release the most carbon during take-off and landing. It’s better to book one longer flight rather than multiple shorter flights so that you only have to take off and land one time. If you can’t find a non-stop, choose the itinerary that takes the most direct route and makes the least stops.",
+   "points": 15,
+   "id": 36,
+   "picture": "",
+   "source": "https://sustainabletravel.org/how-to-reduce-travel-carbon-footprint/",
+   "special": false
+ },
+ {
+   "type": "Travel",
+   "title": "Fly economy ",
+   "description": "One good thing about flying in economy class? Doing so will lower your carbon footprint. This is because an air passenger’s emissions are determined by the amount of space they take up on the plane. On average, business class seats are two times larger than those in economy. This means that a business class passenger’s carbon footprint is typically double that of a traveler in economy. First class seats occupy even more space and have an even larger carbon footprint. Book economy to save money on your ticket while also saving the planet!",
+   "points": 10,
+   "id": 37,
+   "picture": "",
+   "source": "https://sustainabletravel.org/how-to-reduce-travel-carbon-footprint/",
+   "special": false
+ },
+ {
+   "type": "Travel",
+   "title": "Pack light",
+   "description": "The heavier your luggage, the more fuel it takes to transport it by plane, bus, car, or train. Pack your bags as light as possible to reduce fuel use and thus, the amount of carbon emitted. ",
+   "points": 15,
+   "id": 38,
+   "picture": "",
+   "source": "https://sustainabletravel.org/how-to-reduce-travel-carbon-footprint/",
+   "special": false
+ },
+ {
+   "type": "School/Work",
+   "title": "Walk or use public transportation",
+   "description": "If possible, leave your car at home and walk (or bike!) to your classes instead. Walking not only helps to reduce your carbon footprint, but is a great way to improve your health and engage with your new community.",
+   "points": 15,
+   "id": 39,
+   "picture": "",
+   "source": "https://onetreeplanted.org/blogs/stories/reducing-carbon-footprint-college",
+   "special": false
+ },
+ {
+   "type": "School/Work",
+   "title": "Switch to a laptop",
+   "description": "Did you know laptops use up to 90% less energy than desktop computers? If you've been using a desktop computer to write your papers and do research, consider making the switch. With a little research, you can find an inexpensive one that's more than adequate for your needs. ",
+   "points": 20,
+   "id": 40,
+   "picture": "",
+   "source": "https://onetreeplanted.org/blogs/stories/reducing-carbon-footprint-college",
+   "special": false
+ },
+ {
+   "type": "School/Work",
+   "title": "Avoid disposables",
+   "description": "Instead of buying plastic water bottles or plastic water jugs, buy one good thermos and refill it with water, tea, or your favorite soup from the dining hall. If possible, also bring reusable utensils in your bag so you won't have to use the disposable cutlery and straws provided at the dining hall. If you're ready for more, check out our tips on zero-waste living.",
+   "points": 10,
+   "id": 41,
+   "picture": "",
+   "source": "https://onetreeplanted.org/blogs/stories/reducing-carbon-footprint-college",
+   "special": false
+ },
+ {
+   "type": "School/Work",
+   "title": "Purchase Sparingly",
+   "description": "Do you really need that new bulletin board? How about that hat? When you're tempted to make a purchase, think carefully: will the item really add to your life, or will it just take up more space? For more inspiration, check out our tips on sustainable living for ways to live a more sustainable life.",
+   "points": 10,
+   "id": 42,
+   "picture": "",
+   "source": "https://onetreeplanted.org/blogs/stories/reducing-carbon-footprint-college",
+   "special": false
+ },
+ {
+   "type": "School/Work",
+   "title": "Plant a tree",
+   "description": "Planting trees is a great way to connect with the environment and reduce your carbon footprint. In celebration of Earth Day and Plant a Tree Day (as well as other times throughout the year), One Tree Planted offers tree planting events around the world. So be sure to check our community events page periodically so you have the opportunity to attend an event near you! ",
+   "points": 25,
+   "id": 43,
+   "picture": "",
+   "source": "https://onetreeplanted.org/blogs/stories/reducing-carbon-footprint-college",
+   "special": false
+ }
+]

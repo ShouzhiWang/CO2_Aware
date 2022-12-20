@@ -50,6 +50,7 @@ struct ArticleDetails: View {
         .navigationBarTitleDisplayMode(.inline)
         .fullScreenCover(isPresented: $openSafari, content: {
             SFSafariViewWrapper(url: URL(string: "\(article.link)")!)
+                .ignoresSafeArea()
         })
     }
 

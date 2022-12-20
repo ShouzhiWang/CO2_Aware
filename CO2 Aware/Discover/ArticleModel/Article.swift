@@ -9,7 +9,7 @@ A representation of a single landmark.
 
 import Foundation
 import SwiftUI
-import CoreLocation
+
 
 struct Article: Hashable, Codable, Identifiable {
     var id: Int

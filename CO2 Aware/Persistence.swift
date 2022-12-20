@@ -16,9 +16,10 @@ struct PersistenceController {
         let instance = Actions(context: viewContext)
         instance.id = UUID()
         instance.date = Date()
-        instance.title = "Test1"
-        instance.reference = "Test2"
-        instance.imgName = "Test3"
+        instance.points = "35"
+        instance.title = "Prev1"
+        instance.reference = "Prev2"
+        instance.imgName = "Prev3"
         do {
             try viewContext.save()
         } catch {

@@ -12,7 +12,7 @@ struct FeatureCard: View {
     var article: Article
     
     var body: some View {
-        //Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        
         
         NavigationLink{
             ArticleDetails(article: article)

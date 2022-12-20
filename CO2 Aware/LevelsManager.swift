@@ -19,6 +19,8 @@ final class UserProgress: ObservableObject{
         UserDefaults.standard.register(defaults: ["co2e" : 0])
         UserDefaults.standard.register(defaults: ["redeemProgress" : false])
         UserDefaults.standard.register(defaults: ["startDate" : Date()])
+        UserDefaults.standard.register(defaults: ["actionsCompleted" : 0])
+        UserDefaults.standard.register(defaults: ["firstDay" : Date()])
 
         healthStore = HealthStore()
 
@@ -87,7 +89,17 @@ final class UserProgress: ObservableObject{
         }
     }
     
-        
+    @Published var actionsCompleted: Int = UserDefaults.standard.integer(forKey: "actionsCompleted"){
+        didSet{
+            UserDefaults.standard.set(actionsCompleted, forKey: "actionsCompleted")
+        }
+    }
+    
+    @Published var firstDay: Date = (UserDefaults.standard.object(forKey: "firstDay") as? Date ?? Date()){
+        didSet{
+            UserDefaults.standard.set(firstDay, forKey: "firstDay")
+        }
+    }
     
     
 
@@ -128,6 +140,10 @@ final class UserProgress: ObservableObject{
         points += point
     }
     
+    func newAction() {
+        actionsCompleted += 1
+    }
+    
     func manageSteps() {
         if let healthStore = healthStore {
             healthStore.requestAuthorization {
@@ -151,7 +167,7 @@ final class UserProgress: ObservableObject{
     func daysBetween() -> Bool {
         if Calendar.current.dateComponents([.day], from: startDate, to: Date()).day! > 30 {
             startDate = Date()
-            points = 0
+            points = 1
             return true
         } else {
             return false

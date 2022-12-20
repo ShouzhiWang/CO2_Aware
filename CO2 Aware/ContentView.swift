@@ -14,6 +14,7 @@ struct ContentView: View {
     @StateObject var p =  UserProgress()
     @State private var presentAlrt: Bool = false
     @StateObject var md = ModelData()
+    @StateObject var amd = ActionModelData()
 
     
     
@@ -27,7 +28,7 @@ struct ContentView: View {
                     }
                     .tag(0)
                 
-                ActionsView()
+                ActionsView(p: p).environmentObject(amd)
                     .tabItem {
                         Label("Actions", systemImage: "checkmark.seal")
                     }
@@ -47,23 +48,7 @@ struct ContentView: View {
                 
             }
         }
-        .onAppear{
-            if p.daysBetween() {
-                presentAlrt = true
-            }
         
-        }
-        .alert("Yah! It's been a month.", isPresented: $presentAlrt, actions: {
-            
-        }, message:{
-            VStack {
-                Image(systemName: "sun.max.fill")
-                    .font(.largeTitle)
-                Text("A month or more just passed, so your points have been cleared. Let's start your earning for the next exciting 30 days!")
-            }
-        }
-                
-        )
     }
     
     
@@ -73,7 +58,8 @@ struct ContentView: View {
             ContentView()
                 .environmentObject(UserProgress())
                 .environmentObject(ModelData())
-                
+                .environmentObject(ActionModelData())
+                .environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
               
         }
     }

@@ -10,12 +10,14 @@ import SwiftUI
 struct HomeView: View {
     @ObservedObject var p :  UserProgress
     @State private var presentAlrt: Bool = false
+    @State private var presentAlrt2: Bool = false
     @Environment(\.scenePhase) var scenePhase
+    @FetchRequest(sortDescriptors: []) var history: FetchedResults<Actions>
     
 
     var body: some View {
         //Home view
-        NavigationStack{
+        NavigationView{
             ScrollView(.vertical) {
                 
                 ZStack(alignment: .top){
@@ -92,7 +94,7 @@ struct HomeView: View {
                                         }
                                         
                                     }
-                                        .disabled(p.userSteps < 1000 || p.redeemProgress)
+                                        .disabled(p.userSteps < 6000 || p.redeemProgress)
 
                      
                                 } else{
@@ -112,24 +114,69 @@ struct HomeView: View {
                         }.padding(.horizontal)
                         
 
-                        HStack{
-                            //Text: Actions
-                            Text("Actions")
-                                .font(.title2.weight(.semibold))
-                            Spacer()
-                            
-                        }.padding(.horizontal)
-                        HStack{
-                            //Text: Emission Saved
-                            Text("Saved")
-                                .font(.title2.weight(.semibold))
-                            Spacer()
-                            
-                        }.padding(.horizontal)
+
+                        
+                        
+                        VStack{
+                            ZStack(alignment: .topTrailing){
+                                //Day progress bar + text indicating days passed in the 30 days cycle
+                                ProgressView("Day " + String(Calendar.current.dateComponents([.day], from: p.startDate, to: Date()).day!), value: Double(Calendar.current.dateComponents([.day], from: p.startDate, to: Date()).day!), total: 30)
+                                    .font(.title3.weight(.semibold))
+                                Spacer()
+                                //Text: total days
+                                Text("/30")
+                                
+                            }.padding(.horizontal)
+                        }
+                        
+                        Text("\(p.actionsCompleted) Actions compeleted since \(p.firstDay.formatted(date: .abbreviated, time: .omitted))")
 
                     }.padding(.all)
+                    
+                    
+                }
+                
+                if !history.isEmpty {
+                    let tempInstance = history.randomElement()!
+                    ZStack{
+                        RoundedRectangle(cornerRadius: 36)
+                            .foregroundColor(Color("WB").opacity(0.2))
+                            .background(.ultraThinMaterial, in: RoundedRectangle(cornerRadius: 36))
+                            .padding(.horizontal)
+                            .blur(radius: 0.3)
+                        VStack{
+                            HStack{
+                                VStack(alignment: .leading){
+                                    Text("Do you remember?")
+                                        .font(.title3.weight(.semibold))
+                                    Text((tempInstance.date?.formatted(date: .abbreviated, time: .standard))!)
+                                }
+                                    
+                                    
+                                
+                                Spacer()
+                                NavigationLink{
+                                    PastActionDetail(instance: tempInstance)
+                                } label: {
+                                    Image(systemName: "arrow.right")
+                                }
+                            }.padding(.horizontal)
+                            if loadImageFromDocumentDirectory(instance: tempInstance) != nil {
+                                Image(uiImage: loadImageFromDocumentDirectory(instance: tempInstance)!)
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fit)
+                                    .cornerRadius(20)
+                                    .padding(.horizontal)
+                            }
+                        }.padding(.all)
+                    }
+                    
+                    
+                    
+                    
                 }
             }
+                
             
             .navigationTitle("Home")
             .toolbar(.hidden)
@@ -155,12 +202,31 @@ struct HomeView: View {
             }
                     
             )
+            
+            .alert("It's been a month!", isPresented: $presentAlrt2, actions: {
+                
+            }, message:{
+                VStack {
+                    Image(systemName: "sun.max.fill")
+                        .font(.largeTitle)
+                    Text("A month or more just passed, so your points have been cleared. Let's start your earning for the next exciting 30 days!")
+                }
+            }
+                    
+            )
       
         }.environmentObject(p)
             .onAppear{
                 p.manageSteps()
                 p.isDayChanged()
+                    
                 
+                if p.daysBetween() {
+                    presentAlrt2 = true
+                }
+            
+            
+                    
                 
                 
             }
@@ -170,11 +236,25 @@ struct HomeView: View {
                     p.isDayChanged()
                 }
                 
+            
+                
                            
             }
      
     }
-       
+    func loadImageFromDocumentDirectory(instance: Actions) -> UIImage? {
+            
+        let documentsUrl = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!;
+        let fileURL = documentsUrl.appendingPathComponent("\(instance.imgName ?? "").jpg")
+        
+            do {
+                let imageData = try Data(contentsOf: fileURL)
+                return UIImage(data: imageData)
+            } catch {
+                
+                return nil
+            }
+    }
 }
     
 
