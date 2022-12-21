@@ -21,6 +21,16 @@
  },
  {
    "type": "Daily",
+   "title": "Ride bike",
+   "description": "Biking, instead of driving, can help reduce physical inactivity and air pollution, save lives and mitigate climate change, as the negative effects from burning fuel are eliminated. ",
+   "points": 20,
+   "id": 44,
+   "picture": "bike",
+   "source": "https://sustainability.georgetown.edu/community-engagement/things-you-can-do/",
+   "special": false
+ },
+ {
+   "type": "Daily",
    "title": "Control the temperature",
    "description": "Keep your temperature system on a moderate setting while you’re in the room. During the warm weather, it is generally recommended that you set your home's cooling system to **78 degrees Fahrenheit (26 degrees Celsius)** when you are home. For winter, it is **68 degrees Fahrenheit (20 degrees Celsius)**",
    "points": 5,

@@ -14,15 +14,17 @@ struct UserSelfView: View {
     
     @ObservedObject var levelsm : UserProgress
     @State private var tempname: String = ""
-    @State private var temppoints: String = ""
+//    @State private var temppoints: String = ""
     @State private var showPopover: Bool = false
     @State private var showPopover2: Bool = false
-    
+    @State private var isNotif: Bool = false
     
     var worldData = loadCSV()
     @State private var tempCo2: GHG?
     
-    var settings: [String] = ["a", "b", "c", "d"]
+    @AppStorage("welcomeScreenShown") var welcomeScreenShown: Bool = true
+    
+    //var settings: [String] = ["a", "b", "c", "d"]
     
     
     var body: some View {
@@ -33,7 +35,7 @@ struct UserSelfView: View {
                         .resizable()
                         //.aspectRatio(contentMode: .fit)
                         //.cornerRadius(25)
-                        .frame(height: 300)
+                        .frame(height: 330)
                     VStack {
                         Spacer()
                         HStack{
@@ -45,7 +47,7 @@ struct UserSelfView: View {
                                 
                                     
                                 if (levelsm.username == ""){
-                                    Text("Tap to edit")
+                                    Text("Tap arrow to edit")
                                         .foregroundColor(Color.white)
                                 } else {
                                     Text(levelsm.username)
@@ -113,24 +115,63 @@ struct UserSelfView: View {
                 Spacer()
                 
                 
-                //Setting
-                
-                Text("Settings")
-                    .fontWeight(.bold)
-                    .padding([.top, .leading])
-                    .frame(maxWidth: .infinity, alignment: .leading)
-                    .font(.largeTitle)
+
                 
                 Spacer()
-                ForEach(settings, id: \.self){ setting in
-                    VStack{
-                        Text(setting)
-                            .padding(.leading)
+                
+                VStack{
+                    
+                    Text("\(Image(systemName: "bell")) Notification")
+                            .padding(.horizontal)
                             .frame(maxWidth: .infinity, alignment: .leading)
-                            .font(.title3)
-                        Divider()
+                            .font(.title2)
+                            .bold()
+                            
+                    Text("To turn it ON/OFF, go to Settings, Notifications, find 'CO2 Aware', and turn its notification ON/OFF.")
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                        .padding(.horizontal)
+                        
+                        
+                    Divider()
+                    
+                    Button("\(Image(systemName: "doc.richtext")) Show welcome screen again"){
+                        welcomeScreenShown = false
                     }
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .padding(.horizontal)
+                    .font(.title2)
+                    .bold()
+                    
+                    Text("Note: Doing so will reset your points earned for this month")
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                        .padding(.horizontal)
+                        .foregroundColor(.red)
+                    
+                    Divider()
+                    
+                    NavigationLink {
+                        About_US()
+                    } label: {
+                        Text("\(Image(systemName: "person.2.fill")) About us")
+                    }.frame(maxWidth: .infinity, alignment: .leading)
+                        .padding(.horizontal)
+                        .font(.title2)
+                        .bold()
+                    Divider()
+                    
+                    Text("\(Image(systemName: "ellipsis.circle")) More Coming!")
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                        .padding(.horizontal)
+                        .font(.title2)
+                        .bold()
+                    
+                    
+                    Divider()
                 }
+                
+                
+                
+                
                 
              
                 
@@ -187,11 +228,11 @@ struct UserSelfView: View {
                 
                     
                     
-                    Text("!TEMP!!!POINTS!")
-                    TextField("Points", text: $temppoints)
-                        .padding(.leading)
-                            .keyboardType(.decimalPad)
-                    
+//                    Text("!TEMP!!!POINTS!")
+//                    TextField("Points", text: $temppoints)
+//                        .padding(.leading)
+//                            .keyboardType(.decimalPad)
+//
                     Spacer()
                         
                 }
@@ -326,18 +367,22 @@ struct UserSelfView: View {
                 }
             }
             .ignoresSafeArea()
-            //.navigationTitle("About Me")
+
             
             
             
 
         }
-        }
+    }
         
     
     func saveName() {
         levelsm.username = tempname
-        levelsm.points = Int(temppoints) ?? 0
+        NotificationManager.instance.cancelNotif()
+        NotificationManager.instance.scheduleNotification(title: "Morning", name: levelsm.username, hour: 9, min: 30)
+        NotificationManager.instance.scheduleNotification(title: "Afternoon", name: levelsm.username, hour: 12, min: 30)
+        NotificationManager.instance.scheduleNotification(title: "Evening", name: levelsm.username, hour: 6, min: 00)
+//        levelsm.points = Int(temppoints) ?? 0
         
     }
     

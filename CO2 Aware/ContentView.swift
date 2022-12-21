@@ -16,36 +16,41 @@ struct ContentView: View {
     @StateObject var md = ModelData()
     @StateObject var amd = ActionModelData()
 
-    
+    @AppStorage("welcomeScreenShown") var welcomeScreenShown: Bool = false
     
     
     var body: some View {
         NavigationView {
-            TabView(selection: $selection){
-                HomeView(p: p)
-                    .tabItem {
-                        Label("Home", systemImage: "leaf")
-                    }
-                    .tag(0)
+            if welcomeScreenShown{
+                TabView(selection: $selection){
+                    HomeView(p: p)
+                        .tabItem {
+                            Label("Home", systemImage: "leaf")
+                        }
+                        .tag(0)
+                    
+                    ActionsView(p: p).environmentObject(amd)
+                        .tabItem {
+                            Label("Actions", systemImage: "checkmark.seal")
+                        }
+                        .tag(1)
+                    
+                    DiscoverView().environmentObject(md)
+                        .tabItem {
+                            Label("Discover", systemImage: "newspaper")
+                        }
+                        .tag(2)
+                    
+                    UserSelfView(levelsm: p)
+                        .tabItem {
+                            Label("About Me", systemImage: "person")
+                        }
+                        .tag(3)
+                    
+                }
                 
-                ActionsView(p: p).environmentObject(amd)
-                    .tabItem {
-                        Label("Actions", systemImage: "checkmark.seal")
-                    }
-                    .tag(1)
-                
-                DiscoverView().environmentObject(md)
-                    .tabItem {
-                        Label("Discover", systemImage: "newspaper")
-                    }
-                    .tag(2)
-                
-                UserSelfView(levelsm: p)
-                    .tabItem {
-                        Label("About Me", systemImage: "person")
-                    }
-                    .tag(3)
-                
+            } else {
+                WelcomeView(p: p)
             }
         }
         

@@ -17,7 +17,6 @@
       "scale" : "1x"
     },
     {
-      "filename" : "编组 3@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
@@ -28,12 +27,10 @@
           "value" : "dark"
         }
       ],
-      "filename" : "clouds dark@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "编组 3@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     },
@@ -44,7 +41,6 @@
           "value" : "dark"
         }
       ],
-      "filename" : "clouds dark@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

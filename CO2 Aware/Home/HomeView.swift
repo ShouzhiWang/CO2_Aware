@@ -197,7 +197,7 @@ struct HomeView: View {
             .alert("No Steps?", isPresented: $presentAlrt, actions: {
                 
             }, message:{
-                Text("If you want to see your steps presented in CO2 Aware and earn steps points, please allow us to load your step data from Apple Health.\n\nYou can grant permission in Settings->Privacy->Health->CO2 Aware.\n\nIf you did not walk today or just woke up, please disregard this message! Your steps will present after you have your step data.\n\nThank you!")
+                Text("If you want to see your steps presented in CO2 Aware and earn steps points, please allow us to load your step data from Apple Health.\n\nYou can grant permission in Settings->Privacy->Health->CO2 Aware.\n\nIf you did not walk today or just woke up, please disregard this message! Your steps will be present after you have your step data.\n\nThank you!")
                     
             }
                     
@@ -224,8 +224,9 @@ struct HomeView: View {
                 if p.daysBetween() {
                     presentAlrt2 = true
                 }
-            
-            
+                
+                NotificationManager.instance.requestAuth()
+                UIApplication.shared.applicationIconBadgeNumber = 0
                     
                 
                 

@@ -56,6 +56,10 @@ struct ActionDetail: View {
                                 .bold()
                         }.frame(height: 50)
                          .background(Color("AccentColor")).cornerRadius(10)
+                    } else {
+                        Text("Walk at least 6000 steps and go to home page to click 'Redeem' in 'Steps' section")
+                            .padding(.all)
+                            .bold()
                     }
                     
                     Spacer(minLength: 150)

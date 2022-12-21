@@ -11,9 +11,9 @@ final class UserProgress: ObservableObject{
     
     
     init(){
-        UserDefaults.standard.register(defaults: ["points" : 0])
+        UserDefaults.standard.register(defaults: ["points" : 1])
         UserDefaults.standard.register(defaults: ["level" : 1])
-        UserDefaults.standard.register(defaults: ["calculatedPoints" : 0])
+        UserDefaults.standard.register(defaults: ["calculatedPoints" : 1])
         UserDefaults.standard.register(defaults: ["username" : ""])
         UserDefaults.standard.register(defaults: ["co2Region" : "... Please Choose"])
         UserDefaults.standard.register(defaults: ["co2e" : 0])
