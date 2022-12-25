@@ -9,6 +9,8 @@ import UIKit
 import SwiftUI
 import CoreData
 
+
+// Manages image related stuff
 struct ImagePicker: UIViewControllerRepresentable {
     @Environment(\.managedObjectContext) var managedObjContext
     @FetchRequest(sortDescriptors: []) var history: FetchedResults<Actions>
@@ -53,6 +55,7 @@ struct ImagePicker: UIViewControllerRepresentable {
                 saveJpg(image, name: parent.imgName)
             }
             
+            // Adds action history
             parent.addInstance(imgName: parent.imgName, reference: parent.action.description, title: parent.action.title, context: parent.managedObjContext, points: String(parent.action.points))
             parent.p.pointUp(point: parent.action.points)
             parent.presentationMode.wrappedValue.dismiss()

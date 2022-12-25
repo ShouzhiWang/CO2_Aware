@@ -42,7 +42,7 @@ struct ArticleDetails: View {
                     .padding(22)
                     .background(Color("AccentColor"))
                     .foregroundColor(Color("WB"))
-                    .bold()
+                    .font(Font.body.bold())
             }.frame(height: 50)
              .background(Color("AccentColor")).cornerRadius(10)
             

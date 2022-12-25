@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-
+// Define action type
 struct Action: Hashable, Codable, Identifiable {
     var id: Int
     var title: String

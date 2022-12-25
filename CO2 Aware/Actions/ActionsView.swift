@@ -24,6 +24,7 @@ struct ActionsView: View {
     var body: some View {
         NavigationView{
                 List{
+                    // Daily actions section
                     Section{
                         ScrollView(.horizontal, showsIndicators: false){
                             HStack{
@@ -54,6 +55,7 @@ struct ActionsView: View {
                     
                     
                     
+                    // Lifestyle related actions
                     Section{
                         DisclosureGroup {
                             ForEach(actionModel.lifestyle) { action in
@@ -73,6 +75,8 @@ struct ActionsView: View {
                             
                         }
                         
+                        
+                        // School, Work related
                         DisclosureGroup {
                             ForEach(actionModel.sw) { action in
                                 NavigationLink {
@@ -91,6 +95,8 @@ struct ActionsView: View {
                             
                         }
                         
+                        
+                        // Food related
                         DisclosureGroup {
                             ForEach(actionModel.food) { action in
                                 NavigationLink {
@@ -126,18 +132,7 @@ struct ActionsView: View {
                             
                         }
                         
-//                        DisclosureGroup {
-//
-//                            TextField("Title", text: $title)
-//                            TextField("Ref", text: $reference)
-//                            TextField("Img", text: $imgName)
-//                            Button("Save"){
-//                                addInstance(imgName: imgName, reference: reference, title: title, context: managedObjContext)
-//
-//                            }
-//                        } label: {
-//                            Text("Settings")
-//                        }
+
                     } header: {
                         Text("Others")
                     }
@@ -152,10 +147,11 @@ struct ActionsView: View {
             
             
             .navigationTitle("Actions")
+            
+            // History button
             .toolbar {
                 Button() {
                     popUp.toggle()
-                    //imgName = UUID().uuidString
                     
                     
                 } label: {
@@ -163,6 +159,8 @@ struct ActionsView: View {
                 }
             }
             }
+        
+        // History (popup) Page
             .sheet(isPresented: $popUp) {
                 NavigationView{
                     List{
@@ -189,6 +187,8 @@ struct ActionsView: View {
             }
         
     }
+    
+    // Delete history instance
     private func deleteItems(offsets: IndexSet) {
         withAnimation {
             offsets.map { history[$0] }.forEach(managedObjContext.delete)

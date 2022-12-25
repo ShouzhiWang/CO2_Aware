@@ -9,11 +9,8 @@ import SwiftUI
 
 struct DiscoverView: View {
     @EnvironmentObject var modelData: ModelData
-//    init() {
-//        UINavigationBar.appearance().setBackgroundImage(UIImage(), for: .default)
-//        UINavigationBar.appearance().shadowImage = UIImage()
-//    }
-//
+
+    // View that presents some news articles
     var body: some View {
         NavigationView {
             List{

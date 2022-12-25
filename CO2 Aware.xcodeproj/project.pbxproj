@@ -38,7 +38,6 @@
 		A147754428D602A600C204EA /* UserSelfView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A147754328D602A600C204EA /* UserSelfView.swift */; };
 		A1A6A13228EA883D000A53D1 /* LevelsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A6A13128EA883D000A53D1 /* LevelsManager.swift */; };
 		A1B3DF9E28F3A06D001D2EDE /* HealthStepsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B3DF9D28F3A06D001D2EDE /* HealthStepsManager.swift */; };
-		A1E890E229180B1900C8E28E /* articles.json in Resources */ = {isa = PBXBuildFile; fileRef = A1E890E129180B1900C8E28E /* articles.json */; };
 		A1E890E529180DC900C8E28E /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E890E329180DC900C8E28E /* Article.swift */; };
 		A1E890E629180DC900C8E28E /* ModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E890E429180DC900C8E28E /* ModelData.swift */; };
 /* End PBXBuildFile section */
@@ -78,7 +77,6 @@
 		A1B3DF9D28F3A06D001D2EDE /* HealthStepsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthStepsManager.swift; sourceTree = "<group>"; };
 		A1B3DF9F28F3BE43001D2EDE /* CO2-Aware-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "CO2-Aware-Info.plist"; sourceTree = SOURCE_ROOT; };
 		A1B3DFA028F3C4AF001D2EDE /* CO2 Aware.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "CO2 Aware.entitlements"; sourceTree = "<group>"; };
-		A1E890E129180B1900C8E28E /* articles.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = articles.json; sourceTree = "<group>"; };
 		A1E890E329180DC900C8E28E /* Article.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
 		A1E890E429180DC900C8E28E /* ModelData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -112,7 +110,6 @@
 				A1E890E429180DC900C8E28E /* ModelData.swift */,
 				6B0CF459292B17E80013488E /* ArticleDetails.swift */,
 				6B0CF45D292BFD130013488E /* OtherArticles.swift */,
-				A1E890E129180B1900C8E28E /* articles.json */,
 				6BF130ED2926E75F00D23961 /* articles2.json */,
 			);
 			path = ArticleModel;
@@ -147,11 +144,9 @@
 		A147750928D5495800C204EA /* CO2 Aware */ = {
 			isa = PBXGroup;
 			children = (
-				A1B3DFA028F3C4AF001D2EDE /* CO2 Aware.entitlements */,
-				A1B3DF9F28F3BE43001D2EDE /* CO2-Aware-Info.plist */,
+				A147750A28D5495800C204EA /* CO2_AwareApp.swift */,
 				A147750C28D5495800C204EA /* ContentView.swift */,
 				6B16491C2952532B00532290 /* WelcomeView.swift */,
-				A147750A28D5495800C204EA /* CO2_AwareApp.swift */,
 				A147751328D5495A00C204EA /* Persistence.swift */,
 				A1A6A13128EA883D000A53D1 /* LevelsManager.swift */,
 				6BFC47412953874C00CF1AEE /* NotificationManager.swift */,
@@ -160,9 +155,11 @@
 				A147753F28D6022A00C204EA /* Actions */,
 				A147754228D6026100C204EA /* Discover */,
 				A147754528D602B400C204EA /* UserSelf */,
+				A147751028D5495A00C204EA /* Preview Content */,
 				6BE6FA3D292EC334008814F3 /* Actions.xcdatamodeld */,
 				A147750E28D5495A00C204EA /* Assets.xcassets */,
-				A147751028D5495A00C204EA /* Preview Content */,
+				A1B3DFA028F3C4AF001D2EDE /* CO2 Aware.entitlements */,
+				A1B3DF9F28F3BE43001D2EDE /* CO2-Aware-Info.plist */,
 			);
 			path = "CO2 Aware";
 			sourceTree = "<group>";
@@ -275,7 +272,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A1E890E229180B1900C8E28E /* articles.json in Resources */,
 				6BF130EE2926E75F00D23961 /* articles2.json in Resources */,
 				A1379DE128EE769000E3154B /* GHGPerCap.csv in Resources */,
 				A147751228D5495A00C204EA /* Preview Assets.xcassets in Resources */,
@@ -453,6 +449,8 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "CO2-Aware-Info.plist";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.lifestyle";
+				INFOPLIST_KEY_NSCameraUsageDescription = "You need to take pictures for recording your actions. This app is totally offline and would not upload any personal data. ";
 				INFOPLIST_KEY_NSHealthShareUsageDescription = "This app uses your steps data from health to evaluate your daily points earned from walking, as well as to calculate the amount of CO2 you saved.";
 				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "This app uses your steps data from health to evaluate your daily points earned from walking, as well as to calculate the amount of CO2 you saved.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -460,7 +458,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -469,9 +467,12 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "ShawnWang.CO2-Aware";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -489,6 +490,8 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "CO2-Aware-Info.plist";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.lifestyle";
+				INFOPLIST_KEY_NSCameraUsageDescription = "You need to take pictures for recording your actions. This app is totally offline and would not upload any personal data. ";
 				INFOPLIST_KEY_NSHealthShareUsageDescription = "This app uses your steps data from health to evaluate your daily points earned from walking, as well as to calculate the amount of CO2 you saved.";
 				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "This app uses your steps data from health to evaluate your daily points earned from walking, as well as to calculate the amount of CO2 you saved.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -496,7 +499,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -505,9 +508,12 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "ShawnWang.CO2-Aware";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+//Main welcome screen
 struct WelcomeView: View {
     @State private var inAnimation = false
     @State private var buttonIn = false
@@ -22,8 +23,8 @@ struct WelcomeView: View {
                 .scaleEffect(inAnimation ? 1: 0, anchor: .bottom)
                 
                 Text("Welcome!")
-                    .font(.largeTitle)
-                    .bold()
+                    .font(.largeTitle.weight(.bold))
+                    
                 .scaleEffect(inAnimation ? 1: 0, anchor: .bottom)
                 Spacer()
                     .frame(height: 150)
@@ -38,8 +39,8 @@ struct WelcomeView: View {
                 
                 
             }
-            .frame(maxWidth: .infinity, maxHeight: .infinity) // 1
-            //.accentColor(Color.black)
+            .frame(maxWidth: .infinity, maxHeight: .infinity)
+
             .background(
                 Image("HomeLvl3")
                     .resizable()
@@ -47,13 +48,15 @@ struct WelcomeView: View {
                 
                     .padding(-10)
             )
+            
+            // In animation
             .onAppear {
                 withAnimation(.easeInOut(duration: 1.5)) {
-                    inAnimation.toggle()
+                    inAnimation = true
                 }
                 DispatchQueue.main.asyncAfter(deadline: .now() + 1.8) {
                     withAnimation(.easeInOut(duration: 1)) {
-                        buttonIn.toggle()
+                        buttonIn = true
                     }
                     
                 }
@@ -63,15 +66,16 @@ struct WelcomeView: View {
         
 }
 
+// Welcome Screen 2
 struct Welcome2: View {
     @ObservedObject var p :  UserProgress
     var body: some View{
         ScrollView{
             VStack(alignment: .leading){
                 Text("There is no Planet B.")
-                    .font(.title)
+                    .font(.title.weight(.bold))
                     .multilineTextAlignment(.leading)
-                    .bold()
+                    
                 Spacer()
                 Text(.init("***Emissions continue to rise.*** As a result, the Earth is now about 1.1°C warmer than it was in the late 1800s. The last decade (2011-2020) was the warmest on record.\n\nMany people think climate change mainly means warmer temperatures. But temperature rise is only the beginning of the story. Because the Earth is a system, where everything is connected, **changes in one area can influence changes in all others**.\n\nThe consequences of climate change now include, among others, **intense droughts, water scarcity, severe fires, rising sea levels, flooding, melting polar ice, catastrophic storms and declining biodiversity.**"))
                     .font(.title3)
@@ -107,7 +111,7 @@ struct Welcome2: View {
     }
 }
 
-
+// Welcome screen 3
 struct Welcome3: View {
     @State private var askHealth = false
     @State private var askNotif = false
@@ -129,6 +133,7 @@ struct Welcome3: View {
                     HStack {
                         Spacer()
                         
+                        //dismiss first text paragraph
                         Button {
                             withAnimation(.easeInOut(duration: 0.2)) {
                                 outAnim = true
@@ -147,6 +152,7 @@ struct Welcome3: View {
                     .padding(.vertical)
                 }
                 
+                // Ask for notification permission
                 if askNotif {
                     Text(.init("First, we need your permission to send notifications for reminding you to act. There will only be three notifications everyday, at 9:30am, 12:30pm, and 6pm.\n\n**Simply click allow.**\n\n*However, it is totally fine if you don't want to recieve any notifications.*"))
                         .padding(.all)
@@ -156,8 +162,11 @@ struct Welcome3: View {
                     HStack {
                         Spacer()
                         
+                        // Request Authorization
                         Button {
                             NotificationManager.instance.requestAuth()
+                            
+                            // Make next one appear
                             askHealth = true
                         } label: {
                                 Image(systemName: "checkmark.circle")
@@ -167,7 +176,7 @@ struct Welcome3: View {
                     }.disabled(askHealth)
                 }
                 
-                
+                // Ask for healthkit permission
                 if askHealth {
                     Text("Also, as mentioned, you can get points from walking instead of driving. To know how many steps you walked, we need to access your health data.\n\nAgain, this app is offline and your data is totally confidential.")
                         .padding(.all)
@@ -177,10 +186,14 @@ struct Welcome3: View {
                     HStack {
                         Spacer()
                         
+                        // A Button that initializes the app
+                        // Presets 3 notifications, 1 point, and set welcomeScreenShown to true
+                        // ContentView automatically refreshes to main page
                         Button {
-                            NotificationManager.instance.scheduleNotification(title: "Morning", name: nil, hour: 9, min: 30)
-                            NotificationManager.instance.scheduleNotification(title: "Afternoon", name: nil, hour: 12, min: 30)
-                            NotificationManager.instance.scheduleNotification(title: "Evening", name: nil, hour: 6, min: 00)
+                            NotificationManager.instance.cancelNotif()
+                            NotificationManager.instance.scheduleNotification(title: "Morning", name: p.username, hour: 9, min: 30)
+                            NotificationManager.instance.scheduleNotification(title: "Afternoon", name: p.username, hour: 12, min: 30)
+                            NotificationManager.instance.scheduleNotification(title: "Evening", name: p.username, hour: 18, min: 00)
                             
                             p.set(a: 1)
                             welcomeScreenShown = true
@@ -219,6 +232,6 @@ struct Welcome3: View {
 
 struct WelcomeView_Previews: PreviewProvider {
     static var previews: some View {
-        Welcome3(p: UserProgress())
+        WelcomeView(p: UserProgress())
     }
 }

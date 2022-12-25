@@ -12,6 +12,8 @@ import Foundation
 
 class ActionModelData: ObservableObject {
     @Published var actionList: [Action] = loadAction("Actions.json")
+    
+    // Seperate action by their type
     var daily: [Action] {
         actionList.filter {$0.type == "Daily"}
     }
@@ -35,6 +37,8 @@ class ActionModelData: ObservableObject {
     
 }
 
+
+// Load actions from json data and create action types
 func loadAction<T: Decodable>(_ filename: String) -> T {
     let data: Data
 

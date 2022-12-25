@@ -9,32 +9,26 @@ import SwiftUI
 
 
 struct UserSelfView: View {
-    
-    
-    
     @ObservedObject var levelsm : UserProgress
     @State private var tempname: String = ""
-//    @State private var temppoints: String = ""
+
     @State private var showPopover: Bool = false
     @State private var showPopover2: Bool = false
     @State private var isNotif: Bool = false
     
     var worldData = loadCSV()
     @State private var tempCo2: GHG?
-    
+
     @AppStorage("welcomeScreenShown") var welcomeScreenShown: Bool = true
-    
-    //var settings: [String] = ["a", "b", "c", "d"]
     
     
     var body: some View {
-        NavigationStack{
+        NavigationView{
             ScrollView{
                 ZStack{
                     Image("Earth")
                         .resizable()
-                        //.aspectRatio(contentMode: .fit)
-                        //.cornerRadius(25)
+                      
                         .frame(height: 330)
                     VStack {
                         Spacer()
@@ -51,8 +45,8 @@ struct UserSelfView: View {
                                         .foregroundColor(Color.white)
                                 } else {
                                     Text(levelsm.username)
-                                        .font(.title)
-                                        .fontWeight(.bold)
+                                        .font(.title.weight(.bold))
+                                        
                                         .foregroundColor(Color.white)
                                 }
                             }.padding(.leading)
@@ -76,8 +70,8 @@ struct UserSelfView: View {
                                 
                                 HStack{
                                     Text(String(levelsm.co2e))
-                                        .font(.title)
-                                        .fontWeight(.bold)
+                                        .font(.title.weight(.bold))
+                                        
                                         .foregroundColor(Color.white)
                                     Text("t CO2e")
                                         .font(.subheadline)
@@ -124,8 +118,8 @@ struct UserSelfView: View {
                     Text("\(Image(systemName: "bell")) Notification")
                             .padding(.horizontal)
                             .frame(maxWidth: .infinity, alignment: .leading)
-                            .font(.title2)
-                            .bold()
+                            .font(.title2.weight(.bold))
+                            
                             
                     Text("To turn it ON/OFF, go to Settings, Notifications, find 'CO2 Aware', and turn its notification ON/OFF.")
                         .frame(maxWidth: .infinity, alignment: .leading)
@@ -139,8 +133,8 @@ struct UserSelfView: View {
                     }
                     .frame(maxWidth: .infinity, alignment: .leading)
                     .padding(.horizontal)
-                    .font(.title2)
-                    .bold()
+                    .font(.title2.weight(.bold))
+                    
                     
                     Text("Note: Doing so will reset your points earned for this month")
                         .frame(maxWidth: .infinity, alignment: .leading)
@@ -155,15 +149,15 @@ struct UserSelfView: View {
                         Text("\(Image(systemName: "person.2.fill")) About us")
                     }.frame(maxWidth: .infinity, alignment: .leading)
                         .padding(.horizontal)
-                        .font(.title2)
-                        .bold()
+                        .font(.title2.weight(.bold))
+                        
                     Divider()
                     
                     Text("\(Image(systemName: "ellipsis.circle")) More Coming!")
                         .frame(maxWidth: .infinity, alignment: .leading)
                         .padding(.horizontal)
                         .font(.title2)
-                        .bold()
+                        
                     
                     
                     Divider()
@@ -225,14 +219,7 @@ struct UserSelfView: View {
                         }
                         
                     }
-                
-                    
-                    
-//                    Text("!TEMP!!!POINTS!")
-//                    TextField("Points", text: $temppoints)
-//                        .padding(.leading)
-//                            .keyboardType(.decimalPad)
-//
+
                     Spacer()
                         
                 }
@@ -243,11 +230,7 @@ struct UserSelfView: View {
                 
             }
             
-            
-            
-            
-            
-            
+ 
             
             .popover(isPresented: $showPopover2) {
                 VStack {
@@ -348,7 +331,7 @@ struct UserSelfView: View {
                             Text("Save")
                                 .font(.body)
                                 .frame(minWidth: 0, maxWidth: .infinity)
-                                .fontWeight(.bold)
+                                .font(Font.body.bold())
                             
                                 .padding()
                                 .foregroundColor(Color("WB"))
@@ -368,10 +351,6 @@ struct UserSelfView: View {
             }
             .ignoresSafeArea()
 
-            
-            
-            
-
         }
     }
         
@@ -381,8 +360,8 @@ struct UserSelfView: View {
         NotificationManager.instance.cancelNotif()
         NotificationManager.instance.scheduleNotification(title: "Morning", name: levelsm.username, hour: 9, min: 30)
         NotificationManager.instance.scheduleNotification(title: "Afternoon", name: levelsm.username, hour: 12, min: 30)
-        NotificationManager.instance.scheduleNotification(title: "Evening", name: levelsm.username, hour: 6, min: 00)
-//        levelsm.points = Int(temppoints) ?? 0
+        NotificationManager.instance.scheduleNotification(title: "Evening", name: levelsm.username, hour: 18, min: 00)
+
         
     }
     

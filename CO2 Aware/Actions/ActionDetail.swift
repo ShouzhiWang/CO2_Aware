@@ -16,6 +16,8 @@ struct ActionDetail: View {
     @State private var ifDone: Bool = false
     @Environment(\.presentationMode) var presentation
     
+    
+    // Detail page of actions
     var body: some View {
         ScrollView{
             if action.image != nil{
@@ -26,12 +28,12 @@ struct ActionDetail: View {
             HStack{
                 VStack(alignment: .leading) {
                     Text(action.title)
-                        .font(.title)
-                        .bold()
+                        .font(.title.weight(.bold))
+                        
                     
                     Text("\(String(action.points)) Points")
-                        .bold()
-                        .font(.title3)
+                        
+                        .font(.title3.weight(.bold))
                     
                     Divider()
                     
@@ -53,13 +55,13 @@ struct ActionDetail: View {
                                 .padding(22)
                                 .background(Color("AccentColor"))
                                 .foregroundColor(Color("WB"))
-                                .bold()
+                                .font(Font.body.bold())
                         }.frame(height: 50)
                          .background(Color("AccentColor")).cornerRadius(10)
                     } else {
                         Text("Walk at least 6000 steps and go to home page to click 'Redeem' in 'Steps' section")
                             .padding(.all)
-                            .bold()
+                            .font(Font.body.bold())
                     }
                     
                     Spacer(minLength: 150)

@@ -12,7 +12,7 @@ struct PastActionDetail: View {
     
     var instance: Actions
     
-
+    // detail page of actions completed
     var body: some View {
         VStack{
             if loadImageFromDocumentDirectory() != nil {
@@ -24,15 +24,15 @@ struct PastActionDetail: View {
             HStack{
                 VStack(alignment: .leading){
                     Text(instance.title ?? "Non")
-                        .font(.largeTitle)
-                        .bold()
+                        .font(.largeTitle.weight(.bold))
+                        
                     
                     Text((instance.date ?? Date()).formatted(date: .abbreviated, time: .shortened))
                     
                     Text("\(instance.points ?? "Unknown") Points")
                         .padding(.top)
-                        .font(.title2)
-                        .bold()
+                        .font(.title2.weight(.bold))
+                        
                     
                     Text(.init(instance.reference ?? "No Description"))
                     

@@ -9,6 +9,8 @@ import Foundation
 import HealthKit
 
 
+// A class that manages everything about step data from healthkit
+
 class HealthStore {
     var healthStore: HKHealthStore?
     

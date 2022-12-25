@@ -179,7 +179,7 @@ struct HomeView: View {
                 
             
             .navigationTitle("Home")
-            .toolbar(.hidden)
+            .navigationBarHidden(true)
             
             
             //Background Image that changes according to the level

@@ -8,10 +8,12 @@
 import Foundation
 import UserNotifications
 
+// Manages offline push notifications
 class NotificationManager {
     static let instance = NotificationManager()
     var permissionGranted = true
     
+    // Request for permission
     func requestAuth() {
         let options: UNAuthorizationOptions = [.alert, .sound, .badge]
         UNUserNotificationCenter.current().requestAuthorization(options: options) { (success, error) in
@@ -22,10 +24,12 @@ class NotificationManager {
         }
     }
     
-    func scheduleNotification(title: String, name: String?, hour: Int, min: Int){
+    
+    // Schedules for future notifications
+    func scheduleNotification(title: String, name: String, hour: Int, min: Int){
         var names = ""
-        if name != nil {
-            names = ", " + name! + "!"
+        if name != "" {
+            names = ", " + name + "!"
         } else {
             names = "!"
         }
@@ -46,6 +50,8 @@ class NotificationManager {
         
     }
     
+    
+    // Cancel all planned notfications
     func cancelNotif(){
         UNUserNotificationCenter.current().removeAllDeliveredNotifications()
         UNUserNotificationCenter.current().removeAllPendingNotificationRequests()
