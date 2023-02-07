@@ -1,0 +1,9 @@
+/* Privacy - Camera Usage Description */
+"NSCameraUsageDescription" = "您需要通过拍照来记录行动。此APP完全离线，不会上传您的任何个人文件。";
+
+/* Privacy - Health Share Usage Description */
+"NSHealthShareUsageDescription" = "此APP使用“健康”APP中的信息来测算您的走路距离。";
+
+/* Privacy - Health Update Usage Description */
+"NSHealthUpdateUsageDescription" = "此APP使用“健康”APP中的信息来测算您的走路距离。";
+

@@ -63,7 +63,7 @@ struct HomeView: View {
                     VStack{
                         ZStack(alignment: .topTrailing){
                             //Level progress bar + text indicating the level
-                            ProgressView("Level " + String(p.level), value: Double(self.p.calculatedPoints), total: 100)
+                            ProgressView("Level \(String(p.level))", value: Double(self.p.calculatedPoints), total: 100)
                                 .font(.title3.weight(.semibold))
                             Spacer()
                             //Text: calculated points
@@ -120,7 +120,7 @@ struct HomeView: View {
                         VStack{
                             ZStack(alignment: .topTrailing){
                                 //Day progress bar + text indicating days passed in the 30 days cycle
-                                ProgressView("Day " + String(Calendar.current.dateComponents([.day], from: p.startDate, to: Date()).day!), value: Double(Calendar.current.dateComponents([.day], from: p.startDate, to: Date()).day!), total: 30)
+                                ProgressView("Day \( String(Calendar.current.dateComponents([.day], from: p.startDate, to: Date()).day!))", value: Double(Calendar.current.dateComponents([.day], from: p.startDate, to: Date()).day!), total: 30)
                                     .font(.title3.weight(.semibold))
                                 Spacer()
                                 //Text: total days

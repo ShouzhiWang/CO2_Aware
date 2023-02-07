@@ -1,0 +1,171 @@
+/* No comment provided by engineer. */
+"   Food" = "   食物";
+
+/* No comment provided by engineer. */
+"  Lifestyle" = "  生活方式";
+
+/* No comment provided by engineer. */
+"  School & Work" = "  学习/工作";
+
+/* No comment provided by engineer. */
+" Snap a photo" = " 拍照";
+
+/* No comment provided by engineer. */
+" Travel" = " 旅行";
+
+/* No comment provided by engineer. */
+"[Learn More](https://en.wikipedia.org/wiki/Greenhouse_gas_emissions)" = "[了解更多](https://en.wikipedia.org/wiki/Greenhouse_gas_emissions)";
+
+/* No comment provided by engineer. */
+"%@ About us" = "%@ 关于我们";
+
+/* No comment provided by engineer. */
+"%@ Notification" = "%@ 通知";
+
+/* No comment provided by engineer. */
+"%@ Points" = "%@ 分数";
+
+/* No comment provided by engineer. */
+"%@ Show welcome screen again" = "%@ 再次展示启动界面";
+
+/* No comment provided by engineer. */
+"%lld Actions compeleted since %@" = "%lld 行动已完成，起始于 %@";
+
+/* No comment provided by engineer. */
+"🔗View Original Article on %@" = "🔗查看原文 %@";
+
+/* No comment provided by engineer. */
+"🥳You've read all of them? We are adding more articles!\nPlease wait for further updates😙" = "🥳全都读完了？没关系！以后还有！\n请等待接下来的更新哦😙";
+
+/* No comment provided by engineer. */
+"A month or more just passed, so your points have been cleared. Let's start your earning for the next exciting 30 days!" = "一个多月过去了，所以您的积分已经清零了。让我们开始您接下来激动人心的下一个月吧！";
+
+/* No comment provided by engineer. */
+"About Me" = "我";
+
+/* No comment provided by engineer. */
+"Actions" = "行动";
+
+/* No comment provided by engineer. */
+"Also, as mentioned, you can get points from walking instead of driving. To know how many steps you walked, we need to access your health data.\n\nAgain, this app is offline and your data is totally confidential." = "您可以通过步行取代交通工具来获得积分。要知道您走了多少步，我们需要访问您的健康数据。 同样，此应用完全离线，您的数据是完全保密的。";
+
+/* No comment provided by engineer. */
+"Cancel" = "取消";
+
+/* No comment provided by engineer. */
+"CO₂e emission per capita (tons)" = "人均二氧化碳当量(吨)";
+
+/* No comment provided by engineer. */
+"Daily" = "每日行动";
+
+/* No comment provided by engineer. */
+"Date Published: %@" = "发表日期: %@";
+
+/* No comment provided by engineer. */
+"Day %@" = "第%@天";
+
+/* No comment provided by engineer. */
+"Developed by Shawn Wang" = "由Shawn Wang开发";
+
+/* No comment provided by engineer. */
+"Discover" = "探索";
+
+/* No comment provided by engineer. */
+"Do you remember?" = "你还记得吗？";
+
+/* No comment provided by engineer. */
+"Done" = "完成";
+
+/* No comment provided by engineer. */
+"Edit your nickname" = "编辑昵称";
+
+/* No comment provided by engineer. */
+"Edit Your Region" = "编辑地区";
+
+/* No comment provided by engineer. */
+"Hi!" = "Hi!";
+
+/* No comment provided by engineer. */
+"History" = "历史记录";
+
+/* No comment provided by engineer. */
+"Home" = "主页";
+
+/* No comment provided by engineer. */
+"If you want to see your steps presented in CO2 Aware and earn steps points, please allow us to load your step data from Apple Health.\n\nYou can grant permission in Settings->Privacy->Health->CO2 Aware.\n\nIf you did not walk today or just woke up, please disregard this message! Your steps will be present after you have your step data.\n\nThank you!" = "如果您想看到步数数据在首页展示，并获取积分，请让我们通过苹果健康读取您的步数数据。\n\n您可以在设置->隐私-> 健康-> CO2 Aware中打开相应隐私开关\n\n如果您今天没有带手机走路，或者是刚起床，请不要在意。您的数据会在有可用步数后展示。\n\n谢谢！";
+
+/* No comment provided by engineer. */
+"In order to complete," = "完成此任务：";
+
+/* No comment provided by engineer. */
+"It's been a month!" = "已经一个月了！";
+
+/* No comment provided by engineer. */
+"Level %@" = "等级 %@";
+
+/* No comment provided by engineer. */
+"Nickname" = "昵称";
+
+/* No comment provided by engineer. */
+"No Steps?" = "没有步数？";
+
+/* No comment provided by engineer. */
+"Note: Doing so will reset your points earned for this month" = "注意：点击此选项会删除您这个月的所有积分数据";
+
+/* No comment provided by engineer. */
+"Others" = "其他";
+
+/* No comment provided by engineer. */
+"Per capita GHG emission" = "人均温室气体排放";
+
+/* No comment provided by engineer. */
+"Please send any feedback to \nshoguns.lenses.0s@icloud.com" = "请将反馈发送到shoguns.lenses.0s@icloud.com";
+
+/* No comment provided by engineer. */
+"Redeem" = "兑换";
+
+/* No comment provided by engineer. */
+"Redeemed" = "已兑换";
+
+/* No comment provided by engineer. */
+"Save" = "保存";
+
+/* No comment provided by engineer. */
+"Select a region" = "选择区域";
+
+/* No comment provided by engineer. */
+"Select Your Region" = "选择您的区域";
+
+/* No comment provided by engineer. */
+"Source: \n[%@](%@)" = "来源: \n[%@](%@)";
+
+/* No comment provided by engineer. */
+"Special thanks to Ryan Wu" = "特别感谢: Ryan Wu";
+
+/* No comment provided by engineer. */
+"Steps" = "步数";
+
+/* No comment provided by engineer. */
+"Tap arrow to edit" = "点击箭头编辑";
+
+/* No comment provided by engineer. */
+"The data is from 2019.\nEmissions are measured in carbon dioxide equivalents (CO2eq). This means non-CO2 gases are weighted by the amount of warming they cause over a 100-year timescale. Emissions from land use change – which can be positive or negative – are taken into account.\n\nSource: Our World In Data, Per capita greenhouse gas emissions" = "此数据来源于2019年\n排放量以二氧化碳当量 (CO2eq) 衡量。这意味着非 CO2 气体按其在 100 年时间尺度内引起的变暖量加权。考虑到土地利用变化产生的排放——最后的排放量数字可以是正的也可以是负的。\n\n来源: Our World In Data, Per capita greenhouse gas emissions";
+
+/* No comment provided by engineer. */
+"There is no Planet B." = "我们没有第二个星球了";
+
+/* No comment provided by engineer. */
+"To turn it ON/OFF, go to Settings, Notifications, find 'CO2 Aware', and turn its notification ON/OFF." = "开/关通知，请到设置，通知，找到CO2 Aware, 并开/关此应用的通知权限。";
+
+/* No comment provided by engineer. */
+"Walk at least 6000 steps and go to home page to click 'Redeem' in 'Steps' section" = "请走至少6000步并回到主页，点击“步数”区域的“兑换”按钮";
+
+/* No comment provided by engineer. */
+"Welcome," = "欢迎，";
+
+/* No comment provided by engineer. */
+"Welcome!" = "欢迎！";
+
+/* No comment provided by engineer. */
+"What Can I Do?" = "我可以做什么？";
+
