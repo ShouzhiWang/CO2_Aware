@@ -52,7 +52,7 @@ struct ContentView: View {
             } else {
                 WelcomeView(p: p)
             }
-        }
+        }.navigationViewStyle(.stack)
         
     }
     

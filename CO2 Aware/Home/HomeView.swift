@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import UIKit
 
 struct HomeView: View {
     @ObservedObject var p :  UserProgress
@@ -13,11 +14,14 @@ struct HomeView: View {
     @State private var presentAlrt2: Bool = false
     @Environment(\.scenePhase) var scenePhase
     @FetchRequest(sortDescriptors: []) var history: FetchedResults<Actions>
+    @Environment(\.horizontalSizeClass) var horizontalSizeClass
+    @Environment(\.verticalSizeClass) var verticalSizeClass
     
 
     var body: some View {
         //Home view
-        NavigationView{
+        //NavigationView{
+        
             ScrollView(.vertical) {
                 
                 ZStack(alignment: .top){
@@ -41,9 +45,16 @@ struct HomeView: View {
                     }
                     
                     //Changing tree image according to the level
-                    Image("treeLvl" + String(p.level))
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
+                    if UIDevice.current.userInterfaceIdiom == .pad {
+                        Image("treeLvl" + String(p.level))
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .frame(width: 800, height: 900)
+                    } else {
+                        Image("treeLvl" + String(p.level))
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                    }
           
                 }
                 
@@ -74,44 +85,48 @@ struct HomeView: View {
                             
                         }.padding(.horizontal)
                         
-                        ZStack(alignment: .topTrailing){
-                            //Steps progress bar + text indicating the steps
+                        
+                        if UIDevice.current.userInterfaceIdiom == .phone {
                             
-                            ProgressView("Steps", value: p.userSteps, total: 6000)
-                                .font(.title3.weight(.semibold))
-                            
-                            Spacer()
-                            HStack{
-                                if p.userSteps != 0.0 {
-                                    Button(){
-                                        p.redeemProgress = true
-                                        p.pointUp(point: 10)
-                                    } label:{
-                                        if p.redeemProgress {
-                                            Text("Redeemed")
-                                        } else {
-                                            Text("Redeem")
+                            ZStack(alignment: .topTrailing){
+                                //Steps progress bar + text indicating the steps
+                                
+                                ProgressView("Steps", value: p.userSteps, total: 6000)
+                                    .font(.title3.weight(.semibold))
+                                
+                                Spacer()
+                                HStack{
+                                    if p.userSteps != 0.0 {
+                                        Button(){
+                                            p.redeemProgress = true
+                                            p.pointUp(point: 10)
+                                        } label:{
+                                            if p.redeemProgress {
+                                                Text("Redeemed")
+                                            } else {
+                                                Text("Redeem")
+                                            }
+                                            
+                                        }
+                                        .disabled(p.userSteps < 6000 || p.redeemProgress)
+                                        
+                                        
+                                    } else{
+                                        Button(){
+                                            presentAlrt = true
+                                        } label: {
+                                            Image(systemName: "questionmark.circle")
                                         }
                                         
                                     }
-                                        .disabled(p.userSteps < 6000 || p.redeemProgress)
-
-                     
-                                } else{
-                                    Button(){
-                                        presentAlrt = true
-                                    } label: {
-                                        Image(systemName: "questionmark.circle")
-                                    }
                                     
+                                    
+                                    //Text: calculated steps
+                                    Text(String(Int(p.userSteps)) + "/6000")
                                 }
                                 
-                                
-                                //Text: calculated steps
-                                Text(String(Int(p.userSteps)) + "/6000")
-                            }
-                
-                        }.padding(.horizontal)
+                            }.padding(.horizontal)
+                        }
                         
 
 
@@ -215,7 +230,8 @@ struct HomeView: View {
                     
             )
       
-        }.environmentObject(p)
+        //}
+        .environmentObject(p)
             .onAppear{
                 p.manageSteps()
                 p.isDayChanged()

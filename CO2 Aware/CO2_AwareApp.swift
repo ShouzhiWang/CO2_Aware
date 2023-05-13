@@ -18,6 +18,7 @@ struct CO2_AwareApp: App {
             ContentView()
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
                 //.environment(\.managedObjectContext, dataController.container.viewContext)
+                .navigationViewStyle(StackNavigationViewStyle())
         }
     }
 }

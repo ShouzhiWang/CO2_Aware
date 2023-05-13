@@ -13,7 +13,7 @@ struct WelcomeView: View {
     @State private var buttonIn = false
     @ObservedObject var p :  UserProgress
     var body: some View {
-        NavigationView{
+        //NavigationView{
             
             VStack {
                 Image("Icon")
@@ -61,7 +61,7 @@ struct WelcomeView: View {
                     
                 }
             }
-        }
+        //}
             }
         
 }
@@ -178,7 +178,7 @@ struct Welcome3: View {
                 
                 // Ask for healthkit permission
                 if askHealth {
-                    Text("Also, as mentioned, you can get points from walking instead of driving. To know how many steps you walked, we need to access your health data.\n\nAgain, this app is offline and your data is totally confidential.")
+                    Text("Also, as mentioned, you can get points from walking instead of driving. To know how many steps you walked, we need to access your health data. (This is not applicable for iPad)\n\nAgain, this app is offline and your data is totally confidential.")
                         .padding(.all)
                         .font(.title3)
                     

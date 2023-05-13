@@ -18,6 +18,8 @@
 		6B13DB96292FCDB8001D9214 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B13DB95292FCDB8001D9214 /* ImagePicker.swift */; };
 		6B13DB98292FD5A9001D9214 /* PastActionDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B13DB97292FD5A9001D9214 /* PastActionDetail.swift */; };
 		6B16491D2952532B00532290 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B16491C2952532B00532290 /* WelcomeView.swift */; };
+		6B16A37D2A10252800EEBB45 /* Actions_zh.json in Resources */ = {isa = PBXBuildFile; fileRef = 6B16A37C2A10252800EEBB45 /* Actions_zh.json */; };
+		6B16A37F2A104B4200EEBB45 /* Articles_zh.json in Resources */ = {isa = PBXBuildFile; fileRef = 6B16A37E2A104B4200EEBB45 /* Articles_zh.json */; };
 		6B44F074299193CC0016CD36 /* CO2-Aware-InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6B44F072299193CC0016CD36 /* CO2-Aware-InfoPlist.strings */; };
 		6B44F077299193CC0016CD36 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6B44F075299193CC0016CD36 /* Localizable.strings */; };
 		6BA84E382931710E00D38152 /* Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BA84E372931710E00D38152 /* Action.swift */; };
@@ -56,6 +58,8 @@
 		6B13DB95292FCDB8001D9214 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		6B13DB97292FD5A9001D9214 /* PastActionDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PastActionDetail.swift; sourceTree = "<group>"; };
 		6B16491C2952532B00532290 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
+		6B16A37C2A10252800EEBB45 /* Actions_zh.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Actions_zh.json; sourceTree = "<group>"; };
+		6B16A37E2A104B4200EEBB45 /* Articles_zh.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Articles_zh.json; sourceTree = "<group>"; };
 		6B44F073299193CC0016CD36 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/CO2-Aware-InfoPlist.strings"; sourceTree = "<group>"; };
 		6B44F076299193CC0016CD36 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		6BA84E372931710E00D38152 /* Action.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Action.swift; sourceTree = "<group>"; };
@@ -115,6 +119,7 @@
 				6B0CF459292B17E80013488E /* ArticleDetails.swift */,
 				6B0CF45D292BFD130013488E /* OtherArticles.swift */,
 				6BF130ED2926E75F00D23961 /* articles2.json */,
+				6B16A37E2A104B4200EEBB45 /* Articles_zh.json */,
 			);
 			path = ArticleModel;
 			sourceTree = "<group>";
@@ -125,6 +130,7 @@
 				6BA84E372931710E00D38152 /* Action.swift */,
 				6BA84E3B2931722F00D38152 /* ActionModelData.swift */,
 				6BA84E392931719000D38152 /* Actions.json */,
+				6B16A37C2A10252800EEBB45 /* Actions_zh.json */,
 			);
 			path = ActionModel;
 			sourceTree = "<group>";
@@ -248,7 +254,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1400;
-				LastUpgradeCheck = 1400;
+				LastUpgradeCheck = 1420;
 				TargetAttributes = {
 					A147750628D5495800C204EA = {
 						CreatedOnToolsVersion = 14.0;
@@ -280,11 +286,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				6BF130EE2926E75F00D23961 /* articles2.json in Resources */,
+				6B16A37D2A10252800EEBB45 /* Actions_zh.json in Resources */,
 				A1379DE128EE769000E3154B /* GHGPerCap.csv in Resources */,
 				A147751228D5495A00C204EA /* Preview Assets.xcassets in Resources */,
 				6B44F077299193CC0016CD36 /* Localizable.strings in Resources */,
 				A147750F28D5495A00C204EA /* Assets.xcassets in Resources */,
 				6BA84E3A2931719000D38152 /* Actions.json in Resources */,
+				6B16A37F2A104B4200EEBB45 /* Articles_zh.json in Resources */,
 				6B44F074299193CC0016CD36 /* CO2-Aware-InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -355,6 +363,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -416,6 +425,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -496,7 +506,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = ShawnWang.CO2Aware;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -505,7 +515,7 @@
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -538,7 +548,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = ShawnWang.CO2Aware;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -547,7 +557,7 @@
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
