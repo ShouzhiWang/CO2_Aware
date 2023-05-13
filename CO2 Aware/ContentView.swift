@@ -28,6 +28,8 @@ struct ContentView: View {
                             Label("Home", systemImage: "leaf")
                         }
                         .tag(0)
+                        //.navigationTitle("Home")
+                        .navigationBarHidden(true)
                     
                     ActionsView(p: p).environmentObject(amd)
                         .tabItem {
@@ -52,7 +54,7 @@ struct ContentView: View {
             } else {
                 WelcomeView(p: p)
             }
-        }
+        }.navigationViewStyle(.stack)
         
     }
     

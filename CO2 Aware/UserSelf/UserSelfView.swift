@@ -170,7 +170,7 @@ struct UserSelfView: View {
              
                 
                 
-            }.popover(isPresented: $showPopover) {
+            }.sheet(isPresented: $showPopover) {
                 //Popover of changing name
                 VStack{
                     HStack{
@@ -232,7 +232,7 @@ struct UserSelfView: View {
             
  
             
-            .popover(isPresented: $showPopover2) {
+            .sheet(isPresented: $showPopover2) {
                 VStack {
                     HStack{
                         Button("Cancel") {
@@ -345,7 +345,7 @@ struct UserSelfView: View {
                         .disabled(tempCo2 == nil || tempCo2?.country == "...Please Select")
 
                     }
-                    .padding(.horizontal)
+                    .padding(.all)
                   
                 }
             }

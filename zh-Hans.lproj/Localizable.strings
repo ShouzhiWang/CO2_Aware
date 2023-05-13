@@ -47,7 +47,7 @@
 "Actions" = "行动";
 
 /* No comment provided by engineer. */
-"Also, as mentioned, you can get points from walking instead of driving. To know how many steps you walked, we need to access your health data.\n\nAgain, this app is offline and your data is totally confidential." = "您可以通过步行取代交通工具来获得积分。要知道您走了多少步，我们需要访问您的健康数据。 同样，此应用完全离线，您的数据是完全保密的。";
+"Also, as mentioned, you can get points from walking instead of driving. To know how many steps you walked, we need to access your health data. (This is not applicable for iPad)\n\nAgain, this app is offline and your data is totally confidential." = "您可以通过步行取代交通工具来获得积分。要知道您走了多少步，我们需要访问您的健康数据。(不适用于iPad)\n\n同样，此应用完全离线，您的数据是完全保密的。";
 
 /* No comment provided by engineer. */
 "Cancel" = "取消";
@@ -169,3 +169,10 @@
 /* No comment provided by engineer. */
 "What Can I Do?" = "我可以做什么？";
 
+"***Emissions continue to rise.*** As a result, the Earth is now about 1.1°C warmer than it was in the late 1800s. The last decade (2011-2020) was the warmest on record.\n\nMany people think climate change mainly means warmer temperatures. But temperature rise is only the beginning of the story. Because the Earth is a system, where everything is connected, **changes in one area can influence changes in all others**.\n\nThe consequences of climate change now include, among others, **intense droughts, water scarcity, severe fires, rising sea levels, flooding, melting polar ice, catastrophic storms and declining biodiversity.**" = "***排放量继续上升。*** 因此，地球现在比 1800 年代后期温度高约 1.1°C。 过去十年（2011-2020 年）是有记录以来最温暖的十年。\n\n许多人认为气候变化主要意味着气温升高。 但温度上升只是故事的开始。 因为地球是一个万物相连的系统，**一个地区的变化会影响所有其他地区的变化**。\n\n气候变化的后果包括严重干旱、缺水、严重 火灾、海平面上升、洪水、极地冰层融化、灾难性风暴和生物多样性下降。";
+
+
+"**Start from little things.**\n\nFrom daily walks to travel abroad, this app provides practical recommendations for actions that can reduce greenhouse gas (GHG) emissions. \n\nIn order to recording the actions for you to remember, the actions are completed once you snap a picture of what you did. (your data is safe because this app is completely offline) \n\nYou will get points automatically once you complete an action. The points you earned will facilitate the growth of the tree. 100 points will be a level. If you get to level 6, you will see a fully grown tree with lots of fruits, which also affirms your effort. Isn’t that amazing?\n\nHowever, the points will be automatically cleared every 30 days. Don’t worry! You can still get them back by doing more actions." = "**从小事做起。**\n\n从日常步行到出国旅行，此应用程序为减少温室气体 (GHG) 排放的行动提供实用建议。 \n\n您需要通过拍照来记录完成的行动。 （因为此应用程序完全离线，您的数据完全保密）\n\n您将在完成操作后会自动获得积分。 您获得的积分将促进首页大树的生长。 100分将是一个等级。 如果您到了第 6 等级，您会看到一棵长满果实的大树，这也是对努力的肯定。 \n\n不过，积分每30天会自动清零一次。 不用担心！ 您仍然可以通过完成更多行动赚取更多。";
+
+
+"First, we need your permission to send notifications for reminding you to act. There will only be three notifications everyday, at 9:30am, 12:30pm, and 6pm.\n\n**Simply click allow.**\n\n*However, it is totally fine if you don't want to recieve any notifications.*" = "首先，我们需要您的许可才能发送提醒您采取行动的通知。 每天只有三个通知，分别是上午 9 点 30 分、中午 12 点 30 分和下午 6 点。\n\n**只需点击允许即可。**\n\n*但是，如果您不想收到任何通知也完全没问题。*";

@@ -1,0 +1,452 @@
+[
+  {
+    "type": "Daily",
+    "title": "关灯",
+    "description": "当自然光线充足或离开房间时**关灯**。 这是一个非常简单的行动。",
+    "points": 5,
+    "id": 0,
+    "picture": "lightbulb",
+    "source": "https://sustainability.georgetown.edu/community-engagement/things-you-can-do/",
+    "special": false
+  },
+  {
+    "type": "Daily",
+    "title": "走路",
+    "description": "步行可以帮助减少缺乏运动和空气污染，以及和减缓气候变化",
+    "points": 20,
+    "id": 1,
+    "picture": "walk",
+    "source": "https://sustainability.georgetown.edu/community-engagement/things-you-can-do/",
+    "special": true
+  },
+  {
+    "type": "Daily",
+    "title": "骑自行车",
+    "description": "骑车可以帮助减少缺乏运动和空气污染，以及和减缓气候变化",
+    "points": 20,
+    "id": 44,
+    "picture": "bike",
+    "source": "https://sustainability.georgetown.edu/community-engagement/things-you-can-do/",
+    "special": false
+  },
+  {
+    "type": "Daily",
+    "title": "控制房间温度",
+    "description": "当您在房间内时，请将您的温度系统保持在适中的设置。 在温暖的天气里，通常建议您在家时将家中的制冷系统设置为 **78 华氏度（26 摄氏度）**。 冬天，它是 **68 华氏度（20 摄氏度）**",
+    "points": 5,
+    "id": 2,
+    "picture": "temperature",
+    "source": "https://sustainability.georgetown.edu/community-engagement/things-you-can-do/",
+    "special": false
+  },
+  {
+    "type": "Daily",
+    "title": "开关窗",
+    "description": "如果您的气候控制系统处于**开**状态，请关闭窗户； 如果您需要一点新鲜空气，请**关闭**暖气或空调。",
+    "points": 5,
+    "id": 3,
+    "picture": "windows",
+    "source": "https://sustainability.georgetown.edu/community-engagement/things-you-can-do/",
+    "special": false
+  },
+  {
+    "type": "Lifestyle",
+    "title": "洗衣服前多攒衣服",
+    "description": "等把洗衣机填满了在洗衣服，并尽可能使用节能的洗衣模式。",
+    "points": 10,
+    "id": 4,
+    "picture": "",
+    "source": "https://sustainability.georgetown.edu/community-engagement/things-you-can-do/",
+    "special": false
+  },
+  {
+    "type": "Lifestyle",
+    "title": "房间隔热",
+    "description": "为您的生活空间供暖可能是一个昂贵且耗能的过程。 通过对阁楼和墙壁等地方进行隔热，您可以确保您的房屋在冬天保持热量，在夏天保持凉爽",
+    "points": 30,
+    "id": 5,
+    "picture": "",
+    "source": "https://www.futurelearn.com/info/blog/how-to-reduce-your-carbon-footprint-tips",
+    "special": false
+  },
+  {
+    "type": "Lifestyle",
+    "title": "改用可再生能源",
+    "description": "通过改用太阳能、风能或水力发电的公司，您可以减少家庭排放并节省能源费用。",
+    "points": 30,
+    "id": 6,
+    "picture": "",
+    "source": "https://www.futurelearn.com/info/blog/how-to-reduce-your-carbon-footprint-tips",
+    "special": false
+  },
+  {
+    "type": "Lifestyle",
+    "title": "购买节能灯泡",
+    "description": "购买节能灯泡或带有能源之星的电器",
+    "points": 15,
+    "id": 7,
+    "picture": "",
+    "source": "https://www.futurelearn.com/info/blog/how-to-reduce-your-carbon-footprint-tips",
+    "special": false
+  },
+  {
+    "type": "Lifestyle",
+    "title": "少用水",
+    "description": "处理水并将其输送到我们的家中需要能源和资源。 更重要的是，一旦它在那里加热它也是相当耗能的。 因此，通过减少使用，您可以帮助保护环境并降低碳足迹。",
+    "points": 10,
+    "id": 8,
+    "picture": "",
+    "source": "https://www.futurelearn.com/info/blog/how-to-reduce-your-carbon-footprint-tips",
+    "special": false
+  },
+  {
+    "type": "Lifestyle",
+    "title": "改变饮食",
+    "description": "通过少吃动物产品，尤其是红肉（或选择植物性饮食）并购买当地采购的食物，您可以对改善环境大有作为。",
+    "points": 10,
+    "id": 9,
+    "picture": "",
+    "source": "https://www.futurelearn.com/info/blog/how-to-reduce-your-carbon-footprint-tips",
+    "special": false
+  },
+  {
+    "type": "Lifestyle",
+    "title": "走向数字化",
+    "description": "在线与他人协作从未如此简单。 无论是通过使用云存储共享文档还是通过视频会议代替旅行，您都可以减少浪费和排放。",
+    "points": 5,
+    "id": 10,
+    "picture": "",
+    "source": "https://www.futurelearn.com/info/blog/how-to-reduce-your-carbon-footprint-tips",
+    "special": false
+  },
+  {
+    "type": "Lifestyle",
+    "title": "多骑车",
+    "description": "骑自行车和步行是两种最环保的出行方式。 而且，它们不仅对地球有益，而且对您的健康也有益。 如果可以，尽可能选择骑自行车或步行上班",
+    "points": 10,
+    "id": 11,
+    "picture": "",
+    "source": "https://www.futurelearn.com/info/blog/how-to-reduce-your-carbon-footprint-tips",
+    "special": false
+  },
+  {
+    "type": "Lifestyle",
+    "title": "减少回收再利用",
+    "description": "各种规模的公司在日常运营中使用大量不同的产品。 无论是纸张、电子设备、包装还是水，都有碳足迹。 通过减少产生的废物量、重复使用 IT 设备和回收废物，您也可以参与减排。",
+    "points": 10,
+    "id": 12,
+    "picture": "",
+    "source": "https://www.futurelearn.com/info/blog/how-to-reduce-your-carbon-footprint-tips",
+    "special": false
+  },
+  {
+    "type": "Lifestyle",
+    "title": "避免一次性塑料",
+    "description": "一次性塑料可能很方便，但它们对环境的危害相当大。 它们不仅污染我们的水道和海洋，而且还需要能源来生产和回收。 您可以停止使用一次性咖啡杯和餐具等物品来减少公司的碳足迹。",
+    "points": 5,
+    "id": 13,
+    "picture": "",
+    "source": "https://www.futurelearn.com/info/blog/how-to-reduce-your-carbon-footprint-tips",
+    "special": false
+  },
+  {
+    "type": "Food",
+    "title": "停止浪费食物",
+    "description": "食物浪费是温室气体排放的主要来源。 这是因为被扔掉的食物在垃圾填埋场会分解并释放出甲烷。它特别强效的温室气体",
+    "points": 5,
+    "id": 14,
+    "picture": "",
+    "source": "https://www.healthline.com/nutrition/how-to-reduce-carbon-footprint#1.-Stop-wasting-food",
+    "special": false
+  },
+  {
+    "type": "Food",
+    "title": "少吃肉",
+    "description": "研究表明，减少肉类摄入量是降低碳足迹的最佳方法之一。\\n\n\n在一项针对 16,800 名美国人的研究中，释放最多温室气体的饮食中牛肉、猪肉和其他反刍动物的肉含量最高。 同时，温室气体排放量最低的饮食中肉类含量也最低。",
+    "points": 15,
+    "id": 15,
+    "picture": "",
+    "source": "https://www.healthline.com/nutrition/how-to-reduce-carbon-footprint#1.-Stop-wasting-food",
+    "special": false
+  },
+  {
+    "type": "Food",
+    "title": "吃植物蛋白",
+    "description": "多吃植物性蛋白质可以显着减少温室气体排放。在一项研究中，温室气体排放量最低的人摄入的植物性蛋白质最多，包括豆类、坚果和种子，而摄入的动物蛋白最少",
+    "points": 10,
+    "id": 16,
+    "picture": "",
+    "source": "https://www.healthline.com/nutrition/how-to-reduce-carbon-footprint#1.-Stop-wasting-food",
+    "special": false
+  },
+  {
+    "type": "Food",
+    "title": "少食用乳制品",
+    "description": "减少乳制品（包括牛奶和奶酪）的摄入量是减少碳足迹的另一种方法。\n\n一项针对 2,101 名荷兰成年人的研究表明，乳制品是个人温室气体排放的第二大贡献者——仅次于肉类。\n首先，尝试少吃奶酪，并用杏仁奶或豆奶等植物性替代品代替牛奶。",
+    "points": 10,
+    "id": 17,
+    "picture": "",
+    "source": "https://www.healthline.com/nutrition/how-to-reduce-carbon-footprint#1.-Stop-wasting-food",
+    "special": false
+  },
+  {
+    "type": "Food",
+    "title": "多吃富含纤维的食物",
+    "description": "多吃富含纤维的食物不仅可以改善您的健康，还可以减少您的碳足迹。\n\n一项针对 16,800 名美国人的研究发现，温室气体排放量最低的饮食富含富含纤维的植物性食物，而饱和脂肪和钠含量较低。 这些食物可能有助于让您保持饱腹感，自然会限制您摄入含大量碳的食物。",
+    "points": 10,
+    "id": 18,
+    "picture": "",
+    "source": "https://www.healthline.com/nutrition/how-to-reduce-carbon-footprint#1.-Stop-wasting-food",
+    "special": false
+  },
+  {
+    "type": "Food",
+    "title": "种植自己的食品",
+    "description": "在社区花园或后院种植自己的农产品有很多好处，包括减轻压力、改善饮食质量和改善情绪健康。耕种一块土地，无论大小，也可以减少您的碳足迹。\n\n这是因为种植水果和蔬菜减少了塑料包装的使用，减少了对长途运输农产品的依赖。",
+    "points": 20,
+    "id": 19,
+    "picture": "",
+    "source": "https://www.healthline.com/nutrition/how-to-reduce-carbon-footprint#1.-Stop-wasting-food",
+    "special": false
+  },
+  {
+    "type": "Food",
+    "title": "不要摄入过多的卡路里",
+    "description": "摄入超过身体所需的卡路里可能会促进体重增加和相关疾病。 更重要的是，它与更高的温室气体排放量有关。\n\n一项针对 3,818 名荷兰人的研究表明，那些温室气体排放量较高的人比饮食中温室气体排放量较低的人从食物和饮料中消耗更多的卡路里。",
+    "points": 10,
+    "id": 20,
+    "picture": "",
+    "source": "https://www.healthline.com/nutrition/how-to-reduce-carbon-footprint#1.-Stop-wasting-food",
+    "special": false
+  },
+  {
+    "type": "Food",
+    "title": "购买当地食物",
+    "description": "支持当地农民是减少碳足迹的好方法。 在当地购买可以降低您对长途运输食物的依赖，并可能增加新鲜水果和蔬菜的摄入量，从而帮助抵消您的碳排放。",
+    "points": 10,
+    "id": 21,
+    "picture": "",
+    "source": "https://www.healthline.com/nutrition/how-to-reduce-carbon-footprint#1.-Stop-wasting-food",
+    "special": false
+  },
+  {
+    "type": "School/Work",
+    "title": "少打印",
+    "description": "如果可能，使用电子邮件或 iPad 查看文档而不是将它们打印出来。",
+    "points": 10,
+    "id": 22,
+    "picture": "",
+    "source": "",
+    "special": false
+  },
+  {
+    "type": "School/Work",
+    "title": "双面打印",
+    "description": "双面打印使用的纸张量是单面打印的一半，需要的能源更少，占用的空间也更少",
+    "points": 5,
+    "id": 23,
+    "picture": "",
+    "source": "",
+    "special": false
+  },
+  {
+    "type": "School/Work",
+    "title": "关灯和空调",
+    "description": "离开会议室或办公室时请关闭电灯或空调",
+    "points": 5,
+    "id": 24,
+    "picture": "",
+    "source": "",
+    "special": false
+  },
+  {
+    "type": "School/Work",
+    "title": "用水杯",
+    "description": "使用瓶子/杯子/马克杯代替一次性水瓶。",
+    "points": 10,
+    "id": 25,
+    "picture": "",
+    "source": "",
+    "special": false
+  },
+  {
+    "type": "School/Work",
+    "title": "购买省电产品",
+    "description": "使用更多获得能源之星认证的产品，如电脑、咖啡机或打印机。",
+    "points": 15,
+    "id": 26,
+    "picture": "",
+    "source": "",
+    "special": false
+  },
+  {
+    "type": "School/Work",
+    "title": "线上会议",
+    "description": "如果可能的话，多开一些线上会议，而不是为了线下会议而亲自出差。",
+    "points": 10,
+    "id": 27,
+    "picture": "",
+    "source": "",
+    "special": false
+  },
+  {
+    "type": "School/Work",
+    "title": "切换至可再生能源",
+    "description": "使用太阳能电池板或风力发电等可再生能源代替传统的燃料动力能源。",
+    "points": 20,
+    "id": 28,
+    "picture": "",
+    "source": "",
+    "special": false
+  },
+  {
+    "type": "School/Work",
+    "title": "更好的建筑结构",
+    "description": "使用更有效的建筑结构和材料，利用更多的自然光。 在节省能源的同时，工作场所的自然光会影响许多健康方面，如情绪、睡眠、维生素 D 水平和眼睛健康，并提高生产力水平。",
+    "points": 30,
+    "id": 29,
+    "picture": "",
+    "source": "https://ohsonline.com/articles/2019/11/27/five-ways-that-natural-light-improves-productivity-in-the-workplace.aspx",
+    "special": false
+  },
+  {
+    "type": "Travel",
+    "title": "更好的交通",
+    "description": "与其雇用司机或租车，不如大胆尝试并选择公共交通工具。 坐地铁。 跳上公共汽车。 乘坐有轨电车。 请注意，公共交通方式的效率因目的地而异。 虽然许多城市的公共汽车和铁路系统由更清洁的燃料或替代技术提供动力，但其他城市仍在使用柴油或天然气。 在某些地方，游客甚至可以乘坐电动嘟嘟车穿梭于交通拥堵之中。 研究您正在访问的目的地的不同选项，以做出明智的决定。",
+    "points": 10,
+    "id": 30,
+    "picture": "",
+    "source": "https://sustainabletravel.org/how-to-reduce-travel-carbon-footprint/",
+    "special": false
+  },
+  {
+    "type": "Travel",
+    "title": "使用“请勿打扰”标志",
+    "description": "酒店希望为客人提供最好的客户服务，但是你真的需要每天都打扫房间吗？ 或者你的毛巾每次用完都要洗吗？在门外挂上“请勿打扰标志”，减少用于清理房间的能源和资源。",
+    "points": 10,
+    "id": 31,
+    "picture": "",
+    "source": "https://sustainabletravel.org/how-to-reduce-travel-carbon-footprint/",
+    "special": false
+  },
+  {
+    "type": "Travel",
+    "title": "吃当地美食",
+    "description": "通过吃当地食物而不是进口食物，您将减少膳食的碳足迹，同时也支持当地经济。 此外，您还可以体验当地的饮食文化，品尝当地最新鲜的美食！",
+    "points": 5,
+    "id": 32,
+    "picture": "",
+    "source": "https://sustainabletravel.org/how-to-reduce-travel-carbon-footprint/",
+    "special": false
+  },
+  {
+    "type": "Travel",
+    "title": "减少食物浪费",
+    "description": "尝试所有美味和异国情调的菜肴，度假时很难不放纵一下。 但您是否知道粮食生产约占世界排放量的四分之一？ 随着森林被砍伐用于放牧奶牛和种植农作物，它们储存的碳被释放到空气中。 食品在加工、包装、运输和冷藏过程中也会产生碳； 当我们把没吃完的食物扔掉时，它会在垃圾填埋场腐烂时产生有害的甲烷排放。",
+    "points": 10,
+    "id": 33,
+    "picture": "",
+    "source": "https://sustainabletravel.org/how-to-reduce-travel-carbon-footprint/",
+    "special": false
+  },
+  {
+    "type": "Travel",
+    "title": "购买有意义的纪念品",
+    "description": "在购买一件物品之前，请考虑它是否是您实际会在家中使用的东西。 你真的要戴那顶阔边帽吗？ 那个雪球会不会在抽屉后面积灰？ 选择您实际会使用的实用物品。 购买当地工匠制作的有意义的纪念品，而不是从国外进口的批量生产的商品。 投资于高质量的产品，而不是使用一次后就必须丢弃的劣质产品。",
+    "points": 5,
+    "id": 34,
+    "picture": "",
+    "source": "https://sustainabletravel.org/how-to-reduce-travel-carbon-footprint/",
+    "special": false
+  },
+  {
+    "type": "Travel",
+    "title": "避免飞往附近的目的地",
+    "description": "在离家较近的地方度假时，有很多机会用更可持续的交通方式代替航空旅行。 一般来说，包租巴士和火车往往是对气候最友好的选择。 开车呢？ 这里要考虑的重要因素之一是您车辆中的乘客数量。 如果您独自旅行，那么开车实际上可能比坐飞机产生更高的碳足迹。 但如果您与全家人一起旅行，那么老式的公路旅行可能是更好的选择。",
+    "points": 10,
+    "id": 35,
+    "picture": "",
+    "source": "https://sustainabletravel.org/how-to-reduce-travel-carbon-footprint/",
+    "special": false
+  },
+  {
+    "type": "Travel",
+    "title": "预订直达航班",
+    "description": "较短的距离并不是预订直飞航班的唯一原因。 一个鲜为人知的事实是，飞机在起飞和降落期间释放的碳最多。 最好预订一次较长的航班，而不是多次较短的航班，这样您只需起飞和降落一次。 如果找不到直达站，请选择走最直接路线且停站最少的行程。",
+    "points": 15,
+    "id": 36,
+    "picture": "",
+    "source": "https://sustainabletravel.org/how-to-reduce-travel-carbon-footprint/",
+    "special": false
+  },
+  {
+    "type": "Travel",
+    "title": "坐经济舱",
+    "description": "乘坐经济舱有一件好事吗？ 这样做会降低您的碳足迹。 这是因为航空乘客的排放量取决于他们在飞机上占据的空间大小。 平均而言，商务舱座位比经济舱座位大两倍。 这意味着商务舱乘客的碳足迹通常是经济舱乘客的两倍。 头等舱座位占用更多空间，碳足迹也更大。 预订经济舱既可以节省机票钱，又可以拯救地球！",
+    "points": 10,
+    "id": 37,
+    "picture": "",
+    "source": "https://sustainabletravel.org/how-to-reduce-travel-carbon-footprint/",
+    "special": false
+  },
+  {
+    "type": "Travel",
+    "title": "轻装行李",
+    "description": "您的行李越重，通过飞机、公共汽车、汽车或火车运输所需的燃料就越多。 尽可能轻装行李，以减少燃料使用，从而减少碳排放量。",
+    "points": 15,
+    "id": 38,
+    "picture": "",
+    "source": "https://sustainabletravel.org/how-to-reduce-travel-carbon-footprint/",
+    "special": false
+  },
+  {
+    "type": "School/Work",
+    "title": "步行或使用公共交通工具",
+    "description": "如果可能的话，把车留在家里，步行（或骑自行车！）去上课。 步行不仅有助于减少碳足迹，而且是改善健康和融入新社区的好方法。",
+    "points": 15,
+    "id": 39,
+    "picture": "",
+    "source": "https://onetreeplanted.org/blogs/stories/reducing-carbon-footprint-college",
+    "special": false
+  },
+  {
+    "type": "School/Work",
+    "title": "切换到笔记本电脑",
+    "description": "您知道笔记本电脑的能耗比台式电脑低 90% 吗？ 如果您一直使用台式计算机撰写论文和进行研究，请考虑进行转换。 通过一些研究，您可以找到一种价格低廉且足以满足您需求的产品。",
+    "points": 20,
+    "id": 40,
+    "picture": "",
+    "source": "https://onetreeplanted.org/blogs/stories/reducing-carbon-footprint-college",
+    "special": false
+  },
+  {
+    "type": "School/Work",
+    "title": "避免使用一次性用品",
+    "description": "与其购买塑料水瓶或塑料水壶，不如买一个优质的热水瓶，然后用食堂里的水、茶或您最喜欢的汤重新装满。 如果可能的话，在你的包里也带上可重复使用的餐具，这样你就不必使用餐厅提供的一次性餐具和吸管。 如果您准备好接受更多，请查看我们关于零浪费生活的提示。",
+    "points": 10,
+    "id": 41,
+    "picture": "",
+    "source": "https://onetreeplanted.org/blogs/stories/reducing-carbon-footprint-college",
+    "special": false
+  },
+  {
+    "type": "School/Work",
+    "title": "谨慎购买",
+    "description": "你真的需要那个新的公告板吗？ 那顶帽子怎么样？ 当您想要购买时，请仔细考虑：该物品真的会增加您的生活，还是只会占用更多空间？ 如需更多灵感，请查看我们关于可持续生活的提示，了解如何过上更可持续的生活。",
+    "points": 10,
+    "id": 42,
+    "picture": "",
+    "source": "https://onetreeplanted.org/blogs/stories/reducing-carbon-footprint-college",
+    "special": false
+  },
+  {
+    "type": "School/Work",
+    "title": "种树",
+    "description": "植树是与环境联系并减少碳足迹的好方法。 为庆祝地球日和植树日（以及一年中的其他时间），One Tree Planted 在世界各地举办植树活动。 因此，请务必定期查看我们的社区活动页面，以便您有机会参加您附近的活动！",
+    "points": 25,
+    "id": 43,
+    "picture": "",
+    "source": "https://onetreeplanted.org/blogs/stories/reducing-carbon-footprint-college",
+    "special": false
+  }
+]

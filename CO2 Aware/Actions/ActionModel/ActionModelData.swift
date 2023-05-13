@@ -11,6 +11,7 @@
 import Foundation
 
 class ActionModelData: ObservableObject {
+    
     @Published var actionList: [Action] = loadAction("Actions.json")
     
     // Seperate action by their type
@@ -40,24 +41,47 @@ class ActionModelData: ObservableObject {
 
 // Load actions from json data and create action types
 func loadAction<T: Decodable>(_ filename: String) -> T {
+    
     let data: Data
-
-    guard let file = Bundle.main.url(forResource: filename, withExtension: nil)
+    
+    let locale = Locale.current
+    if locale.languageCode == "zh" {
+        guard let file = Bundle.main.url(forResource: "Actions_zh.json", withExtension: nil)
+        else {
+            fatalError("Couldn't find \("Actions_zh.json") in main bundle.")
+        }
+        
+        do {
+            data = try Data(contentsOf: file)
+        } catch {
+            fatalError("Couldn't load \("Actions_zh.json") from main bundle:\n\(error)")
+        }
+        
+        do {
+            let decoder = JSONDecoder()
+            return try decoder.decode(T.self, from: data)
+        } catch {
+            fatalError("Couldn't parse \("Actions_zh.json") as \(T.self):\n\(error)")
+        }
+        
+    } else{
+        guard let file = Bundle.main.url(forResource: filename, withExtension: nil)
         else {
             fatalError("Couldn't find \(filename) in main bundle.")
-    }
-
-    do {
-        data = try Data(contentsOf: file)
-    } catch {
-        fatalError("Couldn't load \(filename) from main bundle:\n\(error)")
-    }
-
-    do {
-        let decoder = JSONDecoder()
-        return try decoder.decode(T.self, from: data)
-    } catch {
-        fatalError("Couldn't parse \(filename) as \(T.self):\n\(error)")
+        }
+        
+        do {
+            data = try Data(contentsOf: file)
+        } catch {
+            fatalError("Couldn't load \(filename) from main bundle:\n\(error)")
+        }
+        
+        do {
+            let decoder = JSONDecoder()
+            return try decoder.decode(T.self, from: data)
+        } catch {
+            fatalError("Couldn't parse \(filename) as \(T.self):\n\(error)")
+        }
     }
 }
 
