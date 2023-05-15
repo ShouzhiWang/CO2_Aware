@@ -22,7 +22,6 @@
 		6B16A37F2A104B4200EEBB45 /* Articles_zh.json in Resources */ = {isa = PBXBuildFile; fileRef = 6B16A37E2A104B4200EEBB45 /* Articles_zh.json */; };
 		6B44F074299193CC0016CD36 /* CO2-Aware-InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6B44F072299193CC0016CD36 /* CO2-Aware-InfoPlist.strings */; };
 		6B44F077299193CC0016CD36 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6B44F075299193CC0016CD36 /* Localizable.strings */; };
-		6B857A842A105AAC00C900DC /* Actions_zh.json in Resources */ = {isa = PBXBuildFile; fileRef = 6B857A832A105AAC00C900DC /* Actions_zh.json */; };
 		6BA84E382931710E00D38152 /* Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BA84E372931710E00D38152 /* Action.swift */; };
 		6BA84E3A2931719000D38152 /* Actions.json in Resources */ = {isa = PBXBuildFile; fileRef = 6BA84E392931719000D38152 /* Actions.json */; };
 		6BA84E3C2931722F00D38152 /* ActionModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BA84E3B2931722F00D38152 /* ActionModelData.swift */; };
@@ -126,6 +125,14 @@
 			path = ArticleModel;
 			sourceTree = "<group>";
 		};
+		6B1E91112A11D5FF00BE60E7 /* Recovered References */ = {
+			isa = PBXGroup;
+			children = (
+				6B16A37C2A10252800EEBB45 /* Actions_zh.json */,
+			);
+			name = "Recovered References";
+			sourceTree = "<group>";
+		};
 		6BA84E362931707B00D38152 /* ActionModel */ = {
 			isa = PBXGroup;
 			children = (
@@ -142,6 +149,7 @@
 			children = (
 				A147750928D5495800C204EA /* CO2 Aware */,
 				A147750828D5495800C204EA /* Products */,
+				6B1E91112A11D5FF00BE60E7 /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
@@ -291,7 +299,6 @@
 				6B16A37D2A10252800EEBB45 /* Actions_zh.json in Resources */,
 				A1379DE128EE769000E3154B /* GHGPerCap.csv in Resources */,
 				A147751228D5495A00C204EA /* Preview Assets.xcassets in Resources */,
-				6B857A842A105AAC00C900DC /* Actions_zh.json in Resources */,
 				6B44F077299193CC0016CD36 /* Localizable.strings in Resources */,
 				A147750F28D5495A00C204EA /* Assets.xcassets in Resources */,
 				6BA84E3A2931719000D38152 /* Actions.json in Resources */,
