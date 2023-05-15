@@ -1,0 +1,186 @@
+/* No comment provided by engineer. */
+"   Food" = "   Food";
+
+/* No comment provided by engineer. */
+"  Lifestyle" = "  Lifestyle";
+
+/* No comment provided by engineer. */
+"  School & Work" = "  School & Work";
+
+/* No comment provided by engineer. */
+" Snap a photo" = " Snap a photo";
+
+/* No comment provided by engineer. */
+" Travel" = " Travel";
+
+/* No comment provided by engineer. */
+"[Learn More](https://en.wikipedia.org/wiki/Greenhouse_gas_emissions)" = "[Learn More](https://en.wikipedia.org/wiki/Greenhouse_gas_emissions)";
+
+/* No comment provided by engineer. */
+"/30" = "/30";
+
+/* No comment provided by engineer. */
+"%@" = "%@";
+
+/* No comment provided by engineer. */
+"%@ About us" = "%@ About us";
+
+/* No comment provided by engineer. */
+"%@ More Coming!" = "%@ More Coming!";
+
+/* No comment provided by engineer. */
+"%@ Notification" = "%@ Notification";
+
+/* No comment provided by engineer. */
+"%@ Points" = "%@ Points";
+
+/* No comment provided by engineer. */
+"%@ Show welcome screen again" = "%@ Show welcome screen again";
+
+/* No comment provided by engineer. */
+"%lld Actions compeleted since %@" = "%lld Actions compeleted since %@";
+
+/* No comment provided by engineer. */
+"🔗View Original Article on %@" = "🔗View Original Article on %@";
+
+/* No comment provided by engineer. */
+"🥳You've read all of them? We are adding more articles!\nPlease wait for further updates😙" = "🥳You've read all of them? We are adding more articles!\nPlease wait for further updates😙";
+
+/* No comment provided by engineer. */
+"A month or more just passed, so your points have been cleared. Let's start your earning for the next exciting 30 days!" = "A month or more just passed, so your points have been cleared. Let's start your earning for the next exciting 30 days!";
+
+/* No comment provided by engineer. */
+"About Me" = "About Me";
+
+/* No comment provided by engineer. */
+"Actions" = "Actions";
+
+/* No comment provided by engineer. */
+"Also, as mentioned, you can get points from walking instead of driving. To know how many steps you walked, we need to access your health data.\n\nAgain, this app is offline and your data is totally confidential." = "Also, as mentioned, you can get points from walking instead of driving. To know how many steps you walked, we need to access your health data.\n\nAgain, this app is offline and your data is totally confidential.";
+
+/* No comment provided by engineer. */
+"Cancel" = "Cancel";
+
+/* No comment provided by engineer. */
+"CO2 Aware" = "CO2 Aware";
+
+/* No comment provided by engineer. */
+"CO₂e emission per capita (tons)" = "CO₂e emission per capita (tons)";
+
+/* No comment provided by engineer. */
+"Daily" = "Daily";
+
+/* No comment provided by engineer. */
+"Date Published: %@" = "Date Published: %@";
+
+/* No comment provided by engineer. */
+"Day %@" = "Day %@";
+
+/* No comment provided by engineer. */
+"Developed by Shawn Wang" = "Developed by Shawn Wang";
+
+/* No comment provided by engineer. */
+"Discover" = "Discover";
+
+/* No comment provided by engineer. */
+"Do you remember?" = "Do you remember?";
+
+/* No comment provided by engineer. */
+"Done" = "Done";
+
+/* No comment provided by engineer. */
+"Edit your nickname" = "Edit your nickname";
+
+/* No comment provided by engineer. */
+"Edit Your Region" = "Edit Your Region";
+
+/* No comment provided by engineer. */
+"Hi!" = "Hi!";
+
+/* No comment provided by engineer. */
+"History" = "History";
+
+/* No comment provided by engineer. */
+"Home" = "Home";
+
+/* No comment provided by engineer. */
+"If you want to see your steps presented in CO2 Aware and earn steps points, please allow us to load your step data from Apple Health.\n\nYou can grant permission in Settings->Privacy->Health->CO2 Aware.\n\nIf you did not walk today or just woke up, please disregard this message! Your steps will be present after you have your step data.\n\nThank you!" = "If you want to see your steps presented in CO2 Aware and earn steps points, please allow us to load your step data from Apple Health.\n\nYou can grant permission in Settings->Privacy->Health->CO2 Aware.\n\nIf you did not walk today or just woke up, please disregard this message! Your steps will be present after you have your step data.\n\nThank you!";
+
+/* No comment provided by engineer. */
+"In order to complete," = "In order to complete,";
+
+/* No comment provided by engineer. */
+"It's been a month!" = "It's been a month!";
+
+/* No comment provided by engineer. */
+"Level %@" = "Level %@";
+
+/* No comment provided by engineer. */
+"Nickname" = "Nickname";
+
+/* No comment provided by engineer. */
+"No Steps?" = "No Steps?";
+
+/* No comment provided by engineer. */
+"Note: Doing so will reset your points earned for this month" = "Note: Doing so will reset your points earned for this month";
+
+/* No comment provided by engineer. */
+"Others" = "Others";
+
+/* No comment provided by engineer. */
+"Per capita GHG emission" = "Per capita GHG emission";
+
+/* No comment provided by engineer. */
+"Please send any feedback to \nshoguns.lenses.0s@icloud.com" = "Please send any feedback to \nshoguns.lenses.0s@icloud.com";
+
+/* No comment provided by engineer. */
+"Redeem" = "Redeem";
+
+/* No comment provided by engineer. */
+"Redeemed" = "Redeemed";
+
+/* No comment provided by engineer. */
+"Save" = "Save";
+
+/* No comment provided by engineer. */
+"Select a region" = "Select a region";
+
+/* No comment provided by engineer. */
+"Select Your Region" = "Select Your Region";
+
+/* No comment provided by engineer. */
+"Source: \n[%@](%@)" = "Source: \n[%@](%@)";
+
+/* No comment provided by engineer. */
+"Special thanks to Ryan Wu" = "Special thanks to Ryan Wu";
+
+/* No comment provided by engineer. */
+"Steps" = "Steps";
+
+/* No comment provided by engineer. */
+"t CO2e" = "t CO2e";
+
+/* No comment provided by engineer. */
+"Tap arrow to edit" = "Tap arrow to edit";
+
+/* No comment provided by engineer. */
+"The data is from 2019.\nEmissions are measured in carbon dioxide equivalents (CO2eq). This means non-CO2 gases are weighted by the amount of warming they cause over a 100-year timescale. Emissions from land use change – which can be positive or negative – are taken into account.\n\nSource: Our World In Data, Per capita greenhouse gas emissions" = "The data is from 2019.\nEmissions are measured in carbon dioxide equivalents (CO2eq). This means non-CO2 gases are weighted by the amount of warming they cause over a 100-year timescale. Emissions from land use change – which can be positive or negative – are taken into account.\n\nSource: Our World In Data, Per capita greenhouse gas emissions";
+
+/* No comment provided by engineer. */
+"There is no Planet B." = "There is no Planet B.";
+
+/* No comment provided by engineer. */
+"To turn it ON/OFF, go to Settings, Notifications, find 'CO2 Aware', and turn its notification ON/OFF." = "To turn it ON/OFF, go to Settings, Notifications, find 'CO2 Aware', and turn its notification ON/OFF.";
+
+/* No comment provided by engineer. */
+"Walk at least 6000 steps and go to home page to click 'Redeem' in 'Steps' section" = "Walk at least 6000 steps and go to home page to click 'Redeem' in 'Steps' section";
+
+/* No comment provided by engineer. */
+"Welcome," = "Welcome,";
+
+/* No comment provided by engineer. */
+"Welcome!" = "Welcome!";
+
+/* No comment provided by engineer. */
+"What Can I Do?" = "What Can I Do?";
+

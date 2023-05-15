@@ -1,0 +1,375 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.2" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 http://docs.oasis-open.org/xliff/v1.2/os/xliff-core-1.2-strict.xsd">
+  <file original="en.lproj/CO2-Aware-InfoPlist.strings" source-language="en" target-language="en" datatype="plaintext">
+    <header>
+      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="14.2" build-num="14C18"/>
+    </header>
+    <body>
+      <trans-unit id="CFBundleName" xml:space="preserve">
+        <source>CO2 Aware</source>
+        <target>CO2 Aware</target>
+        <note>Bundle name</note>
+      </trans-unit>
+      <trans-unit id="NSCameraUsageDescription" xml:space="preserve">
+        <source>You need to take pictures for recording your actions. This app is totally offline and would not upload any personal data. </source>
+        <target>You need to take pictures for recording your actions. This app is totally offline and would not upload any personal data. </target>
+        <note>Privacy - Camera Usage Description</note>
+      </trans-unit>
+      <trans-unit id="NSHealthShareUsageDescription" xml:space="preserve">
+        <source>This app uses your steps data from health to evaluate your daily points earned from walking, as well as to calculate the amount of CO2 you saved.</source>
+        <target>This app uses your steps data from health to evaluate your daily points earned from walking, as well as to calculate the amount of CO2 you saved.</target>
+        <note>Privacy - Health Share Usage Description</note>
+      </trans-unit>
+      <trans-unit id="NSHealthUpdateUsageDescription" xml:space="preserve">
+        <source>This app uses your steps data from health to evaluate your daily points earned from walking, as well as to calculate the amount of CO2 you saved.</source>
+        <target>This app uses your steps data from health to evaluate your daily points earned from walking, as well as to calculate the amount of CO2 you saved.</target>
+        <note>Privacy - Health Update Usage Description</note>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="en.lproj/Localizable.strings" source-language="en" target-language="en" datatype="plaintext">
+    <header>
+      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="14.2" build-num="14C18"/>
+    </header>
+    <body>
+      <trans-unit id="   Food" xml:space="preserve">
+        <source>   Food</source>
+        <target>   Food</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="  Lifestyle" xml:space="preserve">
+        <source>  Lifestyle</source>
+        <target>  Lifestyle</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="  School &amp; Work" xml:space="preserve">
+        <source>  School &amp; Work</source>
+        <target>  School &amp; Work</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id=" Snap a photo" xml:space="preserve">
+        <source> Snap a photo</source>
+        <target> Snap a photo</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id=" Travel" xml:space="preserve">
+        <source> Travel</source>
+        <target> Travel</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="%@" xml:space="preserve">
+        <source>%@</source>
+        <target>%@</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="%@ About us" xml:space="preserve">
+        <source>%@ About us</source>
+        <target>%@ About us</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="%@ More Coming!" xml:space="preserve">
+        <source>%@ More Coming!</source>
+        <target>%@ More Coming!</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="%@ Notification" xml:space="preserve">
+        <source>%@ Notification</source>
+        <target>%@ Notification</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="%@ Points" xml:space="preserve">
+        <source>%@ Points</source>
+        <target>%@ Points</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="%@ Show welcome screen again" xml:space="preserve">
+        <source>%@ Show welcome screen again</source>
+        <target>%@ Show welcome screen again</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="%lld Actions compeleted since %@" xml:space="preserve">
+        <source>%lld Actions compeleted since %@</source>
+        <target>%lld Actions compeleted since %@</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="/30" xml:space="preserve">
+        <source>/30</source>
+        <target>/30</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="A month or more just passed, so your points have been cleared. Let's start your earning for the next exciting 30 days!" xml:space="preserve">
+        <source>A month or more just passed, so your points have been cleared. Let's start your earning for the next exciting 30 days!</source>
+        <target>A month or more just passed, so your points have been cleared. Let's start your earning for the next exciting 30 days!</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="About Me" xml:space="preserve">
+        <source>About Me</source>
+        <target>About Me</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Actions" xml:space="preserve">
+        <source>Actions</source>
+        <target>Actions</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Also, as mentioned, you can get points from walking instead of driving. To know how many steps you walked, we need to access your health data.&#10;&#10;Again, this app is offline and your data is totally confidential." xml:space="preserve">
+        <source>Also, as mentioned, you can get points from walking instead of driving. To know how many steps you walked, we need to access your health data.
+
+Again, this app is offline and your data is totally confidential.</source>
+        <target>Also, as mentioned, you can get points from walking instead of driving. To know how many steps you walked, we need to access your health data.
+
+Again, this app is offline and your data is totally confidential.</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="CO2 Aware" xml:space="preserve">
+        <source>CO2 Aware</source>
+        <target>CO2 Aware</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="CO₂e emission per capita (tons)" xml:space="preserve">
+        <source>CO₂e emission per capita (tons)</source>
+        <target>CO₂e emission per capita (tons)</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Cancel" xml:space="preserve">
+        <source>Cancel</source>
+        <target>Cancel</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Daily" xml:space="preserve">
+        <source>Daily</source>
+        <target>Daily</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Date Published: %@" xml:space="preserve">
+        <source>Date Published: %@</source>
+        <target>Date Published: %@</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Day %@" xml:space="preserve">
+        <source>Day %@</source>
+        <target>Day %@</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Developed by Shawn Wang" xml:space="preserve">
+        <source>Developed by Shawn Wang</source>
+        <target>Developed by Shawn Wang</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Discover" xml:space="preserve">
+        <source>Discover</source>
+        <target>Discover</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Do you remember?" xml:space="preserve">
+        <source>Do you remember?</source>
+        <target>Do you remember?</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Done" xml:space="preserve">
+        <source>Done</source>
+        <target>Done</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Edit Your Region" xml:space="preserve">
+        <source>Edit Your Region</source>
+        <target>Edit Your Region</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Edit your nickname" xml:space="preserve">
+        <source>Edit your nickname</source>
+        <target>Edit your nickname</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Hi!" xml:space="preserve">
+        <source>Hi!</source>
+        <target>Hi!</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="History" xml:space="preserve">
+        <source>History</source>
+        <target>History</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Home" xml:space="preserve">
+        <source>Home</source>
+        <target>Home</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="If you want to see your steps presented in CO2 Aware and earn steps points, please allow us to load your step data from Apple Health.&#10;&#10;You can grant permission in Settings-&gt;Privacy-&gt;Health-&gt;CO2 Aware.&#10;&#10;If you did not walk today or just woke up, please disregard this message! Your steps will be present after you have your step data.&#10;&#10;Thank you!" xml:space="preserve">
+        <source>If you want to see your steps presented in CO2 Aware and earn steps points, please allow us to load your step data from Apple Health.
+
+You can grant permission in Settings-&gt;Privacy-&gt;Health-&gt;CO2 Aware.
+
+If you did not walk today or just woke up, please disregard this message! Your steps will be present after you have your step data.
+
+Thank you!</source>
+        <target>If you want to see your steps presented in CO2 Aware and earn steps points, please allow us to load your step data from Apple Health.
+
+You can grant permission in Settings-&gt;Privacy-&gt;Health-&gt;CO2 Aware.
+
+If you did not walk today or just woke up, please disregard this message! Your steps will be present after you have your step data.
+
+Thank you!</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="In order to complete," xml:space="preserve">
+        <source>In order to complete,</source>
+        <target>In order to complete,</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="It's been a month!" xml:space="preserve">
+        <source>It's been a month!</source>
+        <target>It's been a month!</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Level %@" xml:space="preserve">
+        <source>Level %@</source>
+        <target>Level %@</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Nickname" xml:space="preserve">
+        <source>Nickname</source>
+        <target>Nickname</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="No Steps?" xml:space="preserve">
+        <source>No Steps?</source>
+        <target>No Steps?</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Note: Doing so will reset your points earned for this month" xml:space="preserve">
+        <source>Note: Doing so will reset your points earned for this month</source>
+        <target>Note: Doing so will reset your points earned for this month</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Others" xml:space="preserve">
+        <source>Others</source>
+        <target>Others</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Per capita GHG emission" xml:space="preserve">
+        <source>Per capita GHG emission</source>
+        <target>Per capita GHG emission</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Please send any feedback to &#10;shoguns.lenses.0s@icloud.com" xml:space="preserve">
+        <source>Please send any feedback to 
+shoguns.lenses.0s@icloud.com</source>
+        <target>Please send any feedback to 
+shoguns.lenses.0s@icloud.com</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Redeem" xml:space="preserve">
+        <source>Redeem</source>
+        <target>Redeem</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Redeemed" xml:space="preserve">
+        <source>Redeemed</source>
+        <target>Redeemed</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Save" xml:space="preserve">
+        <source>Save</source>
+        <target>Save</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Select Your Region" xml:space="preserve">
+        <source>Select Your Region</source>
+        <target>Select Your Region</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Select a region" xml:space="preserve">
+        <source>Select a region</source>
+        <target>Select a region</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Source: &#10;[%@](%@)" xml:space="preserve">
+        <source>Source: 
+[%@](%@)</source>
+        <target>Source: 
+[%@](%@)</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Special thanks to Ryan Wu" xml:space="preserve">
+        <source>Special thanks to Ryan Wu</source>
+        <target>Special thanks to Ryan Wu</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Steps" xml:space="preserve">
+        <source>Steps</source>
+        <target>Steps</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Tap arrow to edit" xml:space="preserve">
+        <source>Tap arrow to edit</source>
+        <target>Tap arrow to edit</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="The data is from 2019.&#10;Emissions are measured in carbon dioxide equivalents (CO2eq). This means non-CO2 gases are weighted by the amount of warming they cause over a 100-year timescale. Emissions from land use change – which can be positive or negative – are taken into account.&#10;&#10;Source: Our World In Data, Per capita greenhouse gas emissions" xml:space="preserve">
+        <source>The data is from 2019.
+Emissions are measured in carbon dioxide equivalents (CO2eq). This means non-CO2 gases are weighted by the amount of warming they cause over a 100-year timescale. Emissions from land use change – which can be positive or negative – are taken into account.
+
+Source: Our World In Data, Per capita greenhouse gas emissions</source>
+        <target>The data is from 2019.
+Emissions are measured in carbon dioxide equivalents (CO2eq). This means non-CO2 gases are weighted by the amount of warming they cause over a 100-year timescale. Emissions from land use change – which can be positive or negative – are taken into account.
+
+Source: Our World In Data, Per capita greenhouse gas emissions</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="There is no Planet B." xml:space="preserve">
+        <source>There is no Planet B.</source>
+        <target>There is no Planet B.</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="To turn it ON/OFF, go to Settings, Notifications, find 'CO2 Aware', and turn its notification ON/OFF." xml:space="preserve">
+        <source>To turn it ON/OFF, go to Settings, Notifications, find 'CO2 Aware', and turn its notification ON/OFF.</source>
+        <target>To turn it ON/OFF, go to Settings, Notifications, find 'CO2 Aware', and turn its notification ON/OFF.</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Walk at least 6000 steps and go to home page to click 'Redeem' in 'Steps' section" xml:space="preserve">
+        <source>Walk at least 6000 steps and go to home page to click 'Redeem' in 'Steps' section</source>
+        <target>Walk at least 6000 steps and go to home page to click 'Redeem' in 'Steps' section</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Welcome!" xml:space="preserve">
+        <source>Welcome!</source>
+        <target>Welcome!</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Welcome," xml:space="preserve">
+        <source>Welcome,</source>
+        <target>Welcome,</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="What Can I Do?" xml:space="preserve">
+        <source>What Can I Do?</source>
+        <target>What Can I Do?</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="[Learn More](https://en.wikipedia.org/wiki/Greenhouse_gas_emissions)" xml:space="preserve">
+        <source>[Learn More](https://en.wikipedia.org/wiki/Greenhouse_gas_emissions)</source>
+        <target>[Learn More](https://en.wikipedia.org/wiki/Greenhouse_gas_emissions)</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="t CO2e" xml:space="preserve">
+        <source>t CO2e</source>
+        <target>t CO2e</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="🔗View Original Article on %@" xml:space="preserve">
+        <source>🔗View Original Article on %@</source>
+        <target>🔗View Original Article on %@</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="🥳You've read all of them? We are adding more articles!&#10;Please wait for further updates😙" xml:space="preserve">
+        <source>🥳You've read all of them? We are adding more articles!
+Please wait for further updates😙</source>
+        <target>🥳You've read all of them? We are adding more articles!
+Please wait for further updates😙</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

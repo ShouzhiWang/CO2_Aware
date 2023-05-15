@@ -18,6 +18,7 @@
 		6B13DB96292FCDB8001D9214 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B13DB95292FCDB8001D9214 /* ImagePicker.swift */; };
 		6B13DB98292FD5A9001D9214 /* PastActionDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B13DB97292FD5A9001D9214 /* PastActionDetail.swift */; };
 		6B16491D2952532B00532290 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B16491C2952532B00532290 /* WelcomeView.swift */; };
+		6B16A37D2A10252800EEBB45 /* Actions_zh.json in Resources */ = {isa = PBXBuildFile; fileRef = 6B16A37C2A10252800EEBB45 /* Actions_zh.json */; };
 		6B16A37F2A104B4200EEBB45 /* Articles_zh.json in Resources */ = {isa = PBXBuildFile; fileRef = 6B16A37E2A104B4200EEBB45 /* Articles_zh.json */; };
 		6B44F074299193CC0016CD36 /* CO2-Aware-InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6B44F072299193CC0016CD36 /* CO2-Aware-InfoPlist.strings */; };
 		6B44F077299193CC0016CD36 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6B44F075299193CC0016CD36 /* Localizable.strings */; };
@@ -58,6 +59,7 @@
 		6B13DB95292FCDB8001D9214 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		6B13DB97292FD5A9001D9214 /* PastActionDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PastActionDetail.swift; sourceTree = "<group>"; };
 		6B16491C2952532B00532290 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
+		6B16A37C2A10252800EEBB45 /* Actions_zh.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Actions_zh.json; sourceTree = "<group>"; };
 		6B16A37E2A104B4200EEBB45 /* Articles_zh.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Articles_zh.json; sourceTree = "<group>"; };
 		6B44F073299193CC0016CD36 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/CO2-Aware-InfoPlist.strings"; sourceTree = "<group>"; };
 		6B44F076299193CC0016CD36 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
@@ -286,6 +288,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6BF130EE2926E75F00D23961 /* articles2.json in Resources */,
+				6B16A37D2A10252800EEBB45 /* Actions_zh.json in Resources */,
 				A1379DE128EE769000E3154B /* GHGPerCap.csv in Resources */,
 				A147751228D5495A00C204EA /* Preview Assets.xcassets in Resources */,
 				6B857A842A105AAC00C900DC /* Actions_zh.json in Resources */,

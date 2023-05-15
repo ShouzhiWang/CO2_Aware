@@ -1,0 +1,8 @@
+/* Bundle name */
+"CFBundleName" = "CO2 Aware";
+/* Privacy - Camera Usage Description */
+"NSCameraUsageDescription" = "You need to take pictures for recording your actions. This app is totally offline and would not upload any personal data. ";
+/* Privacy - Health Share Usage Description */
+"NSHealthShareUsageDescription" = "This app uses your steps data from health to evaluate your daily points earned from walking, as well as to calculate the amount of CO2 you saved.";
+/* Privacy - Health Update Usage Description */
+"NSHealthUpdateUsageDescription" = "This app uses your steps data from health to evaluate your daily points earned from walking, as well as to calculate the amount of CO2 you saved.";
