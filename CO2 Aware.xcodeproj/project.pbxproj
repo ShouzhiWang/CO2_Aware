@@ -123,6 +123,14 @@
 			path = ArticleModel;
 			sourceTree = "<group>";
 		};
+		6B1E91112A11D5FF00BE60E7 /* Recovered References */ = {
+			isa = PBXGroup;
+			children = (
+				6B16A37C2A10252800EEBB45 /* Actions_zh.json */,
+			);
+			name = "Recovered References";
+			sourceTree = "<group>";
+		};
 		6BA84E362931707B00D38152 /* ActionModel */ = {
 			isa = PBXGroup;
 			children = (
@@ -139,6 +147,7 @@
 			children = (
 				A147750928D5495800C204EA /* CO2 Aware */,
 				A147750828D5495800C204EA /* Products */,
+				6B1E91112A11D5FF00BE60E7 /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
