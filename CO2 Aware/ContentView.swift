@@ -20,7 +20,7 @@ struct ContentView: View {
     
     
     var body: some View {
-        NavigationView {
+        //NavigationView {
             if welcomeScreenShown{
                 TabView(selection: $selection){
                     HomeView(p: p)
@@ -28,7 +28,7 @@ struct ContentView: View {
                             Label("Home", systemImage: "leaf")
                         }
                         .tag(0)
-                        //.navigationTitle("Home")
+                        
                         .navigationBarHidden(true)
                     
                     ActionsView(p: p).environmentObject(amd)
@@ -48,13 +48,17 @@ struct ContentView: View {
                             Label("About Me", systemImage: "person")
                         }
                         .tag(3)
+                        
                     
                 }
                 
             } else {
-                WelcomeView(p: p)
+                NavigationView {
+                    WelcomeView(p: p)
+                }
+                
             }
-        }.navigationViewStyle(.stack)
+        //}.navigationViewStyle(.stack)
         
     }
     

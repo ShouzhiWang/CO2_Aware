@@ -20,7 +20,7 @@ struct HomeView: View {
 
     var body: some View {
         //Home view
-        //NavigationView{
+        NavigationView{
         
             ScrollView(.vertical) {
                 
@@ -229,8 +229,9 @@ struct HomeView: View {
             }
                     
             )
-      
-        //}
+            .navigationBarHidden(true)
+        }
+        
         .environmentObject(p)
             .onAppear{
                 p.manageSteps()

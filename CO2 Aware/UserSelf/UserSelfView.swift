@@ -350,7 +350,7 @@ struct UserSelfView: View {
                 }
             }
             .ignoresSafeArea()
-
+            .navigationBarHidden(true)
         }
     }
         
