@@ -20,6 +20,9 @@
 "%@ About us" = "%@ 关于我们";
 
 /* No comment provided by engineer. */
+"%@ My environmental impact" = "%@ 我对环境的影响";
+
+/* No comment provided by engineer. */
 "%@ Notification" = "%@ 通知";
 
 /* No comment provided by engineer. */
@@ -29,13 +32,31 @@
 "%@ Show welcome screen again" = "%@ 再次展示启动界面";
 
 /* No comment provided by engineer. */
+"%@ What is your impact?" = "%@ 您如何影响环境？";
+
+/* No comment provided by engineer. */
 "%lld Actions compeleted since %@" = "%lld 行动已完成，起始于 %@";
+
+/* No comment provided by engineer. */
+"☝🏻I didn't finish" = "☝🏻我没做完";
 
 /* No comment provided by engineer. */
 "🔗View Original Article on %@" = "🔗查看原文 %@";
 
 /* No comment provided by engineer. */
 "🥳You've read all of them? We are adding more articles!\nPlease wait for further updates😙" = "🥳全都读完了？没关系！以后还有！\n请等待接下来的更新哦😙";
+
+/* No comment provided by engineer. */
+"🥺Not good" = "🥺不太行";
+
+/* No comment provided by engineer. */
+"🧐Ummm" = "🧐还要加油";
+
+/* No comment provided by engineer. */
+"😄Excellent" = "😄非常棒";
+
+/* No comment provided by engineer. */
+"😊Great" = "😊很好";
 
 /* No comment provided by engineer. */
 "A month or more just passed, so your points have been cleared. Let's start your earning for the next exciting 30 days!" = "一个多月过去了，所以您的积分已经清零了。让我们开始您接下来激动人心的下一个月吧！";
@@ -47,10 +68,19 @@
 "Actions" = "行动";
 
 /* No comment provided by engineer. */
+"After you take the test, please remember your environmental impact and press the 'Done' button on the upper left corner." = "测评结束后，请记住您的测评结果，然后按左上角的‘完成’按钮。";
+
+/* No comment provided by engineer. */
 "Also, as mentioned, you can get points from walking instead of driving. To know how many steps you walked, we need to access your health data. (This is not applicable for iPad)\n\nAgain, this app is offline and your data is totally confidential." = "您可以通过步行取代交通工具来获得积分。要知道您走了多少步，我们需要访问您的健康数据。(不适用于iPad)\n\n同样，此应用完全离线，您的数据是完全保密的。";
 
 /* No comment provided by engineer. */
 "Cancel" = "取消";
+
+/* No comment provided by engineer. */
+"Carbon footprint test" = "个人碳足迹测评";
+
+/* No comment provided by engineer. */
+"CO2 Aware" = "CO2消失树";
 
 /* No comment provided by engineer. */
 "CO₂e emission per capita (tons)" = "人均二氧化碳当量(吨)";
@@ -77,10 +107,16 @@
 "Done" = "完成";
 
 /* No comment provided by engineer. */
+"Done?" = "测试完了？";
+
+/* No comment provided by engineer. */
 "Edit your nickname" = "编辑昵称";
 
 /* No comment provided by engineer. */
 "Edit Your Region" = "编辑地区";
+
+/* No comment provided by engineer. */
+"Get a test now, through our newly introduced carbon footprint calculator. " = "立即通过我们新推出的碳足迹计算器进行测试。";
 
 /* No comment provided by engineer. */
 "Hi!" = "Hi!";
@@ -110,6 +146,9 @@
 "No Steps?" = "没有步数？";
 
 /* No comment provided by engineer. */
+"Not good! Your lifestyle is causing a significant negative impact. Consider about doing some actions or viewing articles!" = "不太行。。。您的生活方式正在造成重大的负面影响。考虑完成一些环保行动或者阅读一些文章吧！";
+
+/* No comment provided by engineer. */
 "Note: Doing so will reset your points earned for this month" = "注意：点击此选项会删除您这个月的所有积分数据";
 
 /* No comment provided by engineer. */
@@ -126,6 +165,12 @@
 
 /* No comment provided by engineer. */
 "Redeemed" = "已兑换";
+
+/* No comment provided by engineer. */
+"Right now, you are making a small impact on our planet. Keep going!" = "现在，您正在对地球环境产生微小的影响。 继续加油！";
+
+/* No comment provided by engineer. */
+"Right now, your lifestyle is environmental friendly. Keep going!" = "现在，您没有对地球环境产生很大的影响。 继续加油！";
 
 /* No comment provided by engineer. */
 "Save" = "保存";
@@ -146,6 +191,9 @@
 "Steps" = "步数";
 
 /* No comment provided by engineer. */
+"Take me to the test" = "开始测评";
+
+/* No comment provided by engineer. */
 "Tap arrow to edit" = "点击箭头编辑";
 
 /* No comment provided by engineer. */
@@ -158,6 +206,9 @@
 "To turn it ON/OFF, go to Settings, Notifications, find 'CO2 Aware', and turn its notification ON/OFF." = "开/关通知，请到设置，通知，找到CO2 Aware, 并开/关此应用的通知权限。";
 
 /* No comment provided by engineer. */
+"Ummm... Your environmental impact is somewhat high. Consider about doing some actions or viewing articles!" = "还要加油！您对环境的影响有点大。考虑完成一些环保行动或者阅读一些文章吧！";
+
+/* No comment provided by engineer. */
 "Walk at least 6000 steps and go to home page to click 'Redeem' in 'Steps' section" = "请走至少6000步并回到主页，点击“步数”区域的“兑换”按钮";
 
 /* No comment provided by engineer. */
@@ -168,6 +219,24 @@
 
 /* No comment provided by engineer. */
 "What Can I Do?" = "我可以做什么？";
+
+/* No comment provided by engineer. */
+"What's your result?" = "您的结果是？";
+
+/* No comment provided by engineer. */
+"You are making a small impact" = "您正在对地球环境产生微小的影响";
+
+/* No comment provided by engineer. */
+"You will be directed to a website in order to fill the form. We may collect your response to better improve our product. You do not need to fill any sensitive information. All responses are vague.   \n\nSource: wikiHow" = "您将被引导至一个网站以填写表格。我们可能会收集您的回复以更好地改进我们的产品。您无需填写任何敏感信息。所有的回答都是模糊的。\n\nSource: wikiHow";
+
+/* No comment provided by engineer. */
+"Your environmental impact is somewhat high" = "您对环境的影响有点大";
+
+/* No comment provided by engineer. */
+"Your lifestyle is causing a significant negative impact" = "您的生活方式正在造成重大的负面影响。考虑完成一些环保行动或者阅读一些文章吧！";
+
+/* No comment provided by engineer. */
+"Your lifestyle is environmental friendly" = "您的生活方式很环保";
 
 "***Emissions continue to rise.*** As a result, the Earth is now about 1.1°C warmer than it was in the late 1800s. The last decade (2011-2020) was the warmest on record.\n\nMany people think climate change mainly means warmer temperatures. But temperature rise is only the beginning of the story. Because the Earth is a system, where everything is connected, **changes in one area can influence changes in all others**.\n\nThe consequences of climate change now include, among others, **intense droughts, water scarcity, severe fires, rising sea levels, flooding, melting polar ice, catastrophic storms and declining biodiversity.**" = "***排放量继续上升。*** 因此，地球现在比 1800 年代后期温度高约 1.1°C。 过去十年（2011-2020 年）是有记录以来最温暖的十年。\n\n许多人认为气候变化主要意味着气温升高。 但温度上升只是故事的开始。 因为地球是一个万物相连的系统，**一个地区的变化会影响所有其他地区的变化**。\n\n气候变化的后果包括严重干旱、缺水、严重 火灾、海平面上升、洪水、极地冰层融化、灾难性风暴和生物多样性下降。";
 
