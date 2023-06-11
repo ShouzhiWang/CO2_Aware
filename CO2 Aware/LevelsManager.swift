@@ -21,7 +21,7 @@ final class UserProgress: ObservableObject{
         UserDefaults.standard.register(defaults: ["startDate" : Date()])
         UserDefaults.standard.register(defaults: ["actionsCompleted" : 0])
         UserDefaults.standard.register(defaults: ["firstDay" : Date()])
-
+        UserDefaults.standard.register(defaults: ["envImpact" : 0])
         healthStore = HealthStore()
 
         
@@ -101,7 +101,11 @@ final class UserProgress: ObservableObject{
         }
     }
     
-    
+    @Published var envImpact: Int = UserDefaults.standard.integer(forKey: "envImpact"){
+        didSet{
+            UserDefaults.standard.set(envImpact, forKey: "envImpact")
+        }
+    }
 
     
     func isDayChanged() {
@@ -174,7 +178,13 @@ final class UserProgress: ObservableObject{
         }
             
     }
+    
+    func tookTest(score: Int) {
+        envImpact = score
+    }
 }
+
+
 
 
 

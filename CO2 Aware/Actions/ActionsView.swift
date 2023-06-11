@@ -7,6 +7,7 @@
 
 import SwiftUI
 import CoreData
+import HidableTabView
 
 struct ActionsView: View {
     @Environment(\.managedObjectContext) var managedObjContext
@@ -24,6 +25,45 @@ struct ActionsView: View {
     var body: some View {
         NavigationView{
                 List{
+                    
+                        if p.envImpact == 0 {
+                            Section {
+                                NavigationLink{
+                                    TakingTest(p: p)
+                                } label: {
+                                    VStack(alignment: .leading) {
+                                        Text("\(Image(systemName: "smoke")) What is your impact?")
+                                            .padding([.top, .leading, .trailing])
+                                            .frame(maxWidth: .infinity, alignment: .leading)
+                                            .font(.title2.weight(.bold))
+                                            .foregroundColor(Color.black)
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        Text("Get a test now, through our newly introduced carbon footprint calculator. ")
+                                            .multilineTextAlignment(.leading)
+                                        
+                                            .padding([.leading, .bottom, .trailing])
+                                            .foregroundColor(Color.black)
+                                        
+                                        
+                                    }
+                                    
+                                }.background(Rectangle().fill(LinearGradient(gradient: Gradient(colors: [.red.opacity(0.7), .orange.opacity(0.8), .yellow.opacity(0.9), .green, .blue.opacity(0.8)]), startPoint: .trailing, endPoint: .zero)))
+                                    .listRowInsets(EdgeInsets())
+                                
+                                
+                                
+                            
+                            
+                        }
+                                                    
+                    }
+                    
+                    
+                    
                     // Daily actions section
                     Section{
                         ScrollView(.horizontal, showsIndicators: false){
@@ -143,11 +183,11 @@ struct ActionsView: View {
               
                     
                 }
-                .listStyle(.inset)
+                .listStyle(.insetGrouped)
             
             
             .navigationTitle("Actions")
-            
+            .showTabBar(animated: true)
             // History button
             .toolbar {
                 Button() {
@@ -159,6 +199,7 @@ struct ActionsView: View {
                 }
             }
             }
+        
         
         // History (popup) Page
             .sheet(isPresented: $popUp) {

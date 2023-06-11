@@ -25,7 +25,9 @@
 		6BA84E382931710E00D38152 /* Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BA84E372931710E00D38152 /* Action.swift */; };
 		6BA84E3A2931719000D38152 /* Actions.json in Resources */ = {isa = PBXBuildFile; fileRef = 6BA84E392931719000D38152 /* Actions.json */; };
 		6BA84E3C2931722F00D38152 /* ActionModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BA84E3B2931722F00D38152 /* ActionModelData.swift */; };
+		6BBED09F2A36493600A91742 /* HidableTabView in Frameworks */ = {isa = PBXBuildFile; productRef = 6BBED09E2A36493600A91742 /* HidableTabView */; };
 		6BE6FA3F292EC334008814F3 /* Actions.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6BE6FA3D292EC334008814F3 /* Actions.xcdatamodeld */; };
+		6BE949582A34E4CA00A317E6 /* TakingTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BE949572A34E4CA00A317E6 /* TakingTest.swift */; };
 		6BF130EE2926E75F00D23961 /* articles2.json in Resources */ = {isa = PBXBuildFile; fileRef = 6BF130ED2926E75F00D23961 /* articles2.json */; };
 		6BFC47422953874C00CF1AEE /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BFC47412953874C00CF1AEE /* NotificationManager.swift */; };
 		6BFC474429539D1100CF1AEE /* About US.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BFC474329539D1100CF1AEE /* About US.swift */; };
@@ -66,6 +68,7 @@
 		6BA84E392931719000D38152 /* Actions.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Actions.json; sourceTree = "<group>"; };
 		6BA84E3B2931722F00D38152 /* ActionModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionModelData.swift; sourceTree = "<group>"; };
 		6BE6FA3E292EC334008814F3 /* Actions.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Actions.xcdatamodel; sourceTree = "<group>"; };
+		6BE949572A34E4CA00A317E6 /* TakingTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TakingTest.swift; sourceTree = "<group>"; };
 		6BF130ED2926E75F00D23961 /* articles2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = articles2.json; sourceTree = "<group>"; };
 		6BFC47412953874C00CF1AEE /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
 		6BFC474329539D1100CF1AEE /* About US.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "About US.swift"; sourceTree = "<group>"; };
@@ -94,6 +97,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6BBED09F2A36493600A91742 /* HidableTabView in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -227,6 +231,7 @@
 			isa = PBXGroup;
 			children = (
 				A147754328D602A600C204EA /* UserSelfView.swift */,
+				6BE949572A34E4CA00A317E6 /* TakingTest.swift */,
 				A1379DDE28EE759200E3154B /* GHGPerCapita.swift */,
 				A1379DE028EE768F00E3154B /* GHGPerCap.csv */,
 				6BFC474329539D1100CF1AEE /* About US.swift */,
@@ -250,6 +255,9 @@
 			dependencies = (
 			);
 			name = "CO2 Aware";
+			packageProductDependencies = (
+				6BBED09E2A36493600A91742 /* HidableTabView */,
+			);
 			productName = "CO2 Aware";
 			productReference = A147750728D5495800C204EA /* CO2 Aware.app */;
 			productType = "com.apple.product-type.application";
@@ -279,6 +287,9 @@
 				"zh-Hans",
 			);
 			mainGroup = A14774FE28D5495800C204EA;
+			packageReferences = (
+				6BBED09D2A36493600A91742 /* XCRemoteSwiftPackageReference "HidableTabView-SwiftUI" */,
+			);
 			productRefGroup = A147750828D5495800C204EA /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -321,6 +332,7 @@
 				A1E890E629180DC900C8E28E /* ModelData.swift in Sources */,
 				6B16491D2952532B00532290 /* WelcomeView.swift in Sources */,
 				6BA84E382931710E00D38152 /* Action.swift in Sources */,
+				6BE949582A34E4CA00A317E6 /* TakingTest.swift in Sources */,
 				6B0BE2AB293281B0008C1F2E /* ActionDetail.swift in Sources */,
 				6B0CF45A292B17E80013488E /* ArticleDetails.swift in Sources */,
 				6BA84E3C2931722F00D38152 /* ActionModelData.swift in Sources */,
@@ -493,7 +505,7 @@
 				CODE_SIGN_ENTITLEMENTS = "CO2 Aware/CO2 Aware.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 6;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"CO2 Aware/Preview Content\"";
 				DEVELOPMENT_TEAM = 586L2Q38YL;
 				ENABLE_PREVIEWS = YES;
@@ -507,15 +519,15 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UIRequiresFullScreen = YES;
+				INFOPLIST_KEY_UIRequiresFullScreen = NO;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1;
+				MARKETING_VERSION = 1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = ShawnWang.CO2Aware;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -536,7 +548,7 @@
 				CODE_SIGN_ENTITLEMENTS = "CO2 Aware/CO2 Aware.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 6;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"CO2 Aware/Preview Content\"";
 				DEVELOPMENT_TEAM = 586L2Q38YL;
 				ENABLE_PREVIEWS = YES;
@@ -550,15 +562,15 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UIRequiresFullScreen = YES;
+				INFOPLIST_KEY_UIRequiresFullScreen = NO;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1;
+				MARKETING_VERSION = 1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = ShawnWang.CO2Aware;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -593,6 +605,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		6BBED09D2A36493600A91742 /* XCRemoteSwiftPackageReference "HidableTabView-SwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/AliMert/HidableTabView-SwiftUI.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		6BBED09E2A36493600A91742 /* HidableTabView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6BBED09D2A36493600A91742 /* XCRemoteSwiftPackageReference "HidableTabView-SwiftUI" */;
+			productName = HidableTabView;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		6BE6FA3D292EC334008814F3 /* Actions.xcdatamodeld */ = {

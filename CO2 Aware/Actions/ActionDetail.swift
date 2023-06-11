@@ -7,6 +7,7 @@
 
 import SwiftUI
 import CoreData
+import HidableTabView
 
 struct ActionDetail: View {
     @State var action: Action
@@ -84,7 +85,7 @@ struct ActionDetail: View {
             .navigationBarHidden(true)
             
         }
-        
+        .hideTabBar(animated: true)
     }
     
     

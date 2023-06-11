@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+
 struct ArticleDetails: View {
     @EnvironmentObject var modelData : ModelData
     @State private var openSafari: Bool = false
@@ -47,6 +48,7 @@ struct ArticleDetails: View {
              .background(Color("AccentColor")).cornerRadius(10)
             
         }
+        .hideTabBar(animated: true)
         .navigationBarTitleDisplayMode(.inline)
         .fullScreenCover(isPresented: $openSafari, content: {
             SFSafariViewWrapper(url: URL(string: "\(article.link)")!)

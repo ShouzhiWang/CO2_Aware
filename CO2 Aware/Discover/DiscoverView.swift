@@ -6,8 +6,10 @@
 //
 
 import SwiftUI
+import HidableTabView
 
 struct DiscoverView: View {
+    
     @EnvironmentObject var modelData: ModelData
 
     // View that presents some news articles
@@ -32,7 +34,7 @@ struct DiscoverView: View {
                 
                 
             }
-            
+            .showTabBar(animated: true)
             .navigationBarTitle("Discover")
         }
         .environmentObject(modelData)
