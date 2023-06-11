@@ -20,179 +20,19 @@ struct HomeView: View {
 
     var body: some View {
         //Home view
-        NavigationView{
+        //NavigationView{
         
-            ScrollView(.vertical) {
-                
-                ZStack(alignment: .top){
+            VStack{
+                ScrollView(.vertical) {
                     
-                    //Cloud Image
-                    Image("Cloud")
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
-                    //Sun Image
-                    HStack{
-                        Image("Sun")
-                            .resizable()
-                            .frame(width: 90.0, height: 90.0)
-                            //"HI" text
-                            .overlay(
-                                Text("Hi!")
-                                    .font(.largeTitle.weight(.bold))
-                                    .frame(maxWidth: .infinity, alignment: .center)
-                            )
-                        Spacer()
-                    }
-                    
-                    //Changing tree image according to the level
-                    if UIDevice.current.userInterfaceIdiom == .pad {
-                        Image("treeLvl" + String(p.level))
-                            .resizable()
-                            .aspectRatio(contentMode: .fit)
-                            .frame(width: 800, height: 900)
-                    } else {
-                        Image("treeLvl" + String(p.level))
-                            .resizable()
-                            .aspectRatio(contentMode: .fit)
-                    }
-          
-                }
-                
-                
-                .padding(.horizontal)
-                Spacer(minLength: 15)
-                
-                //Rectangular region that shows the user's status
-                
-                ZStack{
-                    RoundedRectangle(cornerRadius: 36)
-                        .foregroundColor(Color("WB").opacity(0.2))
-                        .background(.ultraThinMaterial, in: RoundedRectangle(cornerRadius: 36))
+                    tree
                         .padding(.horizontal)
-                        .blur(radius: 0.3)
-                  
-                    VStack{
-                        ZStack(alignment: .topTrailing){
-                            //Level progress bar + text indicating the level
-                            ProgressView("Level \(String(p.level))", value: Double(self.p.calculatedPoints), total: 100)
-                                .font(.title3.weight(.semibold))
-                            Spacer()
-                            //Text: calculated points
-                            Text(String(self.p.calculatedPoints) + "/100")
-                                
-                            
-                            
-                            
-                        }.padding(.horizontal)
-                        
-                        
-                        if UIDevice.current.userInterfaceIdiom == .phone {
-                            
-                            ZStack(alignment: .topTrailing){
-                                //Steps progress bar + text indicating the steps
-                                
-                                ProgressView("Steps", value: p.userSteps, total: 6000)
-                                    .font(.title3.weight(.semibold))
-                                
-                                Spacer()
-                                HStack{
-                                    if p.userSteps != 0.0 {
-                                        Button(){
-                                            p.redeemProgress = true
-                                            p.pointUp(point: 10)
-                                        } label:{
-                                            if p.redeemProgress {
-                                                Text("Redeemed")
-                                            } else {
-                                                Text("Redeem")
-                                            }
-                                            
-                                        }
-                                        .disabled(p.userSteps < 6000 || p.redeemProgress)
-                                        
-                                        
-                                    } else{
-                                        Button(){
-                                            presentAlrt = true
-                                        } label: {
-                                            Image(systemName: "questionmark.circle")
-                                        }
-                                        
-                                    }
-                                    
-                                    
-                                    //Text: calculated steps
-                                    Text(String(Int(p.userSteps)) + "/6000")
-                                }
-                                
-                            }.padding(.horizontal)
-                        }
-                        
-
-
-                        
-                        
-                        VStack{
-                            ZStack(alignment: .topTrailing){
-                                //Day progress bar + text indicating days passed in the 30 days cycle
-                                ProgressView("Day \( String(Calendar.current.dateComponents([.day], from: p.startDate, to: Date()).day!))", value: Double(Calendar.current.dateComponents([.day], from: p.startDate, to: Date()).day!), total: 30)
-                                    .font(.title3.weight(.semibold))
-                                Spacer()
-                                //Text: total days
-                                Text("/30")
-                                
-                            }.padding(.horizontal)
-                        }
-                        
-                        Text("\(p.actionsCompleted) Actions compeleted since \(p.firstDay.formatted(date: .abbreviated, time: .omitted))")
-
-                    }.padding(.all)
+                    Spacer(minLength: 15)
+                    info
                     
                     
-                }
-                
-                if !history.isEmpty {
-                    let tempInstance = history.randomElement()!
-                    ZStack{
-                        RoundedRectangle(cornerRadius: 36)
-                            .foregroundColor(Color("WB").opacity(0.2))
-                            .background(.ultraThinMaterial, in: RoundedRectangle(cornerRadius: 36))
-                            .padding(.horizontal)
-                            .blur(radius: 0.3)
-                        VStack{
-                            HStack{
-                                VStack(alignment: .leading){
-                                    Text("Do you remember?")
-                                        .font(.title3.weight(.semibold))
-                                    Text((tempInstance.date?.formatted(date: .abbreviated, time: .standard))!)
-                                }
-                                    
-                                    
-                                
-                                Spacer()
-                                NavigationLink{
-                                    PastActionDetail(instance: tempInstance)
-                                } label: {
-                                    Image(systemName: "arrow.right")
-                                }
-                            }.padding(.horizontal)
-                            if loadImageFromDocumentDirectory(instance: tempInstance) != nil {
-                                Image(uiImage: loadImageFromDocumentDirectory(instance: tempInstance)!)
-                                    .resizable()
-                                    .aspectRatio(contentMode: .fit)
-                                    .cornerRadius(20)
-                                    .padding(.horizontal)
-                            }
-                        }.padding(.all)
-                    }
-                    
-                    
-                    
-                    
-                }
-                
-            }
-                
+                }.frame(maxWidth: UIDevice.current.userInterfaceIdiom == .pad ? 550 : .infinity)
+            }.frame(maxWidth: .infinity)
             
             
             
@@ -230,7 +70,7 @@ struct HomeView: View {
                     
             )
             .navigationBarHidden(true)
-        }
+        //}
         
         .environmentObject(p)
             .onAppear{
@@ -260,6 +100,180 @@ struct HomeView: View {
             }
      
     }
+    
+    @ViewBuilder
+    var tree: some View {
+        ZStack(alignment: .top){
+            
+            //Cloud Image
+            Image("Cloud")
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+            
+            //Sun Image
+            HStack{
+                Image("Sun")
+                    .resizable()
+                    .frame(width: 90.0, height: 90.0)
+                    //"HI" text
+                    .overlay(
+                        Text("Hi!")
+                            .font(.largeTitle.weight(.bold))
+                            .frame(maxWidth: .infinity, alignment: .center)
+                    )
+                Spacer()
+            }
+            
+            //Changing tree image according to the level
+            if UIDevice.current.userInterfaceIdiom == .pad {
+                Image("treeLvl" + String(p.level))
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .frame(maxWidth: 800, maxHeight: 900)
+            } else {
+                Image("treeLvl" + String(p.level))
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+            }
+  
+        }
+        
+        
+        
+    }
+    
+    @ViewBuilder
+    var info: some View {
+        //Rectangular region that shows the user's status
+        
+        ZStack{
+            RoundedRectangle(cornerRadius: 36)
+                .foregroundColor(Color("WB").opacity(0.2))
+                .background(.ultraThinMaterial, in: RoundedRectangle(cornerRadius: 36))
+                .padding(.horizontal)
+                .blur(radius: 0.3)
+          
+            VStack{
+                ZStack(alignment: .topTrailing){
+                    //Level progress bar + text indicating the level
+                    ProgressView("Level \(String(p.level))", value: Double(self.p.calculatedPoints), total: 100)
+                        .font(.title3.weight(.semibold))
+                    Spacer()
+                    //Text: calculated points
+                    Text(String(self.p.calculatedPoints) + "/100")
+                        
+                    
+                    
+                    
+                }.padding(.horizontal)
+                
+                
+                if UIDevice.current.userInterfaceIdiom == .phone {
+                    
+                    ZStack(alignment: .topTrailing){
+                        //Steps progress bar + text indicating the steps
+                        
+                        ProgressView("Steps", value: p.userSteps, total: 6000)
+                            .font(.title3.weight(.semibold))
+                        
+                        Spacer()
+                        HStack{
+                            if p.userSteps != 0.0 {
+                                Button(){
+                                    p.redeemProgress = true
+                                    p.pointUp(point: 10)
+                                } label:{
+                                    if p.redeemProgress {
+                                        Text("Redeemed")
+                                    } else {
+                                        Text("Redeem")
+                                    }
+                                    
+                                }
+                                .disabled(p.userSteps < 6000 || p.redeemProgress)
+                                
+                                
+                            } else{
+                                Button(){
+                                    presentAlrt = true
+                                } label: {
+                                    Image(systemName: "questionmark.circle")
+                                }
+                                
+                            }
+                            
+                            
+                            //Text: calculated steps
+                            Text(String(Int(p.userSteps)) + "/6000")
+                        }
+                        
+                    }.padding(.horizontal)
+                }
+                
+
+
+                
+                
+                VStack{
+                    ZStack(alignment: .topTrailing){
+                        //Day progress bar + text indicating days passed in the 30 days cycle
+                        ProgressView("Day \( String(Calendar.current.dateComponents([.day], from: p.startDate, to: Date()).day!))", value: Double(Calendar.current.dateComponents([.day], from: p.startDate, to: Date()).day!), total: 30)
+                            .font(.title3.weight(.semibold))
+                        Spacer()
+                        //Text: total days
+                        Text("/30")
+                        
+                    }.padding(.horizontal)
+                }
+                
+                Text("\(p.actionsCompleted) Actions compeleted since \(p.firstDay.formatted(date: .abbreviated, time: .omitted))")
+
+            }.padding(.all)
+            
+            
+        }
+        
+        if !history.isEmpty {
+            let tempInstance = history.randomElement()!
+            ZStack{
+                RoundedRectangle(cornerRadius: 36)
+                    .foregroundColor(Color("WB").opacity(0.2))
+                    .background(.ultraThinMaterial, in: RoundedRectangle(cornerRadius: 36))
+                    .padding(.horizontal)
+                    .blur(radius: 0.3)
+                VStack{
+                    HStack{
+                        VStack(alignment: .leading){
+                            Text("Do you remember?")
+                                .font(.title3.weight(.semibold))
+                            Text((tempInstance.date?.formatted(date: .abbreviated, time: .standard))!)
+                        }
+                            
+                            
+                        
+                        Spacer()
+                        NavigationLink{
+                            PastActionDetail(instance: tempInstance)
+                        } label: {
+                            Image(systemName: "arrow.right")
+                        }
+                    }.padding(.horizontal)
+                    if loadImageFromDocumentDirectory(instance: tempInstance) != nil {
+                        Image(uiImage: loadImageFromDocumentDirectory(instance: tempInstance)!)
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .cornerRadius(20)
+                            .padding(.horizontal)
+                    }
+                }.padding(.all)
+            }
+            
+            
+            
+            
+        }
+    }
+    
     func loadImageFromDocumentDirectory(instance: Actions) -> UIImage? {
             
         let documentsUrl = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!;
@@ -280,6 +294,6 @@ struct HomeView: View {
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
         HomeView(p: UserProgress())
-           
+            .navigationViewStyle(.stack)
     }
 }
