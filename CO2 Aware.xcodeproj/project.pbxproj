@@ -253,6 +253,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				6BBED0A12A365E7900A91742 /* PBXTargetDependency */,
 			);
 			name = "CO2 Aware";
 			packageProductDependencies = (
@@ -356,6 +357,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6BBED0A12A365E7900A91742 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = 6BBED0A02A365E7900A91742 /* HidableTabView */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		6B44F072299193CC0016CD36 /* CO2-Aware-InfoPlist.strings */ = {
@@ -619,6 +627,11 @@
 
 /* Begin XCSwiftPackageProductDependency section */
 		6BBED09E2A36493600A91742 /* HidableTabView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6BBED09D2A36493600A91742 /* XCRemoteSwiftPackageReference "HidableTabView-SwiftUI" */;
+			productName = HidableTabView;
+		};
+		6BBED0A02A365E7900A91742 /* HidableTabView */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 6BBED09D2A36493600A91742 /* XCRemoteSwiftPackageReference "HidableTabView-SwiftUI" */;
 			productName = HidableTabView;
