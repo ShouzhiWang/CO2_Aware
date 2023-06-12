@@ -46,6 +46,7 @@ struct ArticleDetails: View {
                     .font(Font.body.bold())
             }.frame(height: 50)
              .background(Color("AccentColor")).cornerRadius(10)
+             .padding(.horizontal)
             
         }
         .hideTabBar(animated: true)

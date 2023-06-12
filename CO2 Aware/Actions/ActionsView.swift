@@ -36,7 +36,7 @@ struct ActionsView: View {
                                             .padding([.top, .leading, .trailing])
                                             .frame(maxWidth: .infinity, alignment: .leading)
                                             .font(.title2.weight(.bold))
-                                            .foregroundColor(Color.black)
+                                            .foregroundColor(Color("BW"))
                                         
                                         
                                         
@@ -46,7 +46,7 @@ struct ActionsView: View {
                                             .multilineTextAlignment(.leading)
                                         
                                             .padding([.leading, .bottom, .trailing])
-                                            .foregroundColor(Color.black)
+                                            .foregroundColor(Color("BW"))
                                         
                                         
                                     }

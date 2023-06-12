@@ -122,7 +122,7 @@ struct UserSelfView: View {
                                         .padding([.top, .leading, .trailing])
                                         .frame(maxWidth: .infinity, alignment: .leading)
                                         .font(.title2.weight(.bold))
-                                        .foregroundColor(Color.black)
+                                        .foregroundColor(Color("BW"))
                                     
                                     
                                     
@@ -132,7 +132,7 @@ struct UserSelfView: View {
                                         .multilineTextAlignment(.leading)
                                     
                                         .padding([.leading, .bottom, .trailing])
-                                        .foregroundColor(Color.black)
+                                        .foregroundColor(Color("BW"))
                                     
                                     
                                 }
@@ -153,7 +153,7 @@ struct UserSelfView: View {
                                         .padding([.top, .leading, .trailing])
                                         .frame(maxWidth: .infinity, alignment: .leading)
                                         .font(.title2.weight(.bold))
-                                        .foregroundColor(Color.black)
+                                        .foregroundColor(Color("BW"))
                                     
                                     Group {
                                         switch levelsm.envImpact {
@@ -258,25 +258,25 @@ struct UserSelfView: View {
                                         Text("Right now, you are making a small impact on our planet. Keep going!")
                                             .multilineTextAlignment(.leading)
                                             .padding([.leading, .bottom, .trailing])
-                                            .foregroundColor(Color.black)
+                                            .foregroundColor(Color("BW"))
                                         
                                     case 2:
                                         Text("Right now, your lifestyle is environmental friendly. Keep going!")
                                             .multilineTextAlignment(.leading)
                                             .padding([.leading, .bottom, .trailing])
-                                            .foregroundColor(Color.black)
+                                            .foregroundColor(Color("BW"))
                                         
                                     case 3:
                                         Text("Ummm... Your environmental impact is somewhat high. Consider about doing some actions or viewing articles!")
                                             .multilineTextAlignment(.leading)
                                             .padding([.leading, .bottom, .trailing])
-                                            .foregroundColor(Color.black)
+                                            .foregroundColor(Color("BW"))
                                         
                                     case 4:
                                         Text("Not good! Your lifestyle is causing a significant negative impact. Consider about doing some actions or viewing articles!")
                                             .multilineTextAlignment(.leading)
                                             .padding([.leading, .bottom, .trailing])
-                                            .foregroundColor(Color.black)
+                                            .foregroundColor(Color("BW"))
                                         
                                         
                                         
@@ -285,7 +285,7 @@ struct UserSelfView: View {
                                             .multilineTextAlignment(.leading)
                                         
                                             .padding([.leading, .bottom, .trailing])
-                                            .foregroundColor(Color.black)
+                                            .foregroundColor(Color("BW"))
                                     }
                                     
                                     

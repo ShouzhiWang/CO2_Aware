@@ -9,7 +9,7 @@ import SwiftUI
 
 @main
 struct CO2_AwareApp: App {
-    //@StateObject private var dataController = DataController()
+    
     
     let persistenceController = PersistenceController.shared
 
@@ -17,7 +17,7 @@ struct CO2_AwareApp: App {
         WindowGroup {
             ContentView()
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
-                //.environment(\.managedObjectContext, dataController.container.viewContext)
+                
                 .navigationViewStyle(StackNavigationViewStyle())
         }
     }

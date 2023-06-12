@@ -20,7 +20,7 @@ struct ContentView: View {
     
     
     var body: some View {
-        //NavigationView {
+        
             if welcomeScreenShown{
                 TabView(selection: $selection){
                     HomeView(p: p)
@@ -58,7 +58,7 @@ struct ContentView: View {
                 }
                 
             }
-        //}.navigationViewStyle(.stack)
+        
         
     }
     
