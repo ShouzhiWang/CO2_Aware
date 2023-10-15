@@ -209,6 +209,7 @@ struct TakingTest: View {
                 
             }
         }
+        .frame(maxWidth: UIDevice.current.userInterfaceIdiom == .pad ? 500 : .infinity)
     }
             .hideTabBar(animated: true)
             .fullScreenCover(isPresented: $openSafari, content: {

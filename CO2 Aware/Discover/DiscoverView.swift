@@ -15,29 +15,38 @@ struct DiscoverView: View {
     // View that presents some news articles
     var body: some View {
         NavigationView {
-            List{
-                PageView(pages: modelData.features.map { FeatureCard(article: $0) })
-                    .aspectRatio(3 / 2, contentMode: .fit)
-                    .listRowInsets(EdgeInsets())
-                
-               
-                Section(footer: Text("🥳You've read all of them? We are adding more articles!\nPlease wait for further updates😙")){
+            ZStack {
+                Color(.systemGroupedBackground)
+                    .edgesIgnoringSafeArea(.all)
+                List{
+                    PageView(pages: modelData.features.map { FeatureCard(article: $0) })
+                        .aspectRatio(3 / 2, contentMode: .fit)
+                        .listRowInsets(EdgeInsets())
                     
-                    ForEach(modelData.others){ other in
-                        OtherArticles(article: other)
-                            .listRowInsets(EdgeInsets())
+                   
+                    Section(footer: Text("🥳You've read all of them? We are adding more articles!\nPlease wait for further updates😙")){
                         
+                        ForEach(modelData.others){ other in
+                            OtherArticles(article: other)
+                                .listRowInsets(EdgeInsets())
                             
+                                
+                        }
                     }
+                    
+                    
+                    
                 }
-                
+                .showTabBar(animated: true)
+                .navigationBarTitle("Discover")
+                .frame(maxWidth: UIDevice.current.userInterfaceIdiom == .pad ? 500 : .infinity)
                 
                 
             }
-            .showTabBar(animated: true)
-            .navigationBarTitle("Discover")
+            
         }
         .environmentObject(modelData)
+        
     }
 
 }

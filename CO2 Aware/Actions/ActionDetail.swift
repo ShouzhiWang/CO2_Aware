@@ -25,8 +25,10 @@ struct ActionDetail: View {
                 action.image!
                     .resizable()
                     .aspectRatio(3/2, contentMode: .fit)
+                    .frame(maxWidth: UIDevice.current.userInterfaceIdiom == .pad ? 500 : .infinity)
+                    .cornerRadius(UIDevice.current.userInterfaceIdiom == .pad ? 10 : 0)
             }
-            HStack{
+            
                 VStack(alignment: .leading) {
                     Text(action.title)
                         .font(.title.weight(.bold))
@@ -39,12 +41,17 @@ struct ActionDetail: View {
                     Divider()
                     
                     Text(.init(action.description))
-                        .font(.title3)
+                       
+                        
                     
                     Divider()
-                    Text("In order to complete,")
+                    
+                    
                 }.padding(.horizontal)
-            }
+                .frame(maxWidth: UIDevice.current.userInterfaceIdiom == .pad ? 500 : .infinity)
+                Text("In order to complete,")
+                    .font(.caption)
+                    .foregroundColor(Color.gray)
                     if !action.special {
                         Button {
                             imgName = UUID().uuidString
@@ -59,25 +66,29 @@ struct ActionDetail: View {
                                 .font(Font.body.bold())
                         }.frame(height: 50)
                          .background(Color("AccentColor")).cornerRadius(10)
+                    } else if(UIDevice.current.userInterfaceIdiom == .pad){
+                        Text("Sorry, this feature is only available on our app's iPhone version.")
+                            .padding(.all)
+                            .font(Font.body.bold())
+                            .frame(maxWidth: UIDevice.current.userInterfaceIdiom == .pad ? 500 : .infinity)
+                        
                     } else {
                         Text("Walk at least 6000 steps and go to home page to click 'Redeem' in 'Steps' section")
                             .padding(.all)
                             .font(Font.body.bold())
                     }
                     
-                    Spacer(minLength: 150)
+                    Spacer()
 
                     
-                
-                
-            
-        }
-        .overlay(
             Text("Source: \n[\(action.source)](\(action.source))")
                 .font(.caption)
                 .foregroundColor(.gray)
                 .padding(.all)
-            , alignment: .bottom)
+                .frame(maxWidth: UIDevice.current.userInterfaceIdiom == .pad ? 500 : .infinity)
+            
+        }
+  
         .navigationBarTitleDisplayMode(.inline)
         .fullScreenCover(isPresented: $camUp) {
             ImagePicker(imgName: $imgName, action: $action, p: p)

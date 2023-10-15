@@ -102,7 +102,7 @@ struct UserSelfView: View {
                             
                             
                         }.padding(.bottom)
-                    }
+                    }.frame(maxWidth: UIDevice.current.userInterfaceIdiom == .pad ? 500 : .infinity)
                 }
                 
                     
@@ -128,6 +128,7 @@ struct UserSelfView: View {
                                     
                                     
                                     
+                                    
                                     Text("Get a test now, through our newly introduced carbon footprint calculator. ")
                                         .multilineTextAlignment(.leading)
                                     
@@ -137,7 +138,7 @@ struct UserSelfView: View {
                                     
                                 }
                                 
-                            }.background(Rectangle().fill(LinearGradient(gradient: Gradient(colors: [.red.opacity(0.7), .orange.opacity(0.8), .yellow.opacity(0.9), .green, .blue.opacity(0.8)]), startPoint: .trailing, endPoint: .zero)))
+                            }.background(Rectangle().fill(LinearGradient(gradient: Gradient(colors: [.red.opacity(0.7), .orange.opacity(0.8), .yellow.opacity(0.9), .green, .blue.opacity(0.8)]), startPoint: .trailing, endPoint: .zero)).cornerRadius(UIDevice.current.userInterfaceIdiom == .pad ? 10 : 0))
                             
                             
                             Divider()
@@ -354,7 +355,7 @@ struct UserSelfView: View {
                     
                     
                     Divider()
-                }
+                }.frame(maxWidth: UIDevice.current.userInterfaceIdiom == .pad ? 500 : .infinity)
                 
                 
                 

@@ -24,17 +24,21 @@ struct ArticleDetails: View {
                 .overlay {
                     TextOverlay(article: article)
                 }
+                .frame(maxWidth: UIDevice.current.userInterfaceIdiom == .pad ? 500 : .infinity)
+                .cornerRadius(UIDevice.current.userInterfaceIdiom == .pad ? 10 : 0)
             
             
             if !article.date.isEmpty {
                 Text("Date Published: \(article.date)")
                     .frame(maxWidth: .infinity, alignment: .leading)
                     .padding(.leading)
+                    .frame(maxWidth: UIDevice.current.userInterfaceIdiom == .pad ? 500 : .infinity)
                 
             }
             
             Text(.init(article.content))
                 .padding(.all)
+                .frame(maxWidth: UIDevice.current.userInterfaceIdiom == .pad ? 500 : .infinity)
             
             Button(action: {
                 openSafari.toggle()
@@ -45,6 +49,7 @@ struct ArticleDetails: View {
                     .foregroundColor(Color("WB"))
                     .font(Font.body.bold())
             }.frame(height: 50)
+            .frame(maxWidth: UIDevice.current.userInterfaceIdiom == .pad ? 500 : .infinity)
              .background(Color("AccentColor")).cornerRadius(10)
              .padding(.horizontal)
             

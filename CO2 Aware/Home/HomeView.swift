@@ -31,7 +31,7 @@ struct HomeView: View {
                     info
                     
                     
-                }.frame(maxWidth: UIDevice.current.userInterfaceIdiom == .pad ? 550 : .infinity)
+                }.frame(maxWidth: UIDevice.current.userInterfaceIdiom == .pad ? 500 : .infinity)
             }.frame(maxWidth: .infinity)
             
             
